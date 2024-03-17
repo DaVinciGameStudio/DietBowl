@@ -1,6 +1,9 @@
-﻿using DietBowl.Models;
+﻿using DietBowl.EF;
+using DietBowl.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using AutoMapper;
 
 namespace DietBowl.Controllers
 {
@@ -8,13 +11,14 @@ namespace DietBowl.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger): base()
         {
             _logger = logger;
         }
 
         public IActionResult Index()
         {
+
             return View();
         }
 

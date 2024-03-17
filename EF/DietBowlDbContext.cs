@@ -25,7 +25,16 @@ namespace DietBowl.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Allergen>()
+                .HasOne(a => a.Recipe)
+                .WithMany(r => r.Allergens)
+                .HasForeignKey(a => a.RecipeId)
+                .OnDelete(DeleteBehavior.Restrict); // Zapobieganie kaskadowemu usuwaniu
+
+            modelBuilder.Entity<Allergen>()
+                .HasOne(a => a.Preference)
+                .WithMany(p => p.Allergens)
+                .HasForeignKey(a => a.PreferenceId);
         }
     }
 }
