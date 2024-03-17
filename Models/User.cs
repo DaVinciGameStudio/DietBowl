@@ -8,7 +8,7 @@ namespace DietBowl.Models
     public class User
     {
         public int Id {get; set;}
-        public int IdDietician {get; set;}
+        public int? IdDietician {get; set;}
         public string Role {get; set;}
         public string Email {get; set;}
         public string Password {get; set;}
@@ -18,10 +18,10 @@ namespace DietBowl.Models
         public string Sex {get; set;}
 
         // Relacja 1:1 z Preference
-        public Preference Preference { get; set; }
+        public virtual Preference Preference { get; set; }
         // Relacja 1:1 z BodyParameter
-        public BodyParameter BodyParameter {get; set;}
+        public virtual BodyParameter BodyParameter {get; set;}
 
-        public List<Diet> Diets { get; set; }
+        public virtual List<Diet> Diets { get; set; }
     }
 }

@@ -9,7 +9,6 @@ namespace DietBowl.Models
     public class Recipe
     {
         public int Id {get; set;}
-        public int idAllergen {get; set;}
         public string Title {get; set;}
         public string Ingedients {get; set;}
         public string Instructions {get; set;}
@@ -20,9 +19,10 @@ namespace DietBowl.Models
         
         //relacja z Diet
         public int DietId { get; set; }
-        public Diet Diet { get; set; }
+        public virtual Diet Diet { get; set; }
 
         //realacja z Allergen
-        public List<Allergen> Allergens { get; set; }
+        //public int AllergenId {get; set;}
+        public virtual List<Allergen> Allergens { get; set; }
     }
 }

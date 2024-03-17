@@ -5,12 +5,12 @@ namespace DietBowl.EF
 {
     public class DietBowlDbContext : DbContext
     {
-        public DbSet<Diet> Diets {get; set;}
-        public DbSet<Recipe> Recipes {get; set;}
-        public DbSet<Allergen> Allergens {get; set;}
-        public DbSet<BodyParameter> BodyParameters {get; set;}
-        public DbSet<User> Users {get; set;}
-        public DbSet<Preference> Preferences {get; set;}
+        public virtual DbSet<Diet> Diets {get; set;}
+        public virtual DbSet<Recipe> Recipes {get; set;}
+        public virtual DbSet<Allergen> Allergens {get; set;}
+        public virtual DbSet<BodyParameter> BodyParameters {get; set;}
+        public virtual DbSet<User> Users {get; set;}
+        public virtual DbSet<Preference> Preferences {get; set;}
 
         public DietBowlDbContext(DbContextOptions<DietBowlDbContext> options) : base(options)
         {
