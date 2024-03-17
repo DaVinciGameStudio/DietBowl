@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DietBowl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f14ceb7c2b2ad28bcb119270463b5f9b55a3e2e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75ec5f177a601906b45f24603120bd78a00ccbfd")]
 [assembly: System.Reflection.AssemblyProductAttribute("DietBowl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DietBowl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
