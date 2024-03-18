@@ -19,10 +19,10 @@ namespace DietBowl.Models
         
         //relacja z Diet
         public int DietId { get; set; }
-        public virtual Diet Diet { get; set; }
+        public virtual List<Diet> Diet { get; set; }
 
         //realacja z Allergen
         //public int AllergenId {get; set;}
-        public virtual ICollection<Allergen> Allergens { get; set; }
+        public virtual List<Allergen> Allergens { get; set; }
     }
 }

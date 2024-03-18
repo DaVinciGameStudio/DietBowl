@@ -22,6 +22,6 @@ namespace DietBowl.Models
         // Relacja 1:1 z BodyParameter
         public virtual BodyParameter BodyParameter {get; set;}
 
-        public virtual ICollection<Diet> Diets { get; set; }
+        public virtual List<Diet> Diets { get; set; }
     }
 }
