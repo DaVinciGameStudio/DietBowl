@@ -7,10 +7,11 @@ namespace DietBowl.Models
 {
     public class PreferenceAllergen
     {
+        public int Id { get; set; }
         public int PreferenceId {get; set;}
-        public Preference Preference {get; set;}
+        public virtual Preference Preference {get; set;}
 
         public int AllergenId {get; set;}
-        public Allergen Allergen {get; set;}
+        public virtual Allergen Allergen {get; set;}
     }
 }
