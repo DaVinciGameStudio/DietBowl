@@ -23,6 +23,6 @@ namespace DietBowl.Models
 
         //realacja z Allergen
         //public int AllergenId {get; set;}
-        public virtual List<Allergen> Allergens { get; set; }
+        public virtual ICollection<Allergen> Allergens { get; set; }
     }
 }
