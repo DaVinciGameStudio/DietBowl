@@ -18,11 +18,11 @@ namespace DietBowl.Models
         public double Calories {get; set;}
         
         //relacja z Diet
-        public int DietId { get; set; }
-        public virtual List<Diet> Diet { get; set; }
+        //public int DietId { get; set; }
+        public virtual List<DietRecipe> DietRecipe { get; set; }
 
         //realacja z Allergen
         //public int AllergenId {get; set;}
-        public virtual List<Allergen> Allergens { get; set; }
+        public virtual List<RecipeAllergen> RecipeAllergens { get; set; }
     }
 }

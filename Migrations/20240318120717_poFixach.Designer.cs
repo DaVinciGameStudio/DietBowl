@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DietBowl.Migrations
 {
     [DbContext(typeof(DietBowlDbContext))]
-    [Migration("20240318101429_test")]
-    partial class test
+    [Migration("20240318120717_poFixach")]
+    partial class poFixach
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,36 +27,6 @@ namespace DietBowl.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("AllergenPreference", b =>
-                {
-                    b.Property<int>("AllergensId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PreferenceId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AllergensId", "PreferenceId");
-
-                    b.HasIndex("PreferenceId");
-
-                    b.ToTable("AllergenPreference");
-                });
-
-            modelBuilder.Entity("AllergenRecipe", b =>
-                {
-                    b.Property<int>("AllergensId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AllergensId", "RecipeId");
-
-                    b.HasIndex("RecipeId");
-
-                    b.ToTable("AllergenRecipe");
-                });
 
             modelBuilder.Entity("DietBowl.Models.Allergen", b =>
                 {
@@ -217,9 +187,6 @@ namespace DietBowl.Migrations
                     b.Property<double>("Carbohydrate")
                         .HasColumnType("float");
 
-                    b.Property<int>("DietId")
-                        .HasColumnType("int");
-
                     b.Property<double>("Fat")
                         .HasColumnType("float");
 
@@ -309,51 +276,6 @@ namespace DietBowl.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("DietRecipe", b =>
-                {
-                    b.Property<int>("DietId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RecipesId")
-                        .HasColumnType("int");
-
-                    b.HasKey("DietId", "RecipesId");
-
-                    b.HasIndex("RecipesId");
-
-                    b.ToTable("DietRecipe");
-                });
-
-            modelBuilder.Entity("AllergenPreference", b =>
-                {
-                    b.HasOne("DietBowl.Models.Allergen", null)
-                        .WithMany()
-                        .HasForeignKey("AllergensId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DietBowl.Models.Preference", null)
-                        .WithMany()
-                        .HasForeignKey("PreferenceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("AllergenRecipe", b =>
-                {
-                    b.HasOne("DietBowl.Models.Allergen", null)
-                        .WithMany()
-                        .HasForeignKey("AllergensId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DietBowl.Models.Recipe", null)
-                        .WithMany()
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("DietBowl.Models.BodyParameter", b =>
                 {
                     b.HasOne("DietBowl.Models.User", "User")
@@ -379,13 +301,13 @@ namespace DietBowl.Migrations
             modelBuilder.Entity("DietBowl.Models.DietRecipe", b =>
                 {
                     b.HasOne("DietBowl.Models.Diet", "Diet")
-                        .WithMany()
+                        .WithMany("DietRecipes")
                         .HasForeignKey("DietId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("DietBowl.Models.Recipe", "Recipe")
-                        .WithMany()
+                        .WithMany("DietRecipe")
                         .HasForeignKey("RecipeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -409,13 +331,13 @@ namespace DietBowl.Migrations
             modelBuilder.Entity("DietBowl.Models.PreferenceAllergen", b =>
                 {
                     b.HasOne("DietBowl.Models.Allergen", "Allergen")
-                        .WithMany()
+                        .WithMany("PreferenceAllergens")
                         .HasForeignKey("AllergenId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("DietBowl.Models.Preference", "Preference")
-                        .WithMany()
+                        .WithMany("PreferenceAllergens")
                         .HasForeignKey("PreferenceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -428,13 +350,13 @@ namespace DietBowl.Migrations
             modelBuilder.Entity("DietBowl.Models.RecipeAllergen", b =>
                 {
                     b.HasOne("DietBowl.Models.Allergen", "Allergen")
-                        .WithMany()
+                        .WithMany("RecipeAllergens")
                         .HasForeignKey("AllergenId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("DietBowl.Models.Recipe", "Recipe")
-                        .WithMany()
+                        .WithMany("RecipeAllergens")
                         .HasForeignKey("RecipeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -444,19 +366,28 @@ namespace DietBowl.Migrations
                     b.Navigation("Recipe");
                 });
 
-            modelBuilder.Entity("DietRecipe", b =>
+            modelBuilder.Entity("DietBowl.Models.Allergen", b =>
                 {
-                    b.HasOne("DietBowl.Models.Diet", null)
-                        .WithMany()
-                        .HasForeignKey("DietId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("PreferenceAllergens");
 
-                    b.HasOne("DietBowl.Models.Recipe", null)
-                        .WithMany()
-                        .HasForeignKey("RecipesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("RecipeAllergens");
+                });
+
+            modelBuilder.Entity("DietBowl.Models.Diet", b =>
+                {
+                    b.Navigation("DietRecipes");
+                });
+
+            modelBuilder.Entity("DietBowl.Models.Preference", b =>
+                {
+                    b.Navigation("PreferenceAllergens");
+                });
+
+            modelBuilder.Entity("DietBowl.Models.Recipe", b =>
+                {
+                    b.Navigation("DietRecipe");
+
+                    b.Navigation("RecipeAllergens");
                 });
 
             modelBuilder.Entity("DietBowl.Models.User", b =>

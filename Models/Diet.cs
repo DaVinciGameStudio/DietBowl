@@ -11,7 +11,7 @@ namespace DietBowl.Models
         public DateTime Date {get; set;}
         //public int IdRecipes {get; set;}
         //------
-        public virtual List<Recipe> Recipes { get; set; }
+        public virtual List<DietRecipe> DietRecipes { get; set; }
 
         //relacja z User
         public int UserId {get; set;}

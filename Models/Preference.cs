@@ -14,7 +14,7 @@ namespace DietBowl.Models
 
         //relacja z Allergen
         //public int AllergenId {get; set;}
-        public virtual List<Allergen> Allergens { get; set; }
+        public virtual List<PreferenceAllergen> PreferenceAllergens { get; set; }
 
         // Relacja 1:1 z User
         public int UserId {get; set;}

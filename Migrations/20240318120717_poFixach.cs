@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DietBowl.Migrations
 {
     /// <inheritdoc />
-    public partial class test : Migration
+    public partial class poFixach : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -36,8 +36,7 @@ namespace DietBowl.Migrations
                     Protein = table.Column<double>(type: "float", nullable: false),
                     Fat = table.Column<double>(type: "float", nullable: false),
                     Carbohydrate = table.Column<double>(type: "float", nullable: false),
-                    Calories = table.Column<double>(type: "float", nullable: false),
-                    DietId = table.Column<int>(type: "int", nullable: false)
+                    Calories = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -62,30 +61,6 @@ namespace DietBowl.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "AllergenRecipe",
-                columns: table => new
-                {
-                    AllergensId = table.Column<int>(type: "int", nullable: false),
-                    RecipeId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AllergenRecipe", x => new { x.AllergensId, x.RecipeId });
-                    table.ForeignKey(
-                        name: "FK_AllergenRecipe_Allergens_AllergensId",
-                        column: x => x.AllergensId,
-                        principalTable: "Allergens",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_AllergenRecipe_Recipes_RecipeId",
-                        column: x => x.RecipeId,
-                        principalTable: "Recipes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -180,30 +155,6 @@ namespace DietBowl.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "DietRecipe",
-                columns: table => new
-                {
-                    DietId = table.Column<int>(type: "int", nullable: false),
-                    RecipesId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_DietRecipe", x => new { x.DietId, x.RecipesId });
-                    table.ForeignKey(
-                        name: "FK_DietRecipe_Diets_DietId",
-                        column: x => x.DietId,
-                        principalTable: "Diets",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_DietRecipe_Recipes_RecipesId",
-                        column: x => x.RecipesId,
-                        principalTable: "Recipes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "DietRecipes",
                 columns: table => new
                 {
@@ -225,30 +176,6 @@ namespace DietBowl.Migrations
                         name: "FK_DietRecipes_Recipes_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "AllergenPreference",
-                columns: table => new
-                {
-                    AllergensId = table.Column<int>(type: "int", nullable: false),
-                    PreferenceId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AllergenPreference", x => new { x.AllergensId, x.PreferenceId });
-                    table.ForeignKey(
-                        name: "FK_AllergenPreference_Allergens_AllergensId",
-                        column: x => x.AllergensId,
-                        principalTable: "Allergens",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_AllergenPreference_Preferences_PreferenceId",
-                        column: x => x.PreferenceId,
-                        principalTable: "Preferences",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -280,25 +207,10 @@ namespace DietBowl.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_AllergenPreference_PreferenceId",
-                table: "AllergenPreference",
-                column: "PreferenceId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_AllergenRecipe_RecipeId",
-                table: "AllergenRecipe",
-                column: "RecipeId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_BodyParameters_UserId",
                 table: "BodyParameters",
                 column: "UserId",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_DietRecipe_RecipesId",
-                table: "DietRecipe",
-                column: "RecipesId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_DietRecipes_DietId",
@@ -346,16 +258,7 @@ namespace DietBowl.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AllergenPreference");
-
-            migrationBuilder.DropTable(
-                name: "AllergenRecipe");
-
-            migrationBuilder.DropTable(
                 name: "BodyParameters");
-
-            migrationBuilder.DropTable(
-                name: "DietRecipe");
 
             migrationBuilder.DropTable(
                 name: "DietRecipes");

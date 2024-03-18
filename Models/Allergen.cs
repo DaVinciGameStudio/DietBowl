@@ -12,11 +12,11 @@ namespace DietBowl.Models
 
         //relacja z Recipe
         //public int RecipeId { get; set; } // Klucz obcy wskazujący na przepis
-        public virtual List<Recipe> Recipe { get; set; } // Powiązanie z przepisem
+        public virtual List<RecipeAllergen> RecipeAllergens { get; set; } // Powiązanie z przepisem
 
         //relacja z Preferences
         // public int PreferenceId { get; set; } // Klucz obcy wskazujący na preference
-        public virtual List<Preference> Preference { get; set; } // Powiązanie z preference
+        public virtual List<PreferenceAllergen> PreferenceAllergens { get; set; } // Powiązanie z preference
         
     }
 }
