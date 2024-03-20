@@ -3175,24 +3175,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/hampel/.nuget/packages/": {}
+    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hampel/Documents/DietBowl/DietBowl.csproj",
+      "projectUniqueName": "E:\\rep\\DietBowl\\DietBowl.csproj",
       "projectName": "DietBowl",
-      "projectPath": "/Users/hampel/Documents/DietBowl/DietBowl.csproj",
-      "packagesPath": "/Users/hampel/.nuget/packages/",
-      "outputPath": "/Users/hampel/Documents/DietBowl/obj/",
+      "projectPath": "E:\\rep\\DietBowl\\DietBowl.csproj",
+      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+      "outputPath": "E:\\rep\\DietBowl\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/hampel/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3260,20 +3262,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.16, 7.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.osx-x64",
-            "version": "[7.0.16, 7.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.16, 7.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -3282,7 +3270,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
