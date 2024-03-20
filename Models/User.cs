@@ -16,12 +16,15 @@ namespace DietBowl.Models
         public string LastName {get; set;}
         public int Age {get; set;}
         public string Sex {get; set;}
+        public string PhoneNumber {get; set;}
 
-        // Relacja 1:1 z Preference
-        public virtual Preference Preference { get; set; }
-        // Relacja 1:1 z BodyParameter
-        public virtual BodyParameter BodyParameter {get; set;}
+        // Relacja 1:1 z preference
+        public Preference Preference { get; set; }
 
-        public virtual List<Diet> Diets { get; set; }
+        // Relacja jeden do wielu z bodyParameter
+        public List<BodyParameter> BodyParameters {get; set;} = new List<BodyParameter>();
+
+        // Relacja jeden do wielu z diets
+        public List<Diet> Diets { get; set; } = new List<Diet>();
     }
 }

@@ -18,12 +18,39 @@ namespace DietBowl.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.17")
-                .HasAnnotation("Proxies:ChangeTracking", false)
-                .HasAnnotation("Proxies:CheckEquality", false)
-                .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("AllergenPreference", b =>
+                {
+                    b.Property<int>("AllergensId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PreferencesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AllergensId", "PreferencesId");
+
+                    b.HasIndex("PreferencesId");
+
+                    b.ToTable("AllergenPreference");
+                });
+
+            modelBuilder.Entity("AllergenRecipe", b =>
+                {
+                    b.Property<int>("AllergensId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RecipesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AllergensId", "RecipesId");
+
+                    b.HasIndex("RecipesId");
+
+                    b.ToTable("AllergenRecipe");
+                });
 
             modelBuilder.Entity("DietBowl.Models.Allergen", b =>
                 {
@@ -67,8 +94,7 @@ namespace DietBowl.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
                     b.ToTable("BodyParameters");
                 });
@@ -92,29 +118,6 @@ namespace DietBowl.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Diets");
-                });
-
-            modelBuilder.Entity("DietBowl.Models.DietRecipe", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("DietId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DietId");
-
-                    b.HasIndex("RecipeId");
-
-                    b.ToTable("DietRecipes");
                 });
 
             modelBuilder.Entity("DietBowl.Models.Preference", b =>
@@ -145,29 +148,6 @@ namespace DietBowl.Migrations
                         .IsUnique();
 
                     b.ToTable("Preferences");
-                });
-
-            modelBuilder.Entity("DietBowl.Models.PreferenceAllergen", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AllergenId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PreferenceId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AllergenId");
-
-                    b.HasIndex("PreferenceId");
-
-                    b.ToTable("PreferenceAllers");
                 });
 
             modelBuilder.Entity("DietBowl.Models.Recipe", b =>
@@ -207,29 +187,6 @@ namespace DietBowl.Migrations
                     b.ToTable("Recipes");
                 });
 
-            modelBuilder.Entity("DietBowl.Models.RecipeAllergen", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AllergenId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AllergenId");
-
-                    b.HasIndex("RecipeId");
-
-                    b.ToTable("RecipeAllers");
-                });
-
             modelBuilder.Entity("DietBowl.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -260,6 +217,10 @@ namespace DietBowl.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -273,11 +234,56 @@ namespace DietBowl.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("DietRecipe", b =>
+                {
+                    b.Property<int>("DietsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RecipesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("DietsId", "RecipesId");
+
+                    b.HasIndex("RecipesId");
+
+                    b.ToTable("DietRecipe");
+                });
+
+            modelBuilder.Entity("AllergenPreference", b =>
+                {
+                    b.HasOne("DietBowl.Models.Allergen", null)
+                        .WithMany()
+                        .HasForeignKey("AllergensId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DietBowl.Models.Preference", null)
+                        .WithMany()
+                        .HasForeignKey("PreferencesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AllergenRecipe", b =>
+                {
+                    b.HasOne("DietBowl.Models.Allergen", null)
+                        .WithMany()
+                        .HasForeignKey("AllergensId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DietBowl.Models.Recipe", null)
+                        .WithMany()
+                        .HasForeignKey("RecipesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("DietBowl.Models.BodyParameter", b =>
                 {
                     b.HasOne("DietBowl.Models.User", "User")
-                        .WithOne("BodyParameter")
-                        .HasForeignKey("DietBowl.Models.BodyParameter", "UserId")
+                        .WithMany("BodyParameters")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -295,25 +301,6 @@ namespace DietBowl.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("DietBowl.Models.DietRecipe", b =>
-                {
-                    b.HasOne("DietBowl.Models.Diet", "Diet")
-                        .WithMany("DietRecipes")
-                        .HasForeignKey("DietId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DietBowl.Models.Recipe", "Recipe")
-                        .WithMany("DietRecipe")
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Diet");
-
-                    b.Navigation("Recipe");
-                });
-
             modelBuilder.Entity("DietBowl.Models.Preference", b =>
                 {
                     b.HasOne("DietBowl.Models.User", "User")
@@ -325,72 +312,24 @@ namespace DietBowl.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("DietBowl.Models.PreferenceAllergen", b =>
+            modelBuilder.Entity("DietRecipe", b =>
                 {
-                    b.HasOne("DietBowl.Models.Allergen", "Allergen")
-                        .WithMany("PreferenceAllergens")
-                        .HasForeignKey("AllergenId")
+                    b.HasOne("DietBowl.Models.Diet", null)
+                        .WithMany()
+                        .HasForeignKey("DietsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DietBowl.Models.Preference", "Preference")
-                        .WithMany("PreferenceAllergens")
-                        .HasForeignKey("PreferenceId")
+                    b.HasOne("DietBowl.Models.Recipe", null)
+                        .WithMany()
+                        .HasForeignKey("RecipesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Allergen");
-
-                    b.Navigation("Preference");
-                });
-
-            modelBuilder.Entity("DietBowl.Models.RecipeAllergen", b =>
-                {
-                    b.HasOne("DietBowl.Models.Allergen", "Allergen")
-                        .WithMany("RecipeAllergens")
-                        .HasForeignKey("AllergenId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DietBowl.Models.Recipe", "Recipe")
-                        .WithMany("RecipeAllergens")
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Allergen");
-
-                    b.Navigation("Recipe");
-                });
-
-            modelBuilder.Entity("DietBowl.Models.Allergen", b =>
-                {
-                    b.Navigation("PreferenceAllergens");
-
-                    b.Navigation("RecipeAllergens");
-                });
-
-            modelBuilder.Entity("DietBowl.Models.Diet", b =>
-                {
-                    b.Navigation("DietRecipes");
-                });
-
-            modelBuilder.Entity("DietBowl.Models.Preference", b =>
-                {
-                    b.Navigation("PreferenceAllergens");
-                });
-
-            modelBuilder.Entity("DietBowl.Models.Recipe", b =>
-                {
-                    b.Navigation("DietRecipe");
-
-                    b.Navigation("RecipeAllergens");
                 });
 
             modelBuilder.Entity("DietBowl.Models.User", b =>
                 {
-                    b.Navigation("BodyParameter")
-                        .IsRequired();
+                    b.Navigation("BodyParameters");
 
                     b.Navigation("Diets");
 

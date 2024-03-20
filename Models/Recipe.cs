@@ -16,13 +16,11 @@ namespace DietBowl.Models
         public double Fat {get; set;}
         public double Carbohydrate {get; set;}
         public double Calories {get; set;}
-        
-        //relacja z Diet
-        //public int DietId { get; set; }
-        public virtual List<DietRecipe> DietRecipe { get; set; }
 
-        //realacja z Allergen
-        //public int AllergenId {get; set;}
-        public virtual List<RecipeAllergen> RecipeAllergens { get; set; }
+        //Relacja wiele do wielu z Diets
+        public List<Diet> Diets { get; set; } = new List<Diet>();
+
+        //Relacja wiele do wielu z Allergen
+        public List<Allergen> Allergens { get; set; } = new List<Allergen>();
     }
 }

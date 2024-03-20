@@ -12,13 +12,12 @@ namespace DietBowl.Models
         public int WeightGoal {get; set;}
         public string ActivityStatus {get; set;}
 
-        //relacja z Allergen
-        //public int AllergenId {get; set;}
-        public virtual List<PreferenceAllergen> PreferenceAllergens { get; set; }
+        //relacja wiele do wielu z Allergen
+        public List<Allergen> Allergens { get; set; } = new List<Allergen>();
 
         // Relacja 1:1 z User
         public int UserId {get; set;}
-        public virtual User User { get; set; }
+        public User User { get; set; }
 
     }
 }

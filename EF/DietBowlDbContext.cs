@@ -5,15 +5,12 @@ namespace DietBowl.EF
 {
     public class DietBowlDbContext : DbContext
     {
-        public virtual DbSet<Diet> Diets {get; set;}
-        public virtual DbSet<Recipe> Recipes {get; set;}
-        public virtual DbSet<Allergen> Allergens {get; set;}
-        public virtual DbSet<BodyParameter> BodyParameters {get; set;}
-        public virtual DbSet<User> Users {get; set;}
-        public virtual DbSet<Preference> Preferences {get; set;}
-        public virtual DbSet<PreferenceAllergen> PreferenceAllers { get; set;}
-        public virtual DbSet<DietRecipe> DietRecipes { get; set;}
-        public virtual DbSet<RecipeAllergen> RecipeAllers { get; set;}
+        public DbSet<Diet> Diets {get; set;}
+        public DbSet<Recipe> Recipes {get; set;}
+        public DbSet<Allergen> Allergens {get; set;}
+        public DbSet<BodyParameter> BodyParameters {get; set;}
+        public DbSet<User> Users {get; set;}
+        public DbSet<Preference> Preferences {get; set;}
 
         public DietBowlDbContext(DbContextOptions<DietBowlDbContext> options) : base(options)
         {
@@ -22,22 +19,49 @@ namespace DietBowl.EF
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseLazyLoadingProxies();
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("DefaultConnection");
+            }
         }
+    
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Allergen>()
-            //    .HasOne(a => a.Recipe)
-            //    .WithMany(r => r.Allergens)
-            //    .HasForeignKey(a => a.RecipeId)
-            //    .OnDelete(DeleteBehavior.Restrict); // Zapobieganie kaskadowemu usuwaniu
+            //Relacja wiele do wielu dla diet i recipe
+            modelBuilder.Entity<Diet>()
+                .HasMany(d => d.Recipes)
+                .WithMany(r => r.Diets);
 
-            //modelBuilder.Entity<Allergen>()
-            //    .HasOne(a => a.Preference)
-            //    .WithMany(p => p.Allergens)
-            //    .HasForeignKey(a => a.PreferenceId);
+            //Relacja wiele do wielu dla allergen i recipe
+            modelBuilder.Entity<Allergen>()
+                .HasMany(a => a.Recipes)
+                .WithMany(r => r.Allergens);
+
+            //Relacja wiele do wielu dla allergen i preference
+            modelBuilder.Entity<Allergen>()
+                .HasMany(a => a.Preferences)
+                .WithMany(p => p.Allergens);
+
+            //Relacja jeden do wielu dla user i bodyParameter
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.BodyParameters)
+                .WithOne(bp => bp.User)
+                .HasForeignKey(bp => bp.UserId);
+
+            //Relacja jeden do wielu dla user i diet
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Diets)
+                .WithOne(d => d.User)
+                .HasForeignKey(d => d.UserId);
+
+            //Relacja jeden do jeden dla user i preferences - POPRAWIC
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Preference)
+                .WithOne(p => p.User)
+                .HasForeignKey<Preference>(p => p.UserId);
+
+
         }
     }
 }

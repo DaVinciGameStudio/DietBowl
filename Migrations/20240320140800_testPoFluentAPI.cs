@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DietBowl.Migrations
 {
     /// <inheritdoc />
-    public partial class poFixach : Migration
+    public partial class testPoFluentAPI : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -56,7 +56,8 @@ namespace DietBowl.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Age = table.Column<int>(type: "int", nullable: false),
-                    Sex = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Sex = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -64,26 +65,24 @@ namespace DietBowl.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "RecipeAllers",
+                name: "AllergenRecipe",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    RecipeId = table.Column<int>(type: "int", nullable: false),
-                    AllergenId = table.Column<int>(type: "int", nullable: false)
+                    AllergensId = table.Column<int>(type: "int", nullable: false),
+                    RecipesId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RecipeAllers", x => x.Id);
+                    table.PrimaryKey("PK_AllergenRecipe", x => new { x.AllergensId, x.RecipesId });
                     table.ForeignKey(
-                        name: "FK_RecipeAllers_Allergens_AllergenId",
-                        column: x => x.AllergenId,
+                        name: "FK_AllergenRecipe_Allergens_AllergensId",
+                        column: x => x.AllergensId,
                         principalTable: "Allergens",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_RecipeAllers_Recipes_RecipeId",
-                        column: x => x.RecipeId,
+                        name: "FK_AllergenRecipe_Recipes_RecipesId",
+                        column: x => x.RecipesId,
                         principalTable: "Recipes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -155,72 +154,72 @@ namespace DietBowl.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "DietRecipes",
+                name: "DietRecipe",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DietId = table.Column<int>(type: "int", nullable: false),
-                    RecipeId = table.Column<int>(type: "int", nullable: false)
+                    DietsId = table.Column<int>(type: "int", nullable: false),
+                    RecipesId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DietRecipes", x => x.Id);
+                    table.PrimaryKey("PK_DietRecipe", x => new { x.DietsId, x.RecipesId });
                     table.ForeignKey(
-                        name: "FK_DietRecipes_Diets_DietId",
-                        column: x => x.DietId,
+                        name: "FK_DietRecipe_Diets_DietsId",
+                        column: x => x.DietsId,
                         principalTable: "Diets",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_DietRecipes_Recipes_RecipeId",
-                        column: x => x.RecipeId,
+                        name: "FK_DietRecipe_Recipes_RecipesId",
+                        column: x => x.RecipesId,
                         principalTable: "Recipes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "PreferenceAllers",
+                name: "AllergenPreference",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PreferenceId = table.Column<int>(type: "int", nullable: false),
-                    AllergenId = table.Column<int>(type: "int", nullable: false)
+                    AllergensId = table.Column<int>(type: "int", nullable: false),
+                    PreferencesId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PreferenceAllers", x => x.Id);
+                    table.PrimaryKey("PK_AllergenPreference", x => new { x.AllergensId, x.PreferencesId });
                     table.ForeignKey(
-                        name: "FK_PreferenceAllers_Allergens_AllergenId",
-                        column: x => x.AllergenId,
+                        name: "FK_AllergenPreference_Allergens_AllergensId",
+                        column: x => x.AllergensId,
                         principalTable: "Allergens",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PreferenceAllers_Preferences_PreferenceId",
-                        column: x => x.PreferenceId,
+                        name: "FK_AllergenPreference_Preferences_PreferencesId",
+                        column: x => x.PreferencesId,
                         principalTable: "Preferences",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_AllergenPreference_PreferencesId",
+                table: "AllergenPreference",
+                column: "PreferencesId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AllergenRecipe_RecipesId",
+                table: "AllergenRecipe",
+                column: "RecipesId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_BodyParameters_UserId",
                 table: "BodyParameters",
-                column: "UserId",
-                unique: true);
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DietRecipes_DietId",
-                table: "DietRecipes",
-                column: "DietId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_DietRecipes_RecipeId",
-                table: "DietRecipes",
-                column: "RecipeId");
+                name: "IX_DietRecipe_RecipesId",
+                table: "DietRecipe",
+                column: "RecipesId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Diets_UserId",
@@ -228,55 +227,35 @@ namespace DietBowl.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PreferenceAllers_AllergenId",
-                table: "PreferenceAllers",
-                column: "AllergenId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PreferenceAllers_PreferenceId",
-                table: "PreferenceAllers",
-                column: "PreferenceId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Preferences_UserId",
                 table: "Preferences",
                 column: "UserId",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RecipeAllers_AllergenId",
-                table: "RecipeAllers",
-                column: "AllergenId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RecipeAllers_RecipeId",
-                table: "RecipeAllers",
-                column: "RecipeId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "AllergenPreference");
+
+            migrationBuilder.DropTable(
+                name: "AllergenRecipe");
+
+            migrationBuilder.DropTable(
                 name: "BodyParameters");
 
             migrationBuilder.DropTable(
-                name: "DietRecipes");
-
-            migrationBuilder.DropTable(
-                name: "PreferenceAllers");
-
-            migrationBuilder.DropTable(
-                name: "RecipeAllers");
-
-            migrationBuilder.DropTable(
-                name: "Diets");
+                name: "DietRecipe");
 
             migrationBuilder.DropTable(
                 name: "Preferences");
 
             migrationBuilder.DropTable(
                 name: "Allergens");
+
+            migrationBuilder.DropTable(
+                name: "Diets");
 
             migrationBuilder.DropTable(
                 name: "Recipes");
