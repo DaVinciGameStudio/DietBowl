@@ -1,4 +1,5 @@
 using DietBowl.EF;
+using DietBowl.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace DietBowl
@@ -15,6 +16,8 @@ namespace DietBowl
             //dodane
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<DietBowlDbContext>(x => x.UseSqlServer(connectionString));
+            //serwisy
+            builder.Services.AddScoped<IUserService, UserService>();
 
             var app = builder.Build();
 

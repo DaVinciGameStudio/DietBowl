@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,8 +10,15 @@ namespace DietBowl.Models
     {
         public int Id {get; set;}
         public int? IdDietician {get; set;}
-        public string Role {get; set;}
+        public int Role {get; set;}
+
+        [Required(ErrorMessage = "Email jest wymagany")]
+        [EmailAddress(ErrorMessage = "Niepoprawny format adresu email")]
+        [RegularExpression(@"^.+@.+\..+$", ErrorMessage = "Adres email musi zawierać znak @")]
         public string Email {get; set;}
+
+        [Required(ErrorMessage = "Pole Hasło jest wymagane.")]
+        [StringLength(100, ErrorMessage = "Hasło musi mieć przynajmniej {2} znaków.", MinimumLength = 8)]
         public string Password {get; set;}
         public string FirstName {get; set;}
         public string LastName {get; set;}
