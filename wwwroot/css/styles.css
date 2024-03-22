@@ -1,0 +1,16 @@
+﻿/* Custom styles for registration form */
+
+.container {
+    margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Optional: Add more custom styling as needed */
