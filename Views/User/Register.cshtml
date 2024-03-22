@@ -29,21 +29,27 @@
                     <input type="submit" value="Zaloguj">
                 </div>
             </form>
-            <form class="signup" asp-action="AddUser" asp-controller="User" method="post" enctype="multipart/form-data">
+            <form class="signup" asp-action="Register" asp-controller="User" method="post" enctype="multipart/form-data">
                 <div class="field">
-                    <input type="text" name="uFirstName" placeholder="Imie" required>
+                    <input type="text" name="FirstName" placeholder="Imie" required>
                 </div>
                 <div class="field">
-                    <input type="text" name="uLastName" placeholder="Nazwisko" required>
+                    <input type="text" name="LastName" placeholder="Nazwisko" required>
                 </div>
                 <div class="field">
-                    <input type="text" name="uEmail" placeholder="Adres email" required>
+                    <input type="text" name="Email" placeholder="Adres email" required>
                 </div>
                 <div class="field">
-                    <input type="text" name="uNick" placeholder="Nazwa użytkownika" required>
+                    <input type="text" name="Sex" placeholder="Płeć" required>
                 </div>
                 <div class="field">
-                    <input type="password" name="uPassword" placeholder="Hasło" required>
+                    <input type="text" name="Age" placeholder="Wiek" required>
+                </div>
+                <div class="field">
+                    <input type="text" name="PhoneNumber" placeholder="Numer telefonu" required>
+                </div>
+                <div class="field">
+                    <input type="password" name="Password" placeholder="Hasło" required>
                 </div>
                 @if (ViewData["errorR"] != null)
                 {
