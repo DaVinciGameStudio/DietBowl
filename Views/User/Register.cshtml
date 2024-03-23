@@ -31,25 +31,30 @@
             </form>
             <form class="signup" asp-action="Register" asp-controller="User" method="post" enctype="multipart/form-data">
                 <div class="field">
-                    <input type="text" name="FirstName" placeholder="Imie" required>
+                    <input type="text" name="FirstName" placeholder="Imię" required>
                 </div>
                 <div class="field">
                     <input type="text" name="LastName" placeholder="Nazwisko" required>
                 </div>
                 <div class="field">
-                    <input type="text" name="Email" placeholder="Adres email" required>
+                    <input type="email" name="Email" placeholder="Adres email" required>
+                </div>
+
+                <div class="field">
+                    <input type="number" name="Age" placeholder="Wiek" required>
                 </div>
                 <div class="field">
-                    <input type="text" name="Sex" placeholder="Płeć" required>
-                </div>
-                <div class="field">
-                    <input type="text" name="Age" placeholder="Wiek" required>
-                </div>
-                <div class="field">
-                    <input type="text" name="PhoneNumber" placeholder="Numer telefonu" required>
+                    <input type="tel" name="PhoneNumber" placeholder="Numer telefonu" required>
                 </div>
                 <div class="field">
                     <input type="password" name="Password" placeholder="Hasło" required>
+                </div>
+                <div class="field">
+                    <label for="gender">Płeć:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Mężczyzna</option>
+                        <option value="female">Kobieta</option>
+                    </select>
                 </div>
                 @if (ViewData["errorR"] != null)
                 {
@@ -63,5 +68,11 @@
         </div>
     </div>
 </div>
+
+<footer class="border-top footer text-muted" style="height: 50px;">
+    <div class="container" style="line-height: 50px;">
+        &copy; 2024 - DietBowl - <a asp-area="" asp-controller="Home" asp-action="Privacy">Polityka prywatności</a>
+    </div>
+</footer>
 
 <script src="~/js/LogRegForm.js"></script>

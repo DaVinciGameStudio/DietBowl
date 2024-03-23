@@ -3175,19 +3175,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
+    "C:\\Users\\Łukasz\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\rep\\DietBowl\\DietBowl.csproj",
+      "projectUniqueName": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DBowl\\DietBowl\\DietBowl.csproj",
       "projectName": "DietBowl",
-      "projectPath": "E:\\rep\\DietBowl\\DietBowl.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "E:\\rep\\DietBowl\\obj\\",
+      "projectPath": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DBowl\\DietBowl\\DietBowl.csproj",
+      "packagesPath": "C:\\Users\\Łukasz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DBowl\\DietBowl\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Łukasz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3270,7 +3275,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
