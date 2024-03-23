@@ -196,7 +196,7 @@
               "RelativeDocumentMoniker": "wwwroot\\css\\form.css",
               "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DBowl\\DietBowl\\wwwroot\\css\\form.css",
               "RelativeToolTip": "wwwroot\\css\\form.css",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAA8AAAAYAAAA",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAAAL4AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-03-20T20:56:35.831Z",
               "EditorCaption": ""
@@ -223,8 +223,7 @@
               "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AQIAACEAAAAAAAAAAAAowCMAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T18:38:31.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T18:38:31.997Z"
             },
             {
               "$type": "Document",
@@ -236,8 +235,7 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T18:38:30.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T18:38:30.02Z"
             },
             {
               "$type": "Document",
@@ -285,8 +283,7 @@
               "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-20T18:31:11.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T18:31:11.018Z"
             },
             {
               "$type": "Document",
@@ -382,8 +379,7 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-20T18:00:42.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T18:00:42.794Z"
             },
             {
               "$type": "Document",
@@ -395,8 +391,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACUAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-20T18:00:35.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T18:00:35.52Z"
             },
             {
               "$type": "Document",

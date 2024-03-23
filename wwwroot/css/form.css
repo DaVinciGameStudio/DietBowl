@@ -74,7 +74,7 @@ main {
     left: 0;
     z-index: 0;
     border-radius: 5px;
-    background: linear-gradient(to bottom left, #008000, lightgreen);
+    background: linear-gradient(to bottom left, #f29a02, yellow);
     transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 
@@ -186,7 +186,7 @@ form .btn {
         width: 300%;
         position: absolute;
         left: -100%;
-        background: linear-gradient(to bottom left, #008000, lightgreen);
+        background: linear-gradient(to bottom left, #f29a02, yellow);
         border-radius: 5px;
         transition: all 0.4s ease;
         ;
