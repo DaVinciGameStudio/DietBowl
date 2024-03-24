@@ -12,10 +12,7 @@ main {
     place-items: center;
 }
 
-::selection {
-    background: #fa4299;
-    color: #fff;
-}
+
 
 .wrapper {
     overflow: hidden;
@@ -141,7 +138,7 @@ input[type="radio"] {
     }
 
         .form-inner form .field input:focus {
-            border-color: #fc83bb;
+            border-color: blue;
         }
 
         .form-inner form .field input::placeholder {
@@ -150,7 +147,7 @@ input[type="radio"] {
         }
 
 form .field input:focus::placeholder {
-    color: #b3b3b3;
+    color: blue;
 }
 
 .form-inner form .pass-link {
@@ -164,7 +161,7 @@ form .field input:focus::placeholder {
 
     .form-inner form .pass-link a,
     .form-inner form .signup-link a {
-        color: #fa4299;
+        color: blue;
         text-decoration: none;
     }
 
