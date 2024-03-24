@@ -136,7 +136,7 @@ input[type="radio"] {
         border-bottom-width: 2px;
         font-size: 17px;
         transition: all 0.3s ease;
-        background: #272727;
+/*        background: #272727;*/
         color: white;
     }
 
@@ -227,6 +227,8 @@ form .btn {
     width: 20px;
     height: 20px;
 }
+
+
 
 .error {
     color: red;

@@ -10,12 +10,12 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #212121;
+            background-color: #F0FFFF;
             color: #333;
         }
 
         header {
-            background: linear-gradient(to right, #f6d365, #fda085);
+            background: white;
             padding: 15px 0;
             width: 100%;
             text-align: center;
@@ -31,7 +31,7 @@
         }
 
         .navbar-brand {
-            background: linear-gradient(to right, #ffa500, #ff6347);
+            background: #FFF8DC;
             font-size: 1.5rem;
             font-weight: bold;
             color: #fff;
@@ -42,61 +42,57 @@
             color: #333;
         }
 
-        .container {
-            margin-top: 20px;
-            background: linear-gradient(to right, #ffa500, #ff6347);
-            padding: 20px;
-            color: white;
+       
+
+     
+
+        .logo{
+            width:auto;
+            height:auto;
         }
 
-        footer {
-            background: #212121;
-            padding: 20px 0;
-            margin-top: 50px;
-            text-align: center;
-            color: white;
-            
+        .justify_right{
+            justify-content:right;
         }
+        a{
+
+            font-weight:bold;
+            font-size:20px;
+        }
+
 
     </style>
 </head>
 <body>
-    <header>
-        
-        <img src="/DietBowl/logo.png" class="logo" alt="Opis obrazka">
-    </header>
-    <div class="container">
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom mb-3" style="background: linear-gradient(to right, #ff6347, #ffa500);">
-            <!-- Zmienione tło nawigacji -->
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+    <div class="">
+        <nav class="navbar navbar-expand-sm w-100 navbar-toggleable-sm navbar-light 
+                    border-bottom mb-9 flex-row fixed justify-content-end d-flex" style="height:70px;">
+
+            
+
+            <ul class="navbar-nav flex-grow-1 w-100 flex-row justify-content-end p-5">
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Strona główna</a>
                         </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="User" asp-action="Login">Logowanie</a>
+                </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="User" asp-action="Register">Rejestracja</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Polityka prywatności</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Polityka</a>
                         </li>
                     </ul>
                 </div>
-            </div>
+           
         </nav>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            <a> &copy; 2024 - DietBowl -</a>  <a asp-area="" asp-controller="Home" asp-action="Privacy">Polityka prywatności</a>
-        </div>
-    </footer>
+   
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

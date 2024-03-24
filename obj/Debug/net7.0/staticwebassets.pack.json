@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\form.css"
     },
     {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DBowl\\DietBowl\\wwwroot\\images\\baner.png",
+      "PackagePath": "staticwebassets\\images\\baner.png"
+    },
+    {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DBowl\\DietBowl\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DBowl\\DietBowl\\wwwroot\\js\\LogRegForm.js",
       "PackagePath": "staticwebassets\\js\\LogRegForm.js"
     },
