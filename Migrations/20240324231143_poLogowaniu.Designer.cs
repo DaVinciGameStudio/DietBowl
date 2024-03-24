@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DietBowl.Migrations
 {
     [DbContext(typeof(DietBowlDbContext))]
-    [Migration("20240324224737_g")]
-    partial class g
+    [Migration("20240324231143_poLogowaniu")]
+    partial class poLogowaniu
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
