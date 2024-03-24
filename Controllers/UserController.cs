@@ -9,6 +9,7 @@ using DietBowl.Models;
 using DietBowl.Services;
 using DietBowl.ViewModel;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -66,7 +67,7 @@ namespace DietBowl.Controllers
         public async Task<IActionResult> LoginUser([FromForm] UserVM user)
         {
             ViewData["Title"] = "Logowanie";
-            Task<ClaimsPrincipal> principal = _userService.Login(user);
+            Task<ClaimsPrincipal>? principal = _userService.Login(user);
 
             if(principal.Result != null)
             {
@@ -78,6 +79,18 @@ namespace DietBowl.Controllers
             return Json(new { message = "Nazwa użytkownika lub hasło nieprawidłowe" });
         }
 
-        
+        [Authorize(Roles = "1,2")]
+        public IActionResult Ograniczenia()
+        {
+            ViewData["Title"] = "Login";
+            return View();
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }

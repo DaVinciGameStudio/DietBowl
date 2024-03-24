@@ -47,35 +47,38 @@ namespace DietBowl.Services
             }
         }
 
-        public async Task<ClaimsPrincipal> Login(UserVM user)
+        public async Task<ClaimsPrincipal?> Login(UserVM user)
         {
-            User ?foundUser = null;
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            if (regex.Match(user.Username).Success)
+            try
             {
-                foundUser = await _dietBowlDbContext.Users.FirstOrDefaultAsync(u => u.Email == user.Username);
-            }
+                User? foundUser = null;
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                if (regex.Match(user.Email).Success)
+                    foundUser = await _dietBowlDbContext.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
 
-            bool checkUserCredentials = BCrypt.Net.BCrypt.Verify(user.Password, foundUser!.Password);
-            if (checkUserCredentials)
-            {
-                var userRole = _dietBowlDbContext.Users.FirstOrDefault(u => u.Role == foundUser.Role)!;
-                var claims = new List<Claim>
+
+                Console.WriteLine(foundUser);
+                if (foundUser != null)
                 {
-                    new Claim(ClaimTypes.Role, foundUser.Role.ToString()),
-                    new Claim(ClaimTypes.Email, foundUser.Email),
-                    new Claim(ClaimTypes.NameIdentifier, foundUser.Id.ToString())
-                };
+                    if (BCrypt.Net.BCrypt.Verify(user.Password, foundUser.Password))
+                    {
+                        List<Claim> claims = new()
+                        {
+                            new Claim(ClaimTypes.Role, foundUser.Role.ToString()),
+                            new Claim(ClaimTypes.Name, foundUser.Email),
+                        };
+                        ClaimsIdentity userClaims = new(claims, "login");
 
-
-                var userIdentity = new ClaimsIdentity(claims, "login");
-
-                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
-
-                return principal;
-            }
-            else
+                        return new ClaimsPrincipal(userClaims);
+                    }
+                }
                 return null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Wystąpił błąd: {ex.Message}");
+                return null;
+            }
         }
 
     }

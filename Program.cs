@@ -1,5 +1,6 @@
 using DietBowl.EF;
 using DietBowl.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 namespace DietBowl
@@ -12,6 +13,27 @@ namespace DietBowl
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            //builder.Services.AddAutoMapper(typeof(ActiveSubstancesMapper));
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/User/LoginUser";
+                });
+
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireLoggedIn", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                });
+                options.AddPolicy("AdminAccess", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireRole("admin");
+                });
+            });
+
 
             //dodane
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -34,6 +56,7 @@ namespace DietBowl
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

@@ -27,7 +27,7 @@ namespace DietBowl.Models
         public string PhoneNumber {get; set;}
 
         // Relacja 1:1 z preference
-        public Preference Preference { get; set; }
+        public Preference Preference { get; set; } = null;
 
         // Relacja jeden do wielu z bodyParameter
         public List<BodyParameter> BodyParameters {get; set;} = new List<BodyParameter>();
