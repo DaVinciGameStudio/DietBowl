@@ -2,10 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using DietBowl.EF;
 using DietBowl.Models;
 using DietBowl.Services;
+using DietBowl.ViewModel;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -58,5 +61,23 @@ namespace DietBowl.Controllers
         {
             return View("Error!");
         }
+
+        [HttpPost]
+        public async Task<IActionResult> LoginUser([FromForm] UserVM user)
+        {
+            ViewData["Title"] = "Logowanie";
+            Task<ClaimsPrincipal> principal = _userService.Login(user);
+
+            if(principal.Result != null)
+            {
+                await HttpContext.SignInAsync(principal.Result);
+
+                return RedirectToAction("Index", "Home");
+            }
+
+            return Json(new { message = "Nazwa użytkownika lub hasło nieprawidłowe" });
+        }
+
+        
     }
 }
