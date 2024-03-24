@@ -7,10 +7,10 @@
         <div class="form-inner">
             <form class="login" asp-action="LoginUser" asp-controller="User" method="post" enctype="multipart/form-data">
                 <div class="field">
-                    <input type="text" name="login" placeholder="Nazwa użytkownika" required>
+                    <input type="text" name="Email" placeholder="Email użytkownika" required>
                 </div>
                 <div class="field">
-                    <input type="password" name="password" placeholder="Hasło" required>
+                    <input type="password" name="Password" placeholder="Hasło" required>
                 </div>
                 @if (ViewData["errorL"] != null)
                 {
