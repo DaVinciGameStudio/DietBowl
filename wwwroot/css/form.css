@@ -137,7 +137,7 @@ input[type="radio"] {
         font-size: 17px;
         transition: all 0.3s ease;
 /*        background: #272727;*/
-        color: white;
+        color: black;
     }
 
         .form-inner form .field input:focus {
