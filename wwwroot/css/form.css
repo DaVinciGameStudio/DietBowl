@@ -25,6 +25,7 @@ main {
     .wrapper .title-text {
         display: flex;
         width: 200%;
+        
     }
 
     .wrapper .title {
@@ -232,3 +233,4 @@ form .btn {
     display: flex;
     align-items: center;
 }
+
