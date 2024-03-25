@@ -73,7 +73,22 @@ namespace DietBowl.Controllers
             {
                 await HttpContext.SignInAsync(principal.Result);
 
-                return RedirectToAction("Index", "Home");
+                // Sprawdzenie roli użytkownika - dodane na lekcji
+                var userClaims = principal.Result.Claims;
+                var userRole = userClaims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+                //return RedirectToAction("Index", "Home"); stary kod
+
+                // Na podstawie roli przekieruj do odpowiedniego widoku - dodane na lekcji
+                switch (userRole)
+                {
+                    case "1": // Dietetyk
+                        return RedirectToAction("Dietician", "Home");
+                    case "2": // Pacjent
+                        return RedirectToAction("User", "Home");
+                    default:
+                        return RedirectToAction("Index", "Home"); // Domyślna strona po zalogowaniu
+                }
             }
 
             return Json(new { message = "Nazwa użytkownika lub hasło nieprawidłowe" });

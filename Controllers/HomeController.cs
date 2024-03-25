@@ -27,6 +27,16 @@ namespace DietBowl.Controllers
             return View();
         }
 
+        public IActionResult User()
+        {
+            return View();
+        }
+
+        public IActionResult Dietician()
+        {
+            return View();
+        }
+
         public IActionResult Register()
         {
             return View();
