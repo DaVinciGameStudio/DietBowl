@@ -83,9 +83,16 @@
 
                         @if (User.Identity.IsAuthenticated)
                         {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="User" asp-action="Preferences">Preferencje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="User" asp-action="Body_Parameters">Parametry ciała</a>
+                    </li>
                         <li class="nav-item">
                         <a class="nav-link" asp-area="" asp-controller="User" asp-action="Logout">Wyloguj</a>
                     </li>
+                   
                 }
                 else
                 {

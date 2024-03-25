@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Parametry ciała";
+}
+<br />
+<h1 style="text-align:center;">@ViewData["Title"]</h1>
+
+<div class="form-container" style="text-align:center;">
+    <div class="form-inner">
+        <form class="signup" asp-action="Body_Parameters" asp-controller="User" method="post" enctype="multipart/form-data">
+            <div> Waga:</div>
+            <div>
+                <input type="text" name="weigth" value placeholder />
+                <span>kg</span>
+            </div>
+            <div> Wzrost:</div>
+            <div>
+                <input type="text" name="height" value placeholder />
+                <span>kg</span>
+            </div>
+            
+            
+
+
+            @if (ViewData["errorR"] != null)
+            {
+                <p class="error">@ViewData["errorR"]</p>
+            }
+            <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Oblicz BMI">
+            </div>
+
+            <div>
+                Twoje BMI wynosi:
+            </div>
+            <div class="BMI">
+            </div>
+        </form>
+
+

@@ -56,6 +56,16 @@ namespace DietBowl.Controllers
             ViewData["Title"] = "Login";
             return View();
         }
+        public IActionResult Preferences()
+        {
+            ViewData["Title"] = "Preferencje";
+            return View();
+        }
+        public IActionResult Body_Parameters()
+        {
+            ViewData["Title"] = "Parametry ciała";
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

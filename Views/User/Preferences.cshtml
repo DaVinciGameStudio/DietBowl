@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Preferencje";
+}
+<br />
+<h1 style="text-align:center;">@ViewData["Title"]</h1>
+
+<div class="form-container" style="text-align:center;">
+    <div class="form-inner">
+        <form class="signup" asp-action="Preferences" asp-controller="User" method="post" enctype="multipart/form-data">
+            <div class="field">
+                <br />
+                    <p><label for="description" required>Napisz co lubisz bądź nie lubisz jeść</label></p>
+                <textarea id="description" name="description" rows="4" cols="50"></textarea>
+                   
+                    
+            </div>
+            <div class="field">
+                <br />
+                <p>Podaj wagę którą chcesz uzyskać</p>
+
+                <input type="text" name="weight_goal" required> kg
+            </div>
+            <br />
+            <div>
+
+                <select name="activity_status" required>
+                    <option value="0" selected="selected">Wybierz rodzaj aktywności fizycznej</option>
+                    <option value="1">Znikoma (brak aktywności)</option>
+                    <option value="2">Bardzo mała (praca siedząca,szkoła,brak ćwiczeń)</option>
+                    <option value="3">Umiarkowana(2 treningi siłowe w tygodniu)</option>
+                    <option value="4">Duża(treningi siłowe wiecej niż 2 w tygodniu)</option>
+                    <option value="5">Bardzo duża (Codzienne treningi siłowe)</option>
+                </select>
+            </div>
+
+
+
+            @if (ViewData["errorR"] != null)
+            {
+                <p class="error">@ViewData["errorR"]</p>
+            }
+            <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Wyślij preferencje">
+            </div>
+        </form>
+
+
