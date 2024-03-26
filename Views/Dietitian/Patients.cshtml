@@ -7,7 +7,6 @@
         <th>Email</th>
         <th>Imię</th>
         <th>Nazwisko</th>
-        <!-- Inne pola -->
         <th>Akcje</th>
     </tr>
     @foreach (var user in Model)
@@ -16,9 +15,11 @@
             <td>@user.Email</td>
             <td>@user.FirstName</td>
             <td>@user.LastName</td>
-            <!-- Inne pola -->
             <td>
-                <!-- Przycisk lub link do przypisania pacjenta do dietetyka -->
+                <form method="post" action="@Url.Action("AddPatient", "Dietitian")">
+                    <input type="hidden" name="userId" value="@user.Id" />
+                    <input type="submit" value="Przypisz" />
+                </form>
             </td>
         </tr>
     }

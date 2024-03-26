@@ -2,6 +2,7 @@
 using DietBowl.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace DietBowl.Controllers
 {
@@ -20,6 +21,16 @@ namespace DietBowl.Controllers
         {
             List<Models.User> patients = await _dietitianService.GetAllFreePatientsAsync();
             return View(patients); // Przekazanie listy pacjentów do widoku
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddPatient(int idToadd)
+        {
+            var emailDietitian = await User.FindFirstValue(ClaimTypes.Email);
+
+            await _dietitianService.AddPatient(emailDietitian, idToadd);
+
+            return RedirectToAction("Patients", "Dietitian");
         }
     }
 }
