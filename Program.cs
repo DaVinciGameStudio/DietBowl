@@ -1,6 +1,8 @@
 using DietBowl.EF;
 using DietBowl.Services;
+using DietBowl.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 namespace DietBowl
@@ -40,6 +42,7 @@ namespace DietBowl
             builder.Services.AddDbContext<DietBowlDbContext>(x => x.UseSqlServer(connectionString));
             //serwisy
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IDietitianService, DietitianService>();
 
             var app = builder.Build();
 

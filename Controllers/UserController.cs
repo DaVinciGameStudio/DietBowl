@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using DietBowl.EF;
 using DietBowl.Models;
-using DietBowl.Services;
+using DietBowl.Services.Interfaces;
 using DietBowl.ViewModel;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;

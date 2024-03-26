@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using DietBowl.EF;
 using DietBowl.Models;
+using DietBowl.Services.Interfaces;
 using DietBowl.ViewModel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -32,7 +33,7 @@ namespace DietBowl.Services
                 if (!usernameTaken)
                 {
                     user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password, salt);
-                    user.Role = 1;
+                    user.Role = 2;
                     _dietBowlDbContext.Users.Add(user);
                     _dietBowlDbContext.SaveChanges();
                     return true;
@@ -80,11 +81,5 @@ namespace DietBowl.Services
                 return null;
             }
         }
-
-        public async Task<List<User>> GetAllPatientsAsync()
-        {
-            return await _dietBowlDbContext.Users.Where(u => u.Role == 2).ToListAsync();
-        }
-
     }
 }
