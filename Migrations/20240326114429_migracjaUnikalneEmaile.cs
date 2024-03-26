@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DietBowl.Migrations
 {
     /// <inheritdoc />
-    public partial class poLogowaniu : Migration
+    public partial class migracjaUnikalneEmaile : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

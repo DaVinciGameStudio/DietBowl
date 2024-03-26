@@ -43,7 +43,7 @@ namespace DietBowl.Controllers
                 return Json(new { redirectToUrl = Url.Action("Index") });
             }
 
-            return Json(new { message = "Username is already taken" });
+            return Json(new { message = "Email is already taken" });
         }
          public IActionResult Register()
         {

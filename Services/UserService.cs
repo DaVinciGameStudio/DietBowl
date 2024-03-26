@@ -27,7 +27,7 @@ namespace DietBowl.Services
         {
             try
             {
-                bool usernameTaken = _dietBowlDbContext.Users.Any(u => u.FirstName == user.FirstName);
+                bool usernameTaken = _dietBowlDbContext.Users.Any(u => u.Email == user.Email);
 
                 if (!usernameTaken)
                 {
