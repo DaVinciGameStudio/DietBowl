@@ -32,7 +32,7 @@ namespace DietBowl.Services
                 if (!usernameTaken)
                 {
                     user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password, salt);
-                    user.Role = 2;
+                    user.Role = 1;
                     _dietBowlDbContext.Users.Add(user);
                     _dietBowlDbContext.SaveChanges();
                     return true;
@@ -79,6 +79,11 @@ namespace DietBowl.Services
                 Console.WriteLine($"Wystąpił błąd: {ex.Message}");
                 return null;
             }
+        }
+
+        public async Task<List<User>> GetAllPatientsAsync()
+        {
+            return await _dietBowlDbContext.Users.Where(u => u.Role == 2).ToListAsync();
         }
 
     }

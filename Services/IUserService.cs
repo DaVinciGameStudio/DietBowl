@@ -12,5 +12,8 @@ namespace DietBowl.Services
     {
         bool Register(User user);
         Task<ClaimsPrincipal> Login(UserVM user);
+
+        //dodane na lekcji - daje mozliwosc wyswietlania wszystkich uzytkownikow przez dietetyka
+        Task<List<User>> GetAllPatientsAsync();
     }
 }
