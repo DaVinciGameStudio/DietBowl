@@ -12,9 +12,9 @@ namespace DietBowl.Services
 
         }
 
-        public async Task<List<User>> GetAllPatientsAsync()
+        public async Task<List<User>> GetAllFreePatientsAsync()
         {
-            return await _dietBowlDbContext.Users.Where(u => u.Role == 2).ToListAsync();
+            return await _dietBowlDbContext.Users.Where(u => u.Role == 2 && u.IdDietician == null).ToListAsync();
         }
     }
 }

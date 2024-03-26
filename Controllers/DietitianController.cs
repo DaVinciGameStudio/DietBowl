@@ -18,7 +18,7 @@ namespace DietBowl.Controllers
         [Authorize(Roles = "1")]
         public async Task<IActionResult> Patients()
         {
-            List<Models.User> patients = await _dietitianService.GetAllPatientsAsync();
+            List<Models.User> patients = await _dietitianService.GetAllFreePatientsAsync();
             return View(patients); // Przekazanie listy pacjentów do widoku
         }
     }
