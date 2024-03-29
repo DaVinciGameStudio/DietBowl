@@ -67,6 +67,7 @@ namespace DietBowl.Services
                         {
                             new Claim(ClaimTypes.Role, foundUser.Role.ToString()),
                             new Claim(ClaimTypes.Name, foundUser.Email),
+                            //new Claim(ClaimTypes.Email, foundUser.Email), //dodane
                         };
                         ClaimsIdentity userClaims = new(claims, "login");
 

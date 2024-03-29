@@ -18,13 +18,33 @@ namespace DietBowl.Services
             return await _dietBowlDbContext.Users.Where(u => u.Role == 2 && u.IdDietician == null).ToListAsync();
         }
 
-        public async Task<bool> AddPatient(string dietitianEmail, int userId)
+        public async Task<int?> GetDietitianIdByEmail(string email)
         {
-            User? myUser = await _dietBowlDbContext.Users.Where(u => u.Email == dietitianEmail).FirstOrDefaultAsync();
-            int idDietitian = myUser.Id;
+            var dietitian = await _dietBowlDbContext.Users
+                                .FirstOrDefaultAsync(u => u.Email == email && u.Role == 1);
 
-            var userToAdd = await _dietBowlDbContext.Users.Where(u => u.Id == userId).FirstOrDefaultAsync();
-            userToAdd.Id = idDietitian;
+            return dietitian?.Id; // Zwróć ID dietetyka lub null, jeśli nie znaleziono
+        }
+
+        public async Task<bool> AddPatient(int dietitianId, int userId)
+        {
+            User? dietitianUser = await _dietBowlDbContext.Users.FirstOrDefaultAsync(u => u.Id == dietitianId && u.Role == 1); // dietetyk
+            if (dietitianUser == null)
+            {
+                // dietetyk nie został znaleziony
+                await Console.Out.WriteLineAsync("dietetyk nie został znaleziony");
+                return false;
+            }
+
+            var userToAdd = await _dietBowlDbContext.Users.FirstOrDefaultAsync(u => u.Id == userId && u.Role == 2); // pacjent
+            if (userToAdd == null)
+            {
+                // pacjent nie został znaleziony
+                await Console.Out.WriteLineAsync("pacjent nie został znaleziony");
+                return false;
+            }
+
+            userToAdd.IdDietician = dietitianUser.Id; // przypisanie id dietetyka do id pacjenta
 
             _dietBowlDbContext.Users.Update(userToAdd);
             await _dietBowlDbContext.SaveChangesAsync();
