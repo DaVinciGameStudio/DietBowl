@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\rep\DietBowl
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/rep/DietBowl/Views/Administrator/AddDietitian.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvclxBZGREaWV0aXRpYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/rep/DietBowl/Views/Administrator/Dietitians.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvclxEaWV0aXRpYW5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/rep/DietBowl/Views/Dietitian/AssignedPatients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGl0aWFuXEFzc2lnbmVkUGF0aWVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

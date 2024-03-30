@@ -104,7 +104,7 @@ namespace DietBowl.Controllers
             return Json(new { message = "Nazwa użytkownika lub hasło nieprawidłowe" });
         }
 
-        [Authorize(Roles = "1,2")]
+        [Authorize(Roles = "0,1,2")]
         public IActionResult Ograniczenia()
         {
             ViewData["Title"] = "Login";

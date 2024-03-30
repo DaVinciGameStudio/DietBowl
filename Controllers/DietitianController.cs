@@ -15,7 +15,7 @@ namespace DietBowl.Controllers
             _dietitianService = dietitianService;
         }
 
-        [Authorize(Roles = "1")]    // Tylko dla dietetyków
+        [Authorize(Roles = "1")]
         public async Task<IActionResult> Patients()
         {
             List<Models.User> freePatients = await _dietitianService.GetAllFreePatients();

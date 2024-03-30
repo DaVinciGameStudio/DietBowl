@@ -1,0 +1,48 @@
+﻿<link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
+<div class="wrapper">
+    <div class="title-text">
+        <div class="title signup">Rejestracja</div>
+    </div>
+    <div class="form-container">
+        <div class="form-inner">
+            <form class="signup" asp-action="AddDietitian" asp-controller="Admistrator" method="post" enctype="multipart/form-data">
+                <div class="field">
+                    <input type="text" name="FirstName" placeholder="Imię" required>
+                </div>
+                <div class="field">
+                    <input type="text" name="LastName" placeholder="Nazwisko" required>
+                </div>
+                <div class="field">
+                    <input type="email" name="Email" placeholder="Adres email" required>
+                </div>
+
+                <div class="field">
+                    <input type="number" name="Age" placeholder="Wiek" required>
+                </div>
+                <div class="field">
+                    <input type="tel" name="PhoneNumber" placeholder="Numer telefonu" required>
+                </div>
+                <div class="field">
+                    <input type="password" name="Password" placeholder="Hasło" required>
+                </div>
+                <div class="field">
+                    <label for="Sex">Płeć:</label>
+                    <select class="Sex" id="Sex" name="Sex">
+
+                        <option value="Mezczyzna">Mężczyzna</option>
+                        <option value="Kobieta">Kobieta</option>
+                    </select>
+                </div>
+                @if (ViewData["errorR"] != null)
+                {
+                    <p class="error">@ViewData["errorR"]</p>
+                }
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Zarejestruj">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

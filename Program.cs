@@ -43,6 +43,7 @@ namespace DietBowl
             //serwisy
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IDietitianService, DietitianService>();
+            builder.Services.AddScoped<IAdministratorService, AdministratorService>();
 
             var app = builder.Build();
 
