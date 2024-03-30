@@ -7,6 +7,8 @@
         <th>Email</th>
         <th>Imię</th>
         <th>Nazwisko</th>
+        <th>Wiek</th>
+        <th>Płeć</th>
         <th>Akcje</th>
     </tr>
     @foreach (var user in Model)
@@ -15,6 +17,8 @@
             <td>@user.Email</td>
             <td>@user.FirstName</td>
             <td>@user.LastName</td>
+            <td>@user.Age</td>
+            <td>@user.Sex</td>
             <td>
                 <form method="post" action="@Url.Action("AddPatient", "Dietitian")">
                     <input type="hidden" name="userId" value="@user.Id" />

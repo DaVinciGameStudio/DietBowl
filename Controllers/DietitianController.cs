@@ -18,8 +18,20 @@ namespace DietBowl.Controllers
         [Authorize(Roles = "1")]    // Tylko dla dietetyków
         public async Task<IActionResult> Patients()
         {
-            List<Models.User> patients = await _dietitianService.GetAllFreePatientsAsync();
-            return View(patients); // Przekazanie listy pacjentów do widoku
+            List<Models.User> freePatients = await _dietitianService.GetAllFreePatients();
+            return View(freePatients); // Przekazanie listy pacjentów do widoku
+        }
+
+        [Authorize(Roles = "1")]
+        public async Task<IActionResult> AssignedPatients()
+        {
+            var emailDietitian = User.FindFirstValue(ClaimTypes.Name); // Pobierz adres e-mail dietetyka
+
+            // Znajdź ID dietetyka na podstawie adresu e-mail
+            var dietitianId = await _dietitianService.GetDietitianIdByEmail(emailDietitian);
+
+            var patients = await _dietitianService.GetAssignedPatients((int)dietitianId);
+            return View(patients);
         }
 
         [HttpPost]

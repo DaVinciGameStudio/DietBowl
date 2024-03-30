@@ -4,8 +4,8 @@ namespace DietBowl.Services.Interfaces
 {
     public interface IDietitianService
     {
-        Task<List<User>> GetAllFreePatientsAsync();
-
+        Task<List<User>> GetAllFreePatients();
+        public Task<List<User>> GetAssignedPatients(int dietitianId);
         public Task<int?> GetDietitianIdByEmail(string email);
         public Task<bool> AddPatient(int dietitianId, int userId);
     }
