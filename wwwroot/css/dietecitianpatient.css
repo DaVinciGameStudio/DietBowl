@@ -1,0 +1,36 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    border-spacing: 0;
+}
+
+/* Stylowanie nag³ówków tabeli */
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Stylowanie komórek tabeli */
+td {
+    background-color: #8AAAE5;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Stylowanie wierszy tabeli na zmianê */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Stylowanie howera komórki */
+td:hover {
+    background-color: forestgreen;
+}
+.table-container {
+    display: flex;
+    justify-content: center;
+}
