@@ -7,60 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DietBowl.styles.css" asp-append-version="true" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #F0FFFF;
-            color: #333;
-        }
-
-        header {
-            background: white;
-            padding: 15px 0;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: auto;
-        }
-
-        .logo {
-            width: 100px;
-            display: inline-block;
-        }
-
-        .navbar-brand {
-            background: #FFF8DC;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #fff;
-            margin-right: 20px;
-        }
-
-        .logo {
-            width: 48px;
-            height: 48px;
-            text-align: left;
-        }
-
-
-        a {
-            color: black !important;
-            font-weight: bold;
-            font-size: 20px;
-            text-shadow: 2px 2px 5px white;
-        }
-
-            a:hover {
-                color: white !important;
-                text-decoration: none;
-                background-color: darkblue;
-            }
-
-        .nawband {
-            background-color: #8AAAE5;
-        }
-
-    </style>
+    
 </head>
 <body>
 
@@ -68,10 +15,15 @@
 
         <nav class="navbar navbar-expand-sm w-100 navbar-toggleable-sm navbar-light
                     border-bottom mb-9 flex-row fixed justify-content-end d-flex" style="height:70px;">
-            <img src="~/images/logo.png" class="logo" alt="logo" />
 
-
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+        
             <ul class="navbar-nav flex-grow-1 w-100 flex-row justify-content-end p-5">
+                
 
                 <li class="nav-item">
                     <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Strona główna</a>
@@ -122,12 +74,13 @@
 
             </ul>
     </div>
-
+    
     </nav>
+    
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
-    </div>
+   
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
