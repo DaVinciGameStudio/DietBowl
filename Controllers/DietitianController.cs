@@ -35,7 +35,7 @@ namespace DietBowl.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "1")]    // Tylko dla dietetyków
+        [Authorize(Roles = "1")]
         public async Task<IActionResult> AddPatient(int userId)
         {
             var emailDietitian = User.FindFirstValue(ClaimTypes.Name); // Pobierz adres e-mail dietetyka
@@ -57,8 +57,35 @@ namespace DietBowl.Controllers
 
             // Obsługa błędu
             //ModelState.AddModelError("", "Nie udało się dodać pacjenta. Spróbuj ponownie.");
-            //return View("Error"); // Możesz utworzyć widok "Error" do wyświetlania komunikatu o błędzie
+            //return View("Error"); // Łukasz możesz utworzyć widok "Error" do wyświetlania komunikatu o błędzie
             return RedirectToAction("Index", "Home"); // Domyślna strona po zalogowaniu
         }
+
+        [HttpPost]
+        [Authorize(Roles = "1")]
+        public async Task<IActionResult> RemovePatient(int userId)
+        {
+            var emailDietitian = User.FindFirstValue(ClaimTypes.Name);
+
+            var dietitianId = await _dietitianService.GetDietitianIdByEmail(emailDietitian);
+
+            // Jeśli udało się znaleźć ID dietetyka
+            if (dietitianId != null)
+            {
+                // Usuń przypisanego pacjenta ustawiając jego dietetyka na null
+                bool result = await _dietitianService.RemovePatient(dietitianId.Value, userId);
+
+                if (result)
+                {
+                    return RedirectToAction("AssignedPatients"); // Przekierowanie do akcji "AssignedPatients" jeśli usunięcie się powiodło
+                }
+            }
+
+            // Obsługa błędu
+            //ModelState.AddModelError("", "Nie udało się usunąć pacjenta. Spróbuj ponownie.");
+            //return View("Error"); // Łukasz możesz utworzyć widok "Error" do wyświetlania komunikatu o błędzie
+            return RedirectToAction("Index", "Home"); // Domyślna strona po zalogowaniu
+        }
+
     }
 }

@@ -24,6 +24,7 @@ else
                 <th>Nazwisko</th>
                 <th>Wiek</th>
                 <th>Płeć</th>
+                <th>Akcja</th>
             </tr>
         </thead>
         <tbody>
@@ -35,6 +36,12 @@ else
                     <td>@user.LastName</td>
                     <td>@user.Age</td>
                     <td>@user.Sex</td>
+                    <td>
+                        <form method="post" action="@Url.Action("RemovePatient", "Dietitian")">
+                            <input type="hidden" name="userId" value="@user.Id" />
+                            <input type="submit" value="Usuń" onclick="return confirm('Czy na pewno chcesz usunąć tego pacjenta?');" />
+                        </form>
+                    </td>
                 </tr>
             }
         </tbody>

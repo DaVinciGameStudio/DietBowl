@@ -57,5 +57,33 @@ namespace DietBowl.Services
             await _dietBowlDbContext.SaveChangesAsync();
             return true;
         }
+
+        public async Task<bool> RemovePatient(int dietitianId, int userId)
+        {
+            try
+            {
+                var user = await _dietBowlDbContext.Users.FirstOrDefaultAsync(u => u.Id == userId);
+
+                if (user != null)
+                {
+                    // Sprawdź, czy użytkownik jest aktualnie przypisany do tego dietetyka
+                    if (user.IdDietician == dietitianId)
+                    {
+                        user.IdDietician = null;
+                        await _dietBowlDbContext.SaveChangesAsync();
+
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                // Obsługa błędu
+                Console.WriteLine($"Wystąpił błąd podczas usuwania pacjenta: {ex.Message}");
+                return false;
+            }
+        }
     }
 }

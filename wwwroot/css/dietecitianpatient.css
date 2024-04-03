@@ -28,7 +28,7 @@ tr:nth-child(even) {
 
 /* Stylowanie howera komórki */
 td:hover {
-    background-color: forestgreen;
+    background-color: cadetblue;
 }
 .table-container {
     display: flex;
