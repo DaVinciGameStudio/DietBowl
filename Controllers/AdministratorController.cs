@@ -22,6 +22,12 @@ namespace DietBowl.Controllers
             return View(dietitians);
         }
 
+        [Authorize(Roles = "0")]
+        public IActionResult AddDietitian()
+        {
+            return View();
+        }
+
         [HttpPost]
         [Authorize(Roles = "0")]
         public IActionResult AddDietitian([FromForm] User user)
@@ -32,7 +38,8 @@ namespace DietBowl.Controllers
             if (isUserAdded)
             {
                 ViewBag.UserAdded = true;
-                return Json(new { redirectToUrl = Url.Action("Index") });
+                //return Json(new { redirectToUrl = Url.Action("Index") });
+                return RedirectToAction("Dietitians", "Administrator");
             }
 
             return Json(new { message = "Email is already taken" });
