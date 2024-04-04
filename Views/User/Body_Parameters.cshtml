@@ -6,20 +6,17 @@
 
 <div class="form-container" style="text-align:center;">
     <div class="form-inner">
-        <form class="signup" asp-action="Body_Parameters" asp-controller="User" method="post" enctype="multipart/form-data">
+        <form class="signup" asp-action="AddPreference" asp-controller="User" method="post" enctype="multipart/form-data">
             <div> Waga:</div>
             <div>
-                <input type="text" name="weigth" value placeholder />
+                <input type="text" name="Weight" placeholder="Waga" />
                 <span>kg</span>
             </div>
             <div> Wzrost:</div>
             <div>
-                <input type="text" name="height" value placeholder />
-                <span>kg</span>
+                <input type="text" name="Height" placeholder="Wzrost" />
+                <span>cm</span>
             </div>
-            
-            
-
 
             @if (ViewData["errorR"] != null)
             {
@@ -36,5 +33,5 @@
             <div class="BMI">
             </div>
         </form>
-
-
+    </div>
+</div>

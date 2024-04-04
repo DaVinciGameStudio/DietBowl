@@ -82,5 +82,14 @@ namespace DietBowl.Services
                 return null;
             }
         }
+
+        public async Task<int?> GetUserIdByEmail(string email) {
+            var user = await _dietBowlDbContext.Users
+                                .FirstOrDefaultAsync(u => u.Email == email && u.Role == 2);
+
+            return user?.Id; // Zwróć ID user lub null, jeśli nie znaleziono
+        }
+
+        
     }
 }

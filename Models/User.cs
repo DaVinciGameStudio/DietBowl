@@ -34,5 +34,10 @@ namespace DietBowl.Models
 
         // Relacja jeden do wielu z diets
         public List<Diet> Diets { get; set; } = new List<Diet>();
+
+        public static implicit operator User(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

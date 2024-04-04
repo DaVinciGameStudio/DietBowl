@@ -11,6 +11,7 @@ using DietBowl.ViewModel;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.Extensions.Logging;
 
 namespace DietBowl.Controllers
@@ -115,6 +116,38 @@ namespace DietBowl.Controllers
         {
             await HttpContext.SignOutAsync();
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "2")]
+        public async Task<IActionResult> AddPreference(User user, BodyParameter bodyParameter)
+        {
+            var emailUser = User.FindFirstValue(ClaimTypes.Name);
+            var userId = await _userService.GetUserIdByEmail(emailUser);
+
+            if (userId != null) // Sprawdzamy czy zalogowany użytkownik jest tym samym, którego próbujemy aktualizować
+            {
+                
+                // Ustawiamy ID użytkownika w obiekcie bodyParameter
+                bodyParameter.UserId = userId.Value;
+                
+                // Ustawiamy datę na aktualną
+                bodyParameter.Date = DateTime.Now.Date;
+                
+                // Obliczamy BMI
+                bodyParameter.BMI = bodyParameter.Weight / Math.Pow(bodyParameter.Height / 100, 2);
+
+                await _dietBowlDbContext.BodyParameters.AddAsync(bodyParameter);
+                
+                // Zapisujemy zmiany w bazie danych
+                await _dietBowlDbContext.SaveChangesAsync();
+
+                return View("PreferenceDetails", bodyParameter);
+            }
+            else
+                {
+                    return BadRequest("Nie udało się dodać preferencji ciała. Użytkownik nie został rozpoznany lub nie masz uprawnień do wykonania tej operacji.");
+                }
         }
 
     }
