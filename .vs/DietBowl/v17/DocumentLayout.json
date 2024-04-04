@@ -1,160 +1,184 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\rep\\DietBowl\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\controllers\\dietitiancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:controllers\\dietitiancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\home\\dietician.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\home\\dietician.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\controllers\\administratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:controllers\\administratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\wwwroot\\css\\homepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\css\\homepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\home\\user.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\home\\user.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\wwwroot\\form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\administrator\\adddietitian.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\administrator\\adddietitian.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\wwwroot\\css\\dietecitianpatient.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\css\\dietecitianpatient.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\administratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\administratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\home\\user.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\home\\user.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\dietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\dietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\dietitian\\assignedpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\dietitian\\assignedpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\administrator\\dietitians.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\administrator\\adddietitian.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\administrator\\adddietitian.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\administrator\\dietitians.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\administrator\\dietitians.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\user\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\wwwroot\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\viewmodel\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:viewmodel\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\wwwroot\\css\\form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\css\\form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\dietitian\\patients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\dietitian\\patients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\home\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\home\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\controllers\\administratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:controllers\\administratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\controllers\\dietitiancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:controllers\\dietitiancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\user\\body_parameters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\body_parameters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\user\\ograniczenia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\ograniczenia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\user\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\models\\bodyparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\bodyparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\models\\allergen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\allergen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\services\\administratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\administratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\services\\dietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\dietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\viewmodel\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:viewmodel\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa2/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\interfaces\\idietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\services\\interfaces\\idietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\interfaces\\idietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\dietitian\\assignedpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\dietitian\\assignedpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\dietitian\\patients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\dietitian\\patients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\wwwroot\\css\\dietecitianpatient.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\css\\dietecitianpatient.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\wwwroot\\css\\homepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\css\\homepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\home\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\home\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\ef\\dietbowldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\ef\\dietbowldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:ef\\dietbowldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\home\\dietician.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\home\\dietician.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\wwwroot\\css\\form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\css\\form.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\user\\body_parameters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\body_parameters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\user\\ograniczenia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\ograniczenia.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\interfaces\\iadministratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\services\\interfaces\\iadministratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\interfaces\\iadministratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\models\\preference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\models\\preference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\preference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -165,15 +189,116 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 38,
+          "SelectedChildIndex": 37,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
+              "Title": "form.css",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\form.css",
+              "RelativeDocumentMoniker": "wwwroot\\form.css",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\form.css",
+              "RelativeToolTip": "wwwroot\\form.css",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAAAA8AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-04T20:21:56.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "main.css",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\css\\main.css",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\css\\main.css",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\css\\main.css",
+              "RelativeToolTip": "wwwroot\\assets\\css\\main.css",
+              "ViewState": "AQIAAGIGAAAAAAAAAAAAAHUGAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-04T20:11:09.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T20:11:05.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T20:11:04.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "BodyParameter.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\BodyParameter.cs",
+              "RelativeDocumentMoniker": "Models\\BodyParameter.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\BodyParameter.cs",
+              "RelativeToolTip": "Models\\BodyParameter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T19:40:52.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Allergen.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\Allergen.cs",
+              "RelativeDocumentMoniker": "Models\\Allergen.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\Allergen.cs",
+              "RelativeToolTip": "Models\\Allergen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T19:40:51.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
               "Title": "UserVM.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\ViewModel\\UserVM.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\ViewModel\\UserVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\UserVM.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\ViewModel\\UserVM.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\ViewModel\\UserVM.cs",
               "RelativeToolTip": "ViewModel\\UserVM.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -181,47 +306,48 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 1,
               "Title": "homepage.css",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\wwwroot\\css\\homepage.css",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\homepage.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\homepage.css",
-              "ToolTip": "E:\\rep\\DietBowl\\wwwroot\\css\\homepage.css",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\homepage.css",
               "RelativeToolTip": "wwwroot\\css\\homepage.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-01T15:12:37.119Z"
+              "WhenOpened": "2024-04-01T15:12:37.119Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 19,
               "Title": "Preferences.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Home\\Preferences.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Preferences.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Preferences.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Home\\Preferences.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Preferences.cshtml",
               "RelativeToolTip": "Views\\Home\\Preferences.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-01T15:10:12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "Error.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Shared\\Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Shared\\Error.cshtml",
               "RelativeToolTip": "Views\\Shared\\Error.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-01T15:10:01.447Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 39,
               "Title": "DietBowlDbContext.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\EF\\DietBowlDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\EF\\DietBowlDbContext.cs",
               "RelativeDocumentMoniker": "EF\\DietBowlDbContext.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\EF\\DietBowlDbContext.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\EF\\DietBowlDbContext.cs",
               "RelativeToolTip": "EF\\DietBowlDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -229,11 +355,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 26,
               "Title": "Ograniczenia.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\User\\Ograniczenia.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Ograniczenia.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Ograniczenia.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\User\\Ograniczenia.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Ograniczenia.cshtml",
               "RelativeToolTip": "Views\\User\\Ograniczenia.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -241,84 +367,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 6,
               "Title": "site.css",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\wwwroot\\css\\site.css",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "E:\\rep\\DietBowl\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAHEGAAAAAAAAAAAAAH4GAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-01T15:01:30.883Z"
+              "WhenOpened": "2024-04-01T15:01:30.883Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 15,
               "Title": "form.css",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\wwwroot\\css\\form.css",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\form.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\form.css",
-              "ToolTip": "E:\\rep\\DietBowl\\wwwroot\\css\\form.css",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\form.css",
               "RelativeToolTip": "wwwroot\\css\\form.css",
-              "ViewState": "AQIAAMkAAAAAAAAAAAAAAIgAAAAaAAAA",
+              "ViewState": "AQIAANUAAAAAAAAAAAAAAOgAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-04-01T15:01:09.497Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 5,
               "Title": "dietecitianpatient.css",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\wwwroot\\css\\dietecitianpatient.css",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\dietecitianpatient.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\dietecitianpatient.css",
-              "ToolTip": "E:\\rep\\DietBowl\\wwwroot\\css\\dietecitianpatient.css",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\dietecitianpatient.css",
               "RelativeToolTip": "wwwroot\\css\\dietecitianpatient.css",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACMAAAABAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-01T14:57:21.205Z"
+              "WhenOpened": "2024-04-01T14:57:21.205Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 25,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\User\\Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Login.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\User\\Login.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Login.cshtml",
               "RelativeToolTip": "Views\\User\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAxAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-01T14:55:20.223Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 24,
               "Title": "Body_Parameters.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\User\\Body_Parameters.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Body_Parameters.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Body_Parameters.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\User\\Body_Parameters.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Body_Parameters.cshtml",
               "RelativeToolTip": "Views\\User\\Body_Parameters.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABQAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-01T14:55:18.652Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "User.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Home\\User.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\User.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\User.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Home\\User.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\User.cshtml",
               "RelativeToolTip": "Views\\Home\\User.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-01T14:55:15.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T14:55:15.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 14,
               "Title": "styles.css",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\wwwroot\\css\\styles.css",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\styles.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\styles.css",
-              "ToolTip": "E:\\rep\\DietBowl\\wwwroot\\css\\styles.css",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\styles.css",
               "RelativeToolTip": "wwwroot\\css\\styles.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -326,49 +453,47 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "AddDietitian.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Administrator\\AddDietitian.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Administrator\\AddDietitian.cshtml",
               "RelativeDocumentMoniker": "Views\\Administrator\\AddDietitian.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Administrator\\AddDietitian.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Administrator\\AddDietitian.cshtml",
               "RelativeToolTip": "Views\\Administrator\\AddDietitian.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-30T13:21:39.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-30T13:21:39.323Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 20,
               "Title": "AdministratorController.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Controllers\\AdministratorController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\AdministratorController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdministratorController.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Controllers\\AdministratorController.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\AdministratorController.cs",
               "RelativeToolTip": "Controllers\\AdministratorController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAwwCkAAABHAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAwwCcAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-30T12:49:08.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-30T12:49:08.152Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Dietitians.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Administrator\\Dietitians.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Administrator\\Dietitians.cshtml",
               "RelativeDocumentMoniker": "Views\\Administrator\\Dietitians.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Administrator\\Dietitians.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Administrator\\Dietitians.cshtml",
               "RelativeToolTip": "Views\\Administrator\\Dietitians.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAABXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-30T12:45:40.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 43,
               "Title": "BaseService.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\BaseService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\BaseService.cs",
               "RelativeDocumentMoniker": "Services\\BaseService.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Services\\BaseService.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\BaseService.cs",
               "RelativeToolTip": "Services\\BaseService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -376,11 +501,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 32,
               "Title": "AdministratorService.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\AdministratorService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\AdministratorService.cs",
               "RelativeDocumentMoniker": "Services\\AdministratorService.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Services\\AdministratorService.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\AdministratorService.cs",
               "RelativeToolTip": "Services\\AdministratorService.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAwwB4AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -388,11 +513,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 41,
               "Title": "IAdministratorService.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\Interfaces\\IAdministratorService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\Interfaces\\IAdministratorService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IAdministratorService.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Services\\Interfaces\\IAdministratorService.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\Interfaces\\IAdministratorService.cs",
               "RelativeToolTip": "Services\\Interfaces\\IAdministratorService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -400,11 +525,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 44,
               "Title": "Preference.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Models\\Preference.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\Preference.cs",
               "RelativeDocumentMoniker": "Models\\Preference.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Models\\Preference.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\Preference.cs",
               "RelativeToolTip": "Models\\Preference.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -412,23 +537,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 10,
               "Title": "AssignedPatients.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Dietitian\\AssignedPatients.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Dietitian\\AssignedPatients.cshtml",
               "RelativeDocumentMoniker": "Views\\Dietitian\\AssignedPatients.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Dietitian\\AssignedPatients.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Dietitian\\AssignedPatients.cshtml",
               "RelativeToolTip": "Views\\Dietitian\\AssignedPatients.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACoAAAAfAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-30T10:26:44.213Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "Privacy.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Home\\Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Privacy.cshtml",
               "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -436,59 +561,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 8,
               "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-30T09:22:27.541Z"
+              "WhenOpened": "2024-03-30T09:22:27.541Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGAAAABzAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-30T09:20:57.255Z"
+              "WhenOpened": "2024-03-30T09:20:57.255Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 0,
               "Title": "Dietician.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Home\\Dietician.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Dietician.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Dietician.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Home\\Dietician.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Dietician.cshtml",
               "RelativeToolTip": "Views\\Home\\Dietician.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-30T09:14:10.083Z"
+              "WhenOpened": "2024-03-30T09:14:10.083Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAmwBMAAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-30T09:14:08.812Z"
+              "WhenOpened": "2024-03-30T09:14:08.812Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 42,
               "Title": "IUserService.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\Interfaces\\IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IUserService.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\Interfaces\\IUserService.cs",
               "RelativeToolTip": "Services\\Interfaces\\IUserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -496,35 +625,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 27,
               "Title": "Preferences.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\User\\Preferences.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Preferences.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Preferences.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\User\\Preferences.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Preferences.cshtml",
               "RelativeToolTip": "Views\\User\\Preferences.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-29T13:41:53.907Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 28,
               "Title": "Register.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\User\\Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Register.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\User\\Register.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Register.cshtml",
               "RelativeToolTip": "Views\\User\\Register.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACYAAAARAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACYAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-29T13:41:50.899Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 33,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAwwCwAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -532,24 +661,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UserController.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAwwGEAAABAAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAmwF0AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T13:14:54.911Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 40,
               "Title": "UserService.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\UserService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\UserService.cs",
               "RelativeToolTip": "Services\\UserService.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAowBMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -557,11 +686,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 38,
               "Title": "IDietitianService.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\Interfaces\\IDietitianService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\Interfaces\\IDietitianService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IDietitianService.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Services\\Interfaces\\IDietitianService.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\Interfaces\\IDietitianService.cs",
               "RelativeToolTip": "Services\\Interfaces\\IDietitianService.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAswAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -569,11 +698,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 36,
               "Title": "User.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAcwAsAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -581,11 +710,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 34,
               "Title": "DietitianService.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\DietitianService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\DietitianService.cs",
               "RelativeDocumentMoniker": "Services\\DietitianService.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Services\\DietitianService.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\DietitianService.cs",
               "RelativeToolTip": "Services\\DietitianService.cs",
               "ViewState": "AQIAAEAAAAAAAAAAAAAAADwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -593,11 +722,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -605,19 +734,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Patients.cshtml",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Dietitian\\Patients.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Dietitian\\Patients.cshtml",
               "RelativeDocumentMoniker": "Views\\Dietitian\\Patients.cshtml",
-              "ToolTip": "E:\\rep\\DietBowl\\Views\\Dietitian\\Patients.cshtml",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Dietitian\\Patients.cshtml",
               "RelativeToolTip": "Views\\Dietitian\\Patients.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-29T12:41:54.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 37,
               "Title": "dbo.Users [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa2/True/SqlTable/dbo.Users.sql",
               "ToolTip": "dbo.Users [Data]",
@@ -626,16 +755,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 21,
               "Title": "DietitianController.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Controllers\\DietitianController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\DietitianController.cs",
               "RelativeDocumentMoniker": "Controllers\\DietitianController.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Controllers\\DietitianController.cs",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\DietitianController.cs",
               "RelativeToolTip": "Controllers\\DietitianController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAQwDUAAABeAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAwwFAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T12:37:09.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-29T12:37:09.498Z"
             }
           ]
         }
