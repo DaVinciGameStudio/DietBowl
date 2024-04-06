@@ -46,7 +46,10 @@
                                 <a class="nav-link" asp-area="" asp-controller="User" asp-action="Preferences">Preferencje</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="User" asp-action="Body_Parameters">Parametry ciała</a>
+                                <a class="nav-link" asp-area="" asp-controller="User" asp-action="AddBodyParameters">dodaj parametry ciała</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="User" asp-action="BodyParameters">Moje parametry ciala</a>
                             </li>
                         }
                         else if (User.IsInRole("0"))

@@ -24,7 +24,7 @@ namespace DietBowl.Services
             // _salt = settings.Value.Salt;
         }
 
-        public bool Register(User user) 
+        public bool Register(User user)
         {
             try
             {
@@ -83,13 +83,17 @@ namespace DietBowl.Services
             }
         }
 
-        public async Task<int?> GetUserIdByEmail(string email) {
+        public async Task<int?> GetUserIdByEmail(string email)
+        {
             var user = await _dietBowlDbContext.Users
                                 .FirstOrDefaultAsync(u => u.Email == email && u.Role == 2);
 
             return user?.Id; // Zwróć ID user lub null, jeśli nie znaleziono
         }
 
-        
+        public async Task<List<BodyParameter>> GetBodyParameters(int userId)
+        {
+            return await _dietBowlDbContext.BodyParameters.Where(bp => bp.UserId == userId).ToListAsync();
+        }
     }
 }

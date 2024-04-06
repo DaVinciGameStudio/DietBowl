@@ -55,12 +55,17 @@ namespace DietBowl.EF
                 .WithOne(d => d.User)
                 .HasForeignKey(d => d.UserId);
 
-            //Relacja jeden do jeden dla user i preferences - POPRAWIC
+            //Relacja jeden do jeden dla user i preferences - POPRAWIC?
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Preference)
                 .WithOne(p => p.User)
                 .HasForeignKey<Preference>(p => p.UserId);
 
+            //Relacja jeden do jeden dla user i userNutritionalRequirement
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.UserNutritionalRequirement)
+                .WithOne(p => p.User)
+                .HasForeignKey<UserNutritionalRequirement>(p => p.UserId);
 
         }
     }

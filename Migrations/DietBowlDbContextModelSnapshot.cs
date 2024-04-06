@@ -234,6 +234,37 @@ namespace DietBowl.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("DietBowl.Models.UserNutritionalRequirement", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("Calories")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Carbohydrate")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Fat")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Protein")
+                        .HasColumnType("float");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("UserNutritionalRequirement");
+                });
+
             modelBuilder.Entity("DietRecipe", b =>
                 {
                     b.Property<int>("DietsId")
@@ -312,6 +343,17 @@ namespace DietBowl.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("DietBowl.Models.UserNutritionalRequirement", b =>
+                {
+                    b.HasOne("DietBowl.Models.User", "User")
+                        .WithOne("UserNutritionalRequirement")
+                        .HasForeignKey("DietBowl.Models.UserNutritionalRequirement", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("DietRecipe", b =>
                 {
                     b.HasOne("DietBowl.Models.Diet", null)
@@ -334,6 +376,9 @@ namespace DietBowl.Migrations
                     b.Navigation("Diets");
 
                     b.Navigation("Preference")
+                        .IsRequired();
+
+                    b.Navigation("UserNutritionalRequirement")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

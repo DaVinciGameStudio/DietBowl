@@ -29,6 +29,9 @@ namespace DietBowl.Models
         // Relacja 1:1 z preference
         public Preference Preference { get; set; } = null;
 
+        // Relacja 1:1 z userNutritionalRequirement
+        public UserNutritionalRequirement UserNutritionalRequirement { get; set; } = null;
+
         // Relacja jeden do wielu z bodyParameter
         public List<BodyParameter> BodyParameters {get; set;} = new List<BodyParameter>();
 

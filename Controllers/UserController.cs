@@ -6,12 +6,14 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using DietBowl.EF;
 using DietBowl.Models;
+using DietBowl.Services;
 using DietBowl.Services.Interfaces;
 using DietBowl.ViewModel;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace DietBowl.Controllers
@@ -41,12 +43,13 @@ namespace DietBowl.Controllers
             if (isUserAdded)
             {
                 ViewBag.UserAdded = true;
-                return Json(new { redirectToUrl = Url.Action("Index") });
+                //return Json(new { redirectToUrl = Url.Action("Index") });
+                return RedirectToAction("Login", "User");
             }
 
             return Json(new { message = "Email is already taken" });
         }
-         public IActionResult Register()
+        public IActionResult Register()
         {
             ViewData["Title"] = "Rejestracja";
             return View();
@@ -57,14 +60,19 @@ namespace DietBowl.Controllers
             ViewData["Title"] = "Login";
             return View();
         }
-        public IActionResult Preferences()
+        public IActionResult AddPreference()
         {
-            ViewData["Title"] = "Preferencje";
+            ViewData["Title"] = "Dodaj preferencje";
             return View();
         }
-        public IActionResult Body_Parameters()
+        public IActionResult EditPreference()
         {
-            ViewData["Title"] = "Parametry ciała";
+            ViewData["Title"] = "Edytuj preferencje";
+            return View();
+        }
+        public IActionResult AddBodyParameters()
+        {
+            ViewData["Title"] = "Dodaj parametry ciała";
             return View();
         }
 
@@ -80,7 +88,7 @@ namespace DietBowl.Controllers
             ViewData["Title"] = "Logowanie";
             Task<ClaimsPrincipal>? principal = _userService.Login(user);
 
-            if(principal.Result != null)
+            if (principal.Result != null)
             {
                 await HttpContext.SignInAsync(principal.Result);
 
@@ -120,35 +128,55 @@ namespace DietBowl.Controllers
 
         [HttpPost]
         [Authorize(Roles = "2")]
-        public async Task<IActionResult> AddPreference(User user, BodyParameter bodyParameter)
+        public async Task<IActionResult> AddBodyParameter(User user, BodyParameter bodyParameter)
         {
             var emailUser = User.FindFirstValue(ClaimTypes.Name);
             var userId = await _userService.GetUserIdByEmail(emailUser);
 
-            if (userId != null) // Sprawdzamy czy zalogowany użytkownik jest tym samym, którego próbujemy aktualizować
+            if (userId != null)
             {
-                
+                var today = DateTime.Now.Date;
+                var existingParameter = await _dietBowlDbContext.BodyParameters
+                    .Where(bp => bp.UserId == userId && bp.Date == today)
+                    .FirstOrDefaultAsync();
+
+                if (existingParameter != null)
+                {
+                    //Trzeba dodac jakas obsluge tego jak uzytkownik dodal juz parametry dzisiejszego dnia
+                    //poki co przekierowuje go po prostu na liste parametrow
+                    return RedirectToAction("BodyParameters");
+                }
+
                 // Ustawiamy ID użytkownika w obiekcie bodyParameter
                 bodyParameter.UserId = userId.Value;
-                
+
                 // Ustawiamy datę na aktualną
                 bodyParameter.Date = DateTime.Now.Date;
-                
-                // Obliczamy BMI
-                bodyParameter.BMI = bodyParameter.Weight / Math.Pow(bodyParameter.Height / 100, 2);
+
+                // Obliczamy BMI i zaokrąglamy do trzeciego miejsca po przecinku
+                bodyParameter.BMI = Math.Round(bodyParameter.Weight / Math.Pow(bodyParameter.Height / 100, 2), 3);
 
                 await _dietBowlDbContext.BodyParameters.AddAsync(bodyParameter);
-                
-                // Zapisujemy zmiany w bazie danych
                 await _dietBowlDbContext.SaveChangesAsync();
 
-                return View("PreferenceDetails", bodyParameter);
+                // Po pomyślnym dodaniu przekieruj do widoku z wszystkimi parametrami ciała
+                return RedirectToAction("BodyParameters");
             }
             else
-                {
-                    return BadRequest("Nie udało się dodać preferencji ciała. Użytkownik nie został rozpoznany lub nie masz uprawnień do wykonania tej operacji.");
-                }
+            {
+                return BadRequest("Nie udało się dodać parametrów ciała. Użytkownik nie został rozpoznany lub nie masz uprawnień do wykonania tej operacji.");
+            }
         }
 
+        [Authorize(Roles = "2")]
+        public async Task<IActionResult> BodyParameters()
+        {
+            var emailUser = User.FindFirstValue(ClaimTypes.Name);
+            var userId = await _userService.GetUserIdByEmail(emailUser);
+
+
+            var bodyParameters = await _userService.GetBodyParameters((int)userId);
+            return View(bodyParameters);
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace DietBowl.Services.Interfaces
     {
         bool Register(User user);
         Task<ClaimsPrincipal> Login(UserVM user);
-        public Task<int?> GetUserIdByEmail(string email);
+        Task<int?> GetUserIdByEmail(string email);
+        Task<List<BodyParameter>> GetBodyParameters(int userId);
     }
 }
