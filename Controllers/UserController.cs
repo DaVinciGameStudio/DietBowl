@@ -186,7 +186,8 @@ namespace DietBowl.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var userId = await _userService.GetUserIdByEmail(User.FindFirstValue(ClaimTypes.Name));
+                    var emailUser = User.FindFirstValue(ClaimTypes.Name);
+                    var userId = await _userService.GetUserIdByEmail(emailUser);
                     var preference = new Preference
                     {
                         UserId = userId.Value,
