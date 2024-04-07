@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\rep\\DietBowl\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\user\\addpreference.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\addpreference.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\viewmodel\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:viewmodel\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\viewmodel\\allergenvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -166,11 +166,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 25,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AddPreference.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\User\\AddPreference.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\AddPreference.cshtml",
@@ -195,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PreferenceVM.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\ViewModel\\PreferenceVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\PreferenceVM.cs",
@@ -203,12 +203,11 @@
               "RelativeToolTip": "ViewModel\\PreferenceVM.cs",
               "ViewState": "AQIAABIAAAAAAAAAAADwvxsAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T10:28:17.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T10:28:17.59Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UserController.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -216,8 +215,7 @@
               "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AQIAANcAAAAAAAAAAAASwOIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T13:14:54.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-29T13:14:54.911Z"
             },
             {
               "$type": "Document",
@@ -242,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UserVM.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\ViewModel\\UserVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\UserVM.cs",
@@ -467,15 +465,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "E:\\rep\\DietBowl\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAACgAAAAAAAAAAAAAADYAAABvAAAA",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAAGAAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-06T12:03:35.049Z"
+              "WhenOpened": "2024-04-06T12:03:35.049Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
