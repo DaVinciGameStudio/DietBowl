@@ -1,0 +1,48 @@
+﻿@model DietBowl.ViewModel.PreferenceVM
+
+@{
+    ViewData["Title"] = "Dodaj preferencje";
+}
+
+<h2>@ViewData["Title"]]</h2>
+
+@using (Html.BeginForm("AddPreference", "Preferences", FormMethod.Post))
+{
+    <div class="form-group">
+        <label asp-for="Description">Opis</label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="WeightGoal">Cel wagi</label>
+        <input asp-for="WeightGoal" class="form-control" type="number" />
+        <span asp-validation-for="WeightGoal" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ActivityStatus">Status aktywności</label>
+        @* <select asp-for="ActivityStatus" asp-items="@(new SelectList(Model.ActivityStatusOptions))" class="form-control"></select> *@
+        <select asp-for="ActivityStatus" asp-items="Model.ActivityStatusOptions" class="form-control"></select>
+        <span asp-validation-for="ActivityStatus" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Alergeny</label>
+        @foreach (var allergen in Model.AvailableAllergens)
+        {
+            <div class="form-check">
+                <input asp-for="@Model.SelectedAllergensIds" class="form-check-input" type="checkbox" value="@allergen.Id" />
+                <label class="form-check-label">@allergen.Name</label>
+            </div>
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Dodaj preferencje</button>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

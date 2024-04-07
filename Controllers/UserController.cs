@@ -60,19 +60,16 @@ namespace DietBowl.Controllers
             ViewData["Title"] = "Login";
             return View();
         }
-        public IActionResult AddPreference()
-        {
-            ViewData["Title"] = "Dodaj preferencje";
-            return View();
-        }
-        public IActionResult EditPreference()
-        {
-            ViewData["Title"] = "Edytuj preferencje";
-            return View();
-        }
+
         public IActionResult AddBodyParameters()
         {
             ViewData["Title"] = "Dodaj parametry ciała";
+            return View();
+        }
+
+        public IActionResult AddPreference()
+        {
+            ViewData["Title"] = "Dodaj preferencje";
             return View();
         }
 
@@ -177,6 +174,54 @@ namespace DietBowl.Controllers
 
             var bodyParameters = await _userService.GetBodyParameters((int)userId);
             return View(bodyParameters);
+        }
+
+
+
+        //Preferencje
+        [HttpPost]
+        public async Task<IActionResult> AddPreference(PreferenceVM model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var userId = await _userService.GetUserIdByEmail(User.FindFirstValue(ClaimTypes.Name));
+                    var preference = new Preference
+                    {
+                        UserId = userId.Value,
+                        Description = model.Description,
+                        WeightGoal = model.WeightGoal,
+                        ActivityStatus = model.ActivityStatus
+                    };
+
+                    foreach (var allergenId in model.SelectedAllergensIds)
+                    {
+                        var allergen = await _dietBowlDbContext.Allergens.FindAsync(allergenId);
+                        if (allergen != null)
+                        {
+                            preference.Allergens.Add(allergen);
+                        }
+                    }
+
+                    _dietBowlDbContext.Preferences.Add(preference);
+                    await _dietBowlDbContext.SaveChangesAsync();
+                    return RedirectToAction("Index", "Home"); // Zaktualizuj według potrzeb
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "An error occurred while adding preferences.");
+                _logger.LogError(ex, "An error occurred while adding preferences.");
+            }
+
+            model.AvailableAllergens = await LoadAvailableAllergensAsync();
+            return View(model);
+        }
+
+        private async Task<List<AllergenVM>> LoadAvailableAllergensAsync()
+        {
+            return await _dietBowlDbContext.Allergens.Select(a => new AllergenVM { Id = a.Id, Name = a.Name }).ToListAsync();
         }
     }
 }
