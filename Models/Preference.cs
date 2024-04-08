@@ -17,7 +17,7 @@ namespace DietBowl.Models
 
         // Relacja 1:1 z User
         public int UserId {get; set;}
-        public User User { get; set; }
+        public User User { get; set; } = null;
 
     }
 }

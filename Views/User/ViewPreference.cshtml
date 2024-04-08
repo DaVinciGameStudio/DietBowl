@@ -1,0 +1,28 @@
+﻿@model DietBowl.Models.Preference
+
+@{
+    ViewData["Title"] = "Preferencje użytkownika";
+}
+
+<h1>Preferencje użytkownika</h1>
+
+@if (Model == null)
+{
+    <p>Preferencje dla tego użytkownika nie zostały jeszcze dodane.</p>
+    <a asp-action="AddPreference" asp-route-userId="@ViewBag.UserId" class="btn btn-primary">Dodaj preferencje</a>
+}
+else
+{
+    <h2>Opis preferencji:</h2>
+    <p>@Model.Description</p>
+    <h2>Cele wagowe:</h2>
+    <p>@Model.WeightGoal</p>
+    <h2>Aktywność:</h2>
+    <p>@Model.ActivityStatus</p>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

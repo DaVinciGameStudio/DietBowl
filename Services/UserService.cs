@@ -97,6 +97,15 @@ namespace DietBowl.Services
         }
 
         //Preferencje
+        public async Task<Preference> GetUserPreferences(int userId)
+        {
+            // Pobierz preferencje użytkownika na podstawie podanego userId
+            var userPreferences = await _dietBowlDbContext.Preferences
+                .FirstOrDefaultAsync(p => p.UserId == userId);
+
+            return userPreferences;
+        }
+
         public async Task AddUserPreference(int userId, Preference preference)
         {
             var user = await _dietBowlDbContext.Users.FindAsync(userId);

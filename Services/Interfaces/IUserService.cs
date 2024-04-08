@@ -16,5 +16,6 @@ namespace DietBowl.Services.Interfaces
         Task<List<BodyParameter>> GetBodyParameters(int userId);
         Task AddUserPreference(int userId, Preference preference);
         Task<User> GetUserById(int userId);
+        Task<Preference> GetUserPreferences(int userId);
     }
 }
