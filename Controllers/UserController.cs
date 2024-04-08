@@ -179,50 +179,114 @@ namespace DietBowl.Controllers
 
 
         //Preferencje
-        [HttpPost]
-        public async Task<IActionResult> AddPreference(PreferenceVM model)
+        //[HttpPost]
+        //public async Task<IActionResult> AddPreference(PreferenceVM model)
+        //{
+        //    try
+        //    {
+        //        if (ModelState.IsValid)
+        //        {
+        //            var emailUser = User.FindFirstValue(ClaimTypes.Name);
+        //            var userId = await _userService.GetUserIdByEmail(emailUser);
+        //            var preference = new Preference
+        //            {
+        //                UserId = userId.Value,
+        //                Description = model.Description,
+        //                WeightGoal = model.WeightGoal,
+        //                ActivityStatus = model.ActivityStatus
+        //            };
+
+        //            foreach (var allergenId in model.SelectedAllergensIds)
+        //            {
+        //                var allergen = await _dietBowlDbContext.Allergens.FindAsync(allergenId);
+        //                if (allergen != null)
+        //                {
+        //                    preference.Allergens.Add(allergen);
+        //                }
+        //            }
+
+        //            _dietBowlDbContext.Preferences.Add(preference);
+        //            await _dietBowlDbContext.SaveChangesAsync();
+        //            return RedirectToAction("Index", "Home"); // Zaktualizuj według potrzeb
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ModelState.AddModelError("", "An error occurred while adding preferences.");
+        //        _logger.LogError(ex, "An error occurred while adding preferences.");
+        //    }
+
+        //    model.AvailableAllergens = await LoadAvailableAllergensAsync();
+        //    return View(model);
+        //}
+
+        //private async Task<List<AllergenVM>> LoadAvailableAllergensAsync()
+        //{
+        //    return await _dietBowlDbContext.Allergens.Select(a => new AllergenVM { Id = a.Id, Name = a.Name }).ToListAsync();
+        //}
+
+
+        [Authorize(Roles = "2")]
+        [HttpGet]
+        public async Task<IActionResult> AddPreference(int userId)
         {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    var emailUser = User.FindFirstValue(ClaimTypes.Name);
-                    var userId = await _userService.GetUserIdByEmail(emailUser);
-                    var preference = new Preference
-                    {
-                        UserId = userId.Value,
-                        Description = model.Description,
-                        WeightGoal = model.WeightGoal,
-                        ActivityStatus = model.ActivityStatus
-                    };
+            var emailUser = User.FindFirstValue(ClaimTypes.Name);
+            userId = (int)await _userService.GetUserIdByEmail(emailUser);
 
-                    foreach (var allergenId in model.SelectedAllergensIds)
-                    {
-                        var allergen = await _dietBowlDbContext.Allergens.FindAsync(allergenId);
-                        if (allergen != null)
-                        {
-                            preference.Allergens.Add(allergen);
-                        }
-                    }
 
-                    _dietBowlDbContext.Preferences.Add(preference);
-                    await _dietBowlDbContext.SaveChangesAsync();
-                    return RedirectToAction("Index", "Home"); // Zaktualizuj według potrzeb
-                }
-            }
-            catch (Exception ex)
+
+            var user = await _userService.GetUserById(userId);
+            if (user == null)
             {
-                ModelState.AddModelError("", "An error occurred while adding preferences.");
-                _logger.LogError(ex, "An error occurred while adding preferences.");
+                return NotFound();
             }
 
-            model.AvailableAllergens = await LoadAvailableAllergensAsync();
+            // Pobierz listę alergenów z bazy danych
+            var allergens = await _dietBowlDbContext.Allergens.ToListAsync();
+
+            // Przygotuj model dla widoku
+            var model = new Preference
+            {
+                UserId = userId // Upewnij się, że UserId jest przekazywane do modelu, jeśli jest potrzebne
+            };
+
+            // Przekaż listę alergenów do ViewBag, aby móc ją wykorzystać w widoku
+            ViewBag.Allergens = allergens;
+
             return View(model);
         }
 
-        private async Task<List<AllergenVM>> LoadAvailableAllergensAsync()
+        [Authorize(Roles = "2")]
+        [HttpPost]
+        public async Task<IActionResult> AddPreference(Preference preference, int[] selectedAllergens)
         {
-            return await _dietBowlDbContext.Allergens.Select(a => new AllergenVM { Id = a.Id, Name = a.Name }).ToListAsync();
+            if (ModelState.IsValid)
+            {
+                var user = await _userService.GetUserById(preference.UserId);
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
+                // Dodawanie wybranych alergenów do preferencji
+                foreach (var allergenId in selectedAllergens)
+                {
+                    var allergen = await _dietBowlDbContext.Allergens.FindAsync(allergenId);
+                    if (allergen != null)
+                    {
+                        preference.Allergens.Add(allergen);
+                    }
+                }
+
+                // Tutaj logika zapisu preferencji (może wymagać implementacji w serwisie)
+                await _userService.AddUserPreference(preference.UserId, preference);
+
+                return RedirectToAction(nameof(Index)); // Przekieruj do odpowiedniej akcji po pomyślnym dodaniu
+            }
+
+            // Jeśli model nie jest prawidłowy, ponownie wyświetl formularz (zachowaj dane użytkownika)
+            ViewBag.Allergens = await _dietBowlDbContext.Allergens.ToListAsync();
+            return View(preference);
         }
     }
 }

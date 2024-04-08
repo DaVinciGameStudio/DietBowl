@@ -95,5 +95,34 @@ namespace DietBowl.Services
         {
             return await _dietBowlDbContext.BodyParameters.Where(bp => bp.UserId == userId).ToListAsync();
         }
+
+        //Preferencje
+        public async Task AddUserPreference(int userId, Preference preference)
+        {
+            var user = await _dietBowlDbContext.Users.FindAsync(userId);
+
+            if (user == null)
+            {
+                //throw new NotFoundException("User not found");
+                await Console.Out.WriteLineAsync("Nie ma uzytkownika");
+            }
+
+            // Ustaw userId dla preferencji, jeśli nie został już ustawiony
+            preference.UserId = userId;
+
+            // Dodaj preferencję do kontekstu bazy danych
+            await _dietBowlDbContext.Preferences.AddAsync(preference);
+            await _dietBowlDbContext.SaveChangesAsync();
+        }
+
+        public async Task<User> GetUserById(int userId)
+        {
+            var user = await _dietBowlDbContext.Users
+                .AsNoTracking() // Opcjonalnie, zwiększa wydajność zapytania, jeśli nie planujesz edytować tego obiektu
+                .Include(u => u.Preference) // Dołącz informacje o preferencjach użytkownika, jeśli są potrzebne
+                .FirstOrDefaultAsync(u => u.Id == userId);
+
+            return user;
+        }
     }
 }
