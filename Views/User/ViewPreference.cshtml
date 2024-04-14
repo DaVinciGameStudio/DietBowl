@@ -3,13 +3,16 @@
 @{
     ViewData["Title"] = "Preferencje użytkownika";
 }
+<link rel="stylesheet" href="~/css/user.css" asp-append-version="true" />
 
-<h1>Preferencje użytkownika</h1>
+
+<h1 style="text-align:center">Preferencje użytkownika</h1>
 
 @if (Model == null)
 {
-    <p>Preferencje dla tego użytkownika nie zostały jeszcze dodane.</p>
-    <a asp-action="AddPreference" asp-route-userId="@ViewBag.UserId" class="btn btn-primary">Dodaj preferencje</a>
+    <p style="text-align:center">Preferencje dla tego użytkownika nie zostały jeszcze dodane.</p>
+    <br />
+    <a asp-action="AddPreference" asp-route-userId="@ViewBag.UserId" class="btn btn-success">Dodaj preferencje</a>
 }
 else
 {
@@ -20,7 +23,7 @@ else
     <h2>Aktywność:</h2>
     <p>@Model.ActivityStatus</p>
 }
-
+</div>
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

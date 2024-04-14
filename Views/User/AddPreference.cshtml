@@ -6,6 +6,8 @@
 
 <h2>@ViewData["Title"]</h2>
 
+<link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+
 <form asp-action="AddPreference" asp-controller="User" method="post">
     <input type="hidden" asp-for="UserId" />
     <div class="form-group">
@@ -36,5 +38,5 @@
             </div>
         }
     </div>
-    <button type="submit" class="btn btn-primary">Zapisz preferencje</button>
+    <button type="submit" class="btn btn-success">Zapisz preferencje</button>
 </form>

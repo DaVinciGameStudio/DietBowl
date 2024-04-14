@@ -27,7 +27,7 @@
                     <td>
                         @if (bodyParameter.Date.Date == DateTime.Now.Date)
                         {
-                            <a href="@Url.Action("EditBodyParameter", "User", new { id = bodyParameter.Id })" class="btn btn-primary">Edytuj - prace w toku</a>
+                            <a href="@Url.Action("EditBodyParameter", "User", new { id = bodyParameter.Id })" class="btn btn-warning">Edytuj - prace w toku</a>
                         }
                     </td>
                 </tr>

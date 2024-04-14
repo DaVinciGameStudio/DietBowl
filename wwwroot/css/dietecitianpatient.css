@@ -27,9 +27,6 @@ tr:nth-child(even) {
 }
 
 /* Stylowanie howera komórki */
-td:hover {
-    background-color: cadetblue;
-}
 .table-container {
     display: flex;
     justify-content: center;

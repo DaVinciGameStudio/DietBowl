@@ -5,7 +5,8 @@
     <br />
 <h2 style="text-align:center">Lista Pacjentów</h2>
 
-<table>
+<table class="table table-bordered  table-hover">
+    <thead class="table table-dark">
     <tr>
         <th>Email</th>
         <th>Imię</th>
@@ -13,9 +14,12 @@
         <th>Wiek</th>
         <th>Płeć</th>
         <th>Akcje</th>
+
     </tr>
+    </thead>
     @foreach (var user in Model)
     {
+        <tbody>
         <tr>
             <td>@user.Email</td>
             <td>@user.FirstName</td>
@@ -25,9 +29,10 @@
             <td>
                 <form method="post" action="@Url.Action("AddPatient", "Dietitian")">
                     <input type="hidden" name="userId" value="@user.Id" />
-                    <input type="submit" value="Przypisz" onclick="return confirm('Czy na pewno chcesz przypisać tego pacjenta do dietetyka?');" />
+                    <input class="btn btn-success" type="submit" value="Przypisz" onclick="return confirm('Czy na pewno chcesz przypisać tego pacjenta do dietetyka?');" />
                 </form>
             </td>
         </tr>
+        </tbody>
     }
 </table>
