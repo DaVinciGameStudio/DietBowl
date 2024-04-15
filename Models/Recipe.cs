@@ -10,7 +10,7 @@ namespace DietBowl.Models
     {
         public int Id {get; set;}
         public string Title {get; set;}
-        public string Ingedients {get; set;}
+        public string? Ingedients {get; set;}
         public string Instructions {get; set;}
         public double Protein {get; set;}
         public double Fat {get; set;}

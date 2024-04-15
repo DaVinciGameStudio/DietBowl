@@ -1,4 +1,6 @@
 ﻿using DietBowl.Models;
+using DietBowl.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DietBowl.Services.Interfaces
 {
@@ -9,5 +11,7 @@ namespace DietBowl.Services.Interfaces
         Task<int?> GetDietitianIdByEmail(string email);
         Task<bool> AddPatient(int dietitianId, int userId);
         Task<bool> RemovePatient(int dietitianId, int userId);
+        Task<User> GetUserById(int userId);
+        Task UpdateNutritionalRequirements(NutritionalRequirementsVM model);
     }
 }

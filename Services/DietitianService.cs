@@ -1,6 +1,7 @@
 ﻿using DietBowl.EF;
 using DietBowl.Models;
 using DietBowl.Services.Interfaces;
+using DietBowl.ViewModel;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
@@ -83,6 +84,37 @@ namespace DietBowl.Services
                 // Obsługa błędu
                 Console.WriteLine($"Wystąpił błąd podczas usuwania pacjenta: {ex.Message}");
                 return false;
+            }
+        }
+
+
+        //Makrosklaniki
+        public async Task<User> GetUserById(int userId)
+        {
+            return await _dietBowlDbContext.Users
+                .Include(u => u.UserNutritionalRequirement)
+                .FirstOrDefaultAsync(u => u.Id == userId);
+        }
+
+        public async Task UpdateNutritionalRequirements(NutritionalRequirementsVM model)
+        {
+            var user = await _dietBowlDbContext.Users
+                .Include(u => u.UserNutritionalRequirement)
+                .FirstOrDefaultAsync(u => u.Id == model.UserId);
+
+            if (user != null)
+            {
+                if (user.UserNutritionalRequirement == null)
+                {
+                    user.UserNutritionalRequirement = new UserNutritionalRequirement();
+                }
+
+                user.UserNutritionalRequirement.Calories = model.Calories;
+                user.UserNutritionalRequirement.Protein = model.Protein;
+                user.UserNutritionalRequirement.Fat = model.Fat;
+                user.UserNutritionalRequirement.Carbohydrate = model.Carbohydrate;
+
+                await _dietBowlDbContext.SaveChangesAsync();
             }
         }
     }

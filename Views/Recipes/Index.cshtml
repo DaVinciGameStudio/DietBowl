@@ -1,0 +1,44 @@
+﻿@model List<DietBowl.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Lista Przepisów";
+}
+
+<h1>Lista Przepisów</h1>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tytuł</th>
+                <th>Składniki</th>
+                <th>Instrukcje</th>
+                <th>Białko</th>
+                <th>Tłuszcz</th>
+                <th>Węglowodany</th>
+                <th>Kalorie</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var recipe in Model)
+            {
+                <tr>
+                    <td>@recipe.Id</td>
+                    <td>@recipe.Title</td>
+                    <td>@recipe.Ingedients</td>
+                    <td>@recipe.Instructions</td>
+                    <td>@recipe.Protein</td>
+                    <td>@recipe.Fat</td>
+                    <td>@recipe.Carbohydrate</td>
+                    <td>@recipe.Calories</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Brak przepisów do wyświetlenia.</p>
+}

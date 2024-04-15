@@ -41,6 +41,7 @@ else
                             <input type="hidden" name="userId" value="@user.Id" />
                             <input class="btn btn-danger" type="submit" value="Usuń" onclick="return confirm('Czy na pewno chcesz usunąć tego pacjenta?');" />
                         </form>
+                        <a class="btn btn-primary" href="@Url.Action("SetNutritionalRequirements", "Dietitian", new { userId = user.Id })">Makro</a>
                     </td>
                 </tr>
             }

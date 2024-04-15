@@ -1,727 +1,727 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DietBowl.bundle.scp.css",
+      "Id": "E:\\rep\\DietBowl\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DietBowl.bundle.scp.css",
       "PackagePath": "staticwebassets\\DietBowl.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\css\\main.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\css\\main.css",
       "PackagePath": "staticwebassets\\assets\\css\\main.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\about-2.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\about-2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\about-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\about.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\about.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\about.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\apple-touch-icon.png",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\apple-touch-icon.png",
       "PackagePath": "staticwebassets\\assets\\img\\apple-touch-icon.png"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\chefs\\chefs-1.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\chefs\\chefs-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\chefs\\chefs-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\chefs\\chefs-2.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\chefs\\chefs-2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\chefs\\chefs-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\chefs\\chefs-3.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\chefs\\chefs-3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\chefs\\chefs-3.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\events-1.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\events-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\events-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\events-2.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\events-2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\events-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\events-3.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\events-3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\events-3.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\favicon.png",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\favicon.png",
       "PackagePath": "staticwebassets\\assets\\img\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-1.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\gallery\\gallery-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-2.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\gallery\\gallery-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-3.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\gallery\\gallery-3.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-4.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-4.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\gallery\\gallery-4.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-5.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-5.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\gallery\\gallery-5.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-6.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-6.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\gallery\\gallery-6.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-7.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-7.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\gallery\\gallery-7.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-8.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\gallery\\gallery-8.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\gallery\\gallery-8.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\hero-img.png",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\hero-img.png",
       "PackagePath": "staticwebassets\\assets\\img\\hero-img.png"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-1.png",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-1.png",
       "PackagePath": "staticwebassets\\assets\\img\\menu\\menu-item-1.png"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-2.png",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-2.png",
       "PackagePath": "staticwebassets\\assets\\img\\menu\\menu-item-2.png"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-3.png",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-3.png",
       "PackagePath": "staticwebassets\\assets\\img\\menu\\menu-item-3.png"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-4.png",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-4.png",
       "PackagePath": "staticwebassets\\assets\\img\\menu\\menu-item-4.png"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-5.png",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-5.png",
       "PackagePath": "staticwebassets\\assets\\img\\menu\\menu-item-5.png"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-6.png",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\menu\\menu-item-6.png",
       "PackagePath": "staticwebassets\\assets\\img\\menu\\menu-item-6.png"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\reservation.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\reservation.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\reservation.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\stats-bg.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\stats-bg.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\stats-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\team-shape.svg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\team-shape.svg",
       "PackagePath": "staticwebassets\\assets\\img\\team-shape.svg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\testimonials\\testimonials-1.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\testimonials\\testimonials-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\testimonials\\testimonials-2.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\testimonials\\testimonials-2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\testimonials\\testimonials-3.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\testimonials\\testimonials-3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-3.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\img\\testimonials\\testimonials-4.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\img\\testimonials\\testimonials-4.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-4.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\js\\main.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\js\\main.js",
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\scss\\Readme.txt",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\scss\\Readme.txt",
       "PackagePath": "staticwebassets\\assets\\scss\\Readme.txt"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\aos\\aos.cjs.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\aos\\aos.cjs.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.cjs.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\aos\\aos.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\aos\\aos.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\aos\\aos.esm.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\aos\\aos.esm.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.esm.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\aos\\aos.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\aos\\aos.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\aos\\aos.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\aos\\aos.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\aos\\aos.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.json",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.json",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.json"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.scss",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.scss",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.scss"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff2",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff2",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap-icons\\fonts\\bootstrap-icons.woff2"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\bootstrap\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\css\\glightbox.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\css\\glightbox.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\css\\glightbox.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\css\\glightbox.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\css\\glightbox.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\css\\glightbox.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\css\\plyr.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\css\\plyr.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\css\\plyr.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\css\\plyr.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\css\\plyr.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\css\\plyr.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\js\\glightbox.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\js\\glightbox.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\js\\glightbox.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\js\\glightbox.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\glightbox\\js\\glightbox.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\glightbox\\js\\glightbox.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\php-email-form\\validate.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\php-email-form\\validate.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\php-email-form\\validate.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\purecounter\\purecounter_vanilla.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\purecounter\\purecounter_vanilla.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\purecounter\\purecounter_vanilla.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\purecounter\\purecounter_vanilla.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\purecounter\\purecounter_vanilla.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\purecounter\\purecounter_vanilla.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.css",
       "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.js",
       "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\dietecitianpatient.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\css\\dietecitianpatient.css",
       "PackagePath": "staticwebassets\\css\\dietecitianpatient.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\form.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\css\\form.css",
       "PackagePath": "staticwebassets\\css\\form.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\homepage.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\css\\homepage.css",
       "PackagePath": "staticwebassets\\css\\homepage.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\site.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\styles.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\css\\styles.css",
       "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\user.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\css\\user.css",
       "PackagePath": "staticwebassets\\css\\user.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\userbody.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\css\\userbody.css",
       "PackagePath": "staticwebassets\\css\\userbody.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\favicon.ico",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\form.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\form.css",
       "PackagePath": "staticwebassets\\form.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\forms\\Readme.txt",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\forms\\Readme.txt",
       "PackagePath": "staticwebassets\\forms\\Readme.txt"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\forms\\book-a-table.php",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\forms\\book-a-table.php",
       "PackagePath": "staticwebassets\\forms\\book-a-table.php"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\forms\\contact.php",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\forms\\contact.php",
       "PackagePath": "staticwebassets\\forms\\contact.php"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\baner.png",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\images\\baner.png",
       "PackagePath": "staticwebassets\\images\\baner.png"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\dietetyczny-obiad-zdjecie.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\images\\dietetyczny-obiad-zdjecie.jpg",
       "PackagePath": "staticwebassets\\images\\dietetyczny-obiad-zdjecie.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\kasza gryczana z warzywami i serem.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\images\\kasza gryczana z warzywami i serem.jpg",
       "PackagePath": "staticwebassets\\images\\kasza gryczana z warzywami i serem.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\logo.png",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\majacademy_dania_dieteyczne-768x511.jpg",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\images\\majacademy_dania_dieteyczne-768x511.jpg",
       "PackagePath": "staticwebassets\\images\\majacademy_dania_dieteyczne-768x511.jpg"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\js\\LogRegForm.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\js\\LogRegForm.js",
       "PackagePath": "staticwebassets\\js\\LogRegForm.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\js\\login.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\js\\login.js",
       "PackagePath": "staticwebassets\\js\\login.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\js\\register.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\js\\register.js",
       "PackagePath": "staticwebassets\\js\\register.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\js\\site.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "E:\\rep\\DietBowl\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

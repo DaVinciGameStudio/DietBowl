@@ -1,5 +1,6 @@
 ﻿using DietBowl.Services;
 using DietBowl.Services.Interfaces;
+using DietBowl.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -87,5 +88,41 @@ namespace DietBowl.Controllers
             return RedirectToAction("Index", "Home"); // Domyślna strona po zalogowaniu
         }
 
+
+        //Makroskladniki
+        // Wyświetla formularz do ustawiania zapotrzebowania
+        public async Task<IActionResult> SetNutritionalRequirements(int userId)
+        {
+            var user = await _dietitianService.GetUserById(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var model = new NutritionalRequirementsVM
+            {
+                UserId = user.Id,
+                Calories = user.UserNutritionalRequirement?.Calories ?? 0,
+                Protein = user.UserNutritionalRequirement?.Protein ?? 0,
+                Fat = user.UserNutritionalRequirement?.Fat ?? 0,
+                Carbohydrate = user.UserNutritionalRequirement?.Carbohydrate ?? 0,
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SetNutritionalRequirements(NutritionalRequirementsVM model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            await _dietitianService.UpdateNutritionalRequirements(model);
+            return RedirectToAction("AssignedPatients", "Dietitian"); // Domyślna strona po zalogowaniu
+        }
     }
+
 }
+

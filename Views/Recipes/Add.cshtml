@@ -1,0 +1,53 @@
+﻿@model DietBowl.Models.Recipe
+
+@{
+    ViewData["Title"] = "Add Recipe";
+}
+
+<h1>Add Recipe</h1>
+
+<form asp-action="Add" method="post">
+    <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Ingedients" class="control-label"></label>
+        <textarea asp-for="Ingedients" class="form-control"></textarea>
+        <span asp-validation-for="Ingedients" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Instructions" class="control-label"></label>
+        <textarea asp-for="Instructions" class="form-control"></textarea>
+        <span asp-validation-for="Instructions" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Protein" class="control-label"></label>
+        <input asp-for="Protein" class="form-control" />
+        <span asp-validation-for="Protein" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Fat" class="control-label"></label>
+        <input asp-for="Fat" class="form-control" />
+        <span asp-validation-for="Fat" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Carbohydrate" class="control-label"></label>
+        <input asp-for="Carbohydrate" class="form-control" />
+        <span asp-validation-for="Carbohydrate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Calories" class="control-label"></label>
+        <input asp-for="Calories" class="form-control" />
+        <span asp-validation-for="Calories" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Recipe</button>
+</form>
