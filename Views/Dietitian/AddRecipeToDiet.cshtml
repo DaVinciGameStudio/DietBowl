@@ -71,7 +71,7 @@
     </form>
 
     @* Tutaj dodac brak mozliwosci wybierania daty wstecz (date < today) *@
-    <form id="sendList" class="login" asp-action="AddRecipeAtDay" asp-controller="Dietician" method="post">
+    <form id="sendList" class="login" asp-action="AddRecipeAtDay" asp-controller="Dietitian" method="post">
         <input name="userId" value="@userId" hidden>
         <input name="date" type="date"/>
         <input hidden name="recipeList" id="recipeList">
@@ -93,6 +93,6 @@
 
     <div id="listAtOneDay"></div>
 
-    <div type="button" onclick="parseToSend() style="widht:200px; heigth:200px; backgroundColor:red;"></div>
+    <div type="button" onclick="parseToSend()" style="width:200px; height:200px; background:red;"></div>
 
 
