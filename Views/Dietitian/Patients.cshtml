@@ -3,10 +3,10 @@
 <link rel="stylesheet" href="~/css/dietecitianpatient.css" asp-append-version="true" />
     <br />
     <br />
+<div class="filter">
 <h2 style="text-align:center">Lista Pacjentów</h2>
-
-<table class="table table-bordered  table-hover">
-    <thead class="table table-dark">
+<table>
+    
     <tr>
         <th>Email</th>
         <th>Imię</th>
@@ -16,10 +16,10 @@
         <th>Akcje</th>
 
     </tr>
-    </thead>
+    
     @foreach (var user in Model)
     {
-        <tbody>
+        
         <tr>
             <td>@user.Email</td>
             <td>@user.FirstName</td>
@@ -33,6 +33,7 @@
                 </form>
             </td>
         </tr>
-        </tbody>
+        
     }
 </table>
+</div>

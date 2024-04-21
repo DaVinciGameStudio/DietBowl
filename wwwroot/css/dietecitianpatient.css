@@ -1,33 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    outline:0;
+
+}
+
+.filter{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1;
+    opacity:.7;
+}
+
 table {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
     border-collapse: collapse;
-    width: 100%;
-    font-family: Arial, sans-serif;
     border-spacing: 0;
+    box-shadow: 0 2px 15px rgba(64,64,64,.7);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
 }
 
-/* Stylowanie nag³ówków tabeli */
+td, th {
+    padding: 15px 20px;
+    text-align: center;
+}
+
 th {
-    background-color: #f2f2f2;
-    color: #333;
-    font-weight: bold;
-    padding: 8px;
-    border: 1px solid #ddd;
+    background-color: black;
+    color: #fafafa;
+    font-family: 'Open Sans',Sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
 }
 
-/* Stylowanie komórek tabeli */
-td {
-    background-color: #8AAAE5;
-    padding: 8px;
-    border: 1px solid #ddd;
+tr {
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Stylowanie wierszy tabeli na zmianê */
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Stylowanie howera komórki */
-.table-container {
-    display: flex;
-    justify-content: center;
-}
+    tr:nth-child(even) {
+        background-color: #eeeeee;
+    }
