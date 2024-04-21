@@ -3,6 +3,8 @@ using DietBowl.Services.Interfaces;
 using DietBowl.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using NuGet.Protocol;
 using System.Security.Claims;
 
 namespace DietBowl.Controllers
@@ -122,6 +124,28 @@ namespace DietBowl.Controllers
             await _dietitianService.UpdateNutritionalRequirements(model);
             return RedirectToAction("AssignedPatients", "Dietitian"); // Domyślna strona po zalogowaniu
         }
+
+         public async Task<IActionResult> AddRecipeToDiet(int userId)
+         {
+            var recipes = await _dietitianService.GetRecipes();
+            ViewData["List"] = recipes.Select(x => x.Title).ToJson();
+            ViewData["IdUser"] = userId;
+            return View(recipes);
+         }
+
+        [HttpPost]
+         public async Task<IActionResult> AddRecipeAtDay(int userId, DateTime day, string recipeList)
+         {
+            Console.WriteLine(recipeList, userId, day);
+            dynamic jsonData = JsonConvert.DeserializeObject(recipeList)!;
+            List<int> idRecipes = new();
+            foreach(int idRepice in jsonData)
+            {
+                idRecipes.Add(idRepice);
+            }
+            await _dietitianService.AddRecipeAtDay(userId, day, idRecipes);
+            return RedirectToAction("AssignedPatients", "Dietitian");
+         }
     }
 
 }

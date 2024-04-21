@@ -117,5 +117,37 @@ namespace DietBowl.Services
                 await _dietBowlDbContext.SaveChangesAsync();
             }
         }
+
+        public async Task<List<Recipe>> GetRecipes()
+        {
+            return await _dietBowlDbContext.Recipes
+            .ToListAsync();
+        }
+
+        public async Task<bool> AddRecipeAtDay(int userId, DateTime day, List<int> idRecipes)
+        {
+            if(userId > 0)
+            {
+                List<Recipe> recipes = _dietBowlDbContext.Recipes
+                    .Where(r => idRecipes.Contains(r.Id))
+                    .ToList();
+                User user = _dietBowlDbContext.Users
+                    .Where(u => u.Id == userId)
+                    .FirstOrDefault()!;
+
+
+                Diet diet = new Diet{
+                Date = day,
+                UserId = userId,
+                User = user,
+                Recipes = recipes
+                };
+                await _dietBowlDbContext.Diets.AddAsync(diet);
+                await _dietBowlDbContext.SaveChangesAsync();
+                return true;
+            }
+            
+           return false;
+        }
     }
 }

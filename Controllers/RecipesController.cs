@@ -31,10 +31,13 @@ namespace DietBowl.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "1")]
-        public IActionResult Add([Bind("Title,Ingredients,Instructions,Protein,Fat,Carbohydrate,Calories")] Recipe recipe)
+        public IActionResult Add([Bind("Title,Ingedients,Instructions,Protein,Fat,Carbohydrate,Calories")] Recipe recipe)
         {
             if (ModelState.IsValid)
             {
+                // Obliczanie kalorii na podstawie podanych wartości
+                recipe.Calories = recipe.CalculateCalories();
+
                 // Dodanie przepisu do bazy danych
                 _dietBowlDbContext.Recipes.Add(recipe);
                 _dietBowlDbContext.SaveChanges();
@@ -48,6 +51,23 @@ namespace DietBowl.Controllers
         {
             var recipes = _dietBowlDbContext.Recipes.ToList(); // Pobranie wszystkich przepisÃ³w z bazy danych
             return View(recipes);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "1")]
+        public IActionResult Delete(int id)
+        {
+            var recipe = _dietBowlDbContext.Recipes.Find(id);
+            if (recipe == null)
+            {
+                return NotFound();
+            }
+
+            _dietBowlDbContext.Recipes.Remove(recipe);
+            _dietBowlDbContext.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

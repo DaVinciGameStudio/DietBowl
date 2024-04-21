@@ -25,6 +25,12 @@
         <span asp-validation-for="Instructions" class="text-danger"></span>
     </div>
 
+     <div class="form-group">
+        <label asp-for="Carbohydrate" class="control-label">Węglowodany</label>
+        <input asp-for="Carbohydrate" class="form-control" />
+        <span asp-validation-for="Carbohydrate" class="text-danger"></span>
+    </div>
+
     <div class="form-group">
         <label asp-for="Protein" class="control-label">Białko</label>
         <input asp-for="Protein" class="form-control" />
@@ -37,17 +43,6 @@
         <span asp-validation-for="Fat" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label asp-for="Carbohydrate" class="control-label">Węglowodany</label>
-        <input asp-for="Carbohydrate" class="form-control" />
-        <span asp-validation-for="Carbohydrate" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Calories" class="control-label">Kalorie</label>
-        <input asp-for="Calories" class="form-control" />
-        <span asp-validation-for="Calories" class="text-danger"></span>
-    </div>
 
     <button type="submit" class="btn btn-success">Dodaj przepis</button>
 </form>

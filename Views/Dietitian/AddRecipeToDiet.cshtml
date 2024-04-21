@@ -1,0 +1,98 @@
+@model IList<DietBowl.Models.Recipe>
+@{
+    int userId = (int)ViewData["IdUser"]!;
+}
+<script>
+        var list = new Array();
+        var tab = JSON.parse('@Html.Raw(ViewData["List"])');
+        function reset() {
+            for (let i = 0; i < allList.children.length; i++) {
+                allList.children[i].hidden = false;
+            }
+        }
+
+        function showResult(str) {
+            var result = new Array();
+            if (str.length < 1) {
+                reset();
+                return;
+            }
+            tab.forEach(function (element) {
+                let x = element.toLowerCase()
+                if (x.includes(str.toLowerCase()))
+                    result.push(element);
+            });
+            searchHiden(result);
+        }
+
+        function searchHiden(result) {
+            for (let i = 0; i < allList.children.length; i++) {
+                if (result.includes(allList.children[i].getElementsByTagName("h5")[0].innerText)) {
+                    allList.children[i].hidden = false;
+                } else {
+                    allList.children[i].hidden = true;
+                }
+            }
+        }
+
+        function AddToList(zmienna){
+            if (list.includes(zmienna)) 
+            {
+                for (let i = 0; i < allList.children.length; i++) 
+                {
+                    if(list[i] == zmienna)
+                    {
+                        list.splice(i,1);
+                    }
+                }
+            } 
+            else 
+            {
+                list.push(zmienna)
+            }
+            console.log(list)
+            listAtOneDay.innerHTML = ""
+            list.forEach(item => {
+                const listItem = document.createElement('li')
+                listItem.innerText = item
+                listAtOneDay.appendChild(listItem)
+            });
+        }
+
+    function parseToSend() {
+        document.getElementById('recipeList').value = JSON.stringify(list);
+        document.getElementById('sendList').submit();
+    }
+
+</script>
+    @* tutaj ładnie zrobic forma *@
+    <form>
+        <input placeholder="Wyszukaj przepis..." autocomplete="off" id="inputLiveSearch" type="text" size="30" onkeyup="showResult(this.value)">
+    </form>
+
+    @* Tutaj dodac brak mozliwosci wybierania daty wstecz (date < today) *@
+    <form id="sendList" class="login" asp-action="AddRecipeAtDay" asp-controller="Dietician" method="post">
+        <input name="userId" value="@userId" hidden>
+        <input name="date" type="date"/>
+        <input hidden name="recipeList" id="recipeList">
+    </form>
+
+    @* a tutaj chce ładne okienka :) *@
+    <div id = "allList">
+        @foreach (var recipe in Model)
+        {
+            <div onclick="AddToList(@recipe.Id)">
+                <h5>@recipe.Title</h5>
+                <p>Carbohydrate: @recipe.Carbohydrate g</p>
+                <p>Protein: @recipe.Protein g</p>
+                <p>Fat: @recipe.Fat g</p>
+                <p>Calories: @recipe.CalculateCalories() kcal</p>
+            </div>
+        }
+    </div>
+
+    <div id="listAtOneDay"></div>
+
+    <div type="button" onclick="parseToSend() style="widht:200px; heigth:200px; backgroundColor:red;"></div>
+
+

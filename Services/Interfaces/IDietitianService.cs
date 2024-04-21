@@ -13,5 +13,8 @@ namespace DietBowl.Services.Interfaces
         Task<bool> RemovePatient(int dietitianId, int userId);
         Task<User> GetUserById(int userId);
         Task UpdateNutritionalRequirements(NutritionalRequirementsVM model);
+        Task<List<Recipe>> GetRecipes();
+        Task<bool> AddRecipeAtDay(int userId, DateTime day, List<int> idRecipes);
+
     }
 }

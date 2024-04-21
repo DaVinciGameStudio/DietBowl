@@ -10,7 +10,7 @@ namespace DietBowl.Models
     {
         public int Id {get; set;}
         public string Title {get; set;}
-        public string? Ingedients {get; set;}
+        public string Ingedients {get; set;}
         public string Instructions {get; set;}
         public double Protein {get; set;}
         public double Fat {get; set;}
@@ -22,5 +22,10 @@ namespace DietBowl.Models
 
         //Relacja wiele do wielu z Allergen
         public List<Allergen> Allergens { get; set; } = new List<Allergen>();
+
+        public double CalculateCalories()
+        {
+            return (Protein * 4) + (Fat * 9) + (Carbohydrate * 4);
+        }
     }
 }

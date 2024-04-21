@@ -9,111 +9,115 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DietBowl
 build_property.RootNamespace = DietBowl
-build_property.ProjectDir = C:\Users\Łukasz\Desktop\Git_repository\DietBowl\
+build_property.ProjectDir = /Users/hampel/Documents/Magisterka/DietBowl/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Łukasz\Desktop\Git_repository\DietBowl
+build_property.MSBuildProjectDirectory = /Users/hampel/Documents/Magisterka/DietBowl
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Administrator/AddDietitian.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvclxBZGREaWV0aXRpYW4uY3NodG1s
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Administrator/AddDietitian.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5pc3RyYXRvci9BZGREaWV0aXRpYW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Administrator/Dietitians.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRvclxEaWV0aXRpYW5zLmNzaHRtbA==
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Administrator/Dietitians.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5pc3RyYXRvci9EaWV0aXRpYW5zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Dietitian/AssignedPatients.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGl0aWFuXEFzc2lnbmVkUGF0aWVudHMuY3NodG1s
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Dietitian/AddRecipeToDiet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlldGl0aWFuL0FkZFJlY2lwZVRvRGlldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Dietitian/Patients.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGl0aWFuXFBhdGllbnRzLmNzaHRtbA==
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Dietitian/AssignedPatients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlldGl0aWFuL0Fzc2lnbmVkUGF0aWVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Dietitian/SetNutritionalRequirements.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGl0aWFuXFNldE51dHJpdGlvbmFsUmVxdWlyZW1lbnRzLmNzaHRtbA==
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Dietitian/Patients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlldGl0aWFuL1BhdGllbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Home/Dietician.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaWV0aWNpYW4uY3NodG1s
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Dietitian/SetNutritionalRequirements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlldGl0aWFuL1NldE51dHJpdGlvbmFsUmVxdWlyZW1lbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Home/Dietician.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EaWV0aWNpYW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Home/Preferences.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmVmZXJlbmNlcy5jc2h0bWw=
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Home/Preferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9QcmVmZXJlbmNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Home/User.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyLmNzaHRtbA==
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Recipes/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlc1xBZGQuY3NodG1s
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Home/User.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Vc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Recipes/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlc1xJbmRleC5jc2h0bWw=
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Recipes/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjaXBlcy9BZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Recipes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVjaXBlcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/User/AddBodyParameters.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZGRCb2R5UGFyYW1ldGVycy5jc2h0bWw=
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/User/AddPreference.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZGRQcmVmZXJlbmNlLmNzaHRtbA==
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/User/AddBodyParameters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9BZGRCb2R5UGFyYW1ldGVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/User/BodyParameters.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCb2R5UGFyYW1ldGVycy5jc2h0bWw=
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/User/AddPreference.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9BZGRQcmVmZXJlbmNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/User/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/User/BodyParameters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Cb2R5UGFyYW1ldGVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/User/Ograniczenia.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxPZ3JhbmljemVuaWEuY3NodG1s
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/User/Preferences.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcmVmZXJlbmNlcy5jc2h0bWw=
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/User/Ograniczenia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9PZ3JhbmljemVuaWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/User/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/User/Preferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9QcmVmZXJlbmNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/User/ViewPreference.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxWaWV3UHJlZmVyZW5jZS5jc2h0bWw=
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/User/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/User/ViewPreference.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9WaWV3UHJlZmVyZW5jZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Łukasz/Desktop/Git_repository/DietBowl/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-y2nh7ck5lk
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/hampel/Documents/Magisterka/DietBowl/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fo677j2546
