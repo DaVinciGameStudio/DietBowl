@@ -41,12 +41,12 @@
             }
         }
 
-        function AddToList(zmienna){
-            if (list.includes(zmienna)) 
+        function AddToList(id){
+            if (list.includes(id)) 
             {
                 for (let i = 0; i < allList.children.length; i++) 
                 {
-                    if(list[i] == zmienna)
+                    if(list[i] == id)
                     {
                         list.splice(i,1);
                     }
@@ -54,13 +54,22 @@
             } 
             else 
             {
-                list.push(zmienna)
+                list.push(id)
             }
             console.log(list)
             listAtOneDay.innerHTML = ""
             list.forEach(item => {
-                const listItem = document.createElement('li')
-                listItem.innerText = item
+                const listItem = document.createElement('div')
+                    listItem.classList = "dodaniereceptury"
+                const temp = document.getElementById('allList').children
+                for (let i = 0; i < temp.length; i++) {
+                    if (temp[i].id == item) {
+                        const originalElement = temp[i].cloneNode(true)
+                        const nazwa = originalElement.querySelector("h5")
+                    nazwa.addEventListener('click', () => { AddToList(item) })
+                    listItem.appendChild(nazwa)
+                    }
+                }
                 listAtOneDay.appendChild(listItem)
             });
         }
@@ -75,12 +84,14 @@
     <div id="gornyDiv">
         <!-- Tutaj możesz umieścić treść lub inne elementy dla górnego diva -->
         <div id="listAtOneDay"></div>
+       
     </div>
     <div id="dolnyDiv">
         <div class="pojedynczyDiv wolny">
             <!-- Tutaj możesz umieścić treść lub inne elementy dla pierwszego dolnego diva -->
             
         </div>
+        
         <div class="pojedynczyDiv">
             <!-- Tutaj możesz umieścić treść lub inne elementy dla drugiego dolnego diva -->
             Kalorie
@@ -137,7 +148,7 @@
         <div id="allList" class="recipe-grid">
         @foreach (var recipe in Model)
         {
-            <div onclick="AddToList(@recipe.Id)">
+                <div onclick="AddToList(@recipe.Id)" id="@recipe.Id">
                 <h5>@recipe.Title</h5>
                 <p>Carbohydrate: @recipe.Carbohydrate g</p>
                 <p>Protein: @recipe.Protein g</p>
