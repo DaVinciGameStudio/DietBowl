@@ -1655,12 +1655,12 @@ section {
         }
 
 main {
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 @media (max-width: 640px) {
     main {
-        margin-top: 30%;
+        margin-top: 15%;
     }
 
     

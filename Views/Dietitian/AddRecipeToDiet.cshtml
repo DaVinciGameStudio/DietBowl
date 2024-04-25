@@ -2,6 +2,12 @@
 @{
     int userId = (int)ViewData["IdUser"]!;
 }
+
+<link rel="stylesheet" href="~/css/dietecitianaddrecipe.css" asp-append-version="true" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <script>
         var list = new Array();
         var tab = JSON.parse('@Html.Raw(ViewData["List"])');
@@ -65,20 +71,37 @@
     }
 
 </script>
+<div class="blue">
+    tu przepisy
+</div>
+<div class="content">
+    <div class="orange">
     @* tutaj ładnie zrobic forma *@
     <form>
-        <input placeholder="Wyszukaj przepis..." autocomplete="off" id="inputLiveSearch" type="text" size="30" onkeyup="showResult(this.value)">
-    </form>
+            <div class="input-group">
+                
+                <input class="form-control" placeholder="Wyszukaj przepis..." autocomplete="off" id="inputLiveSearch" type="text" size="30" onkeyup="showResult(this.value)">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" ><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
 
+
+        
+    </form>
+    
+    
     @* Tutaj dodac brak mozliwosci wybierania daty wstecz (date < today) *@
     <form id="sendList" class="login" asp-action="AddRecipeAtDay" asp-controller="Dietitian" method="post">
         <input name="userId" value="@userId" hidden>
         <input name="date" type="date"/>
         <input hidden name="recipeList" id="recipeList">
     </form>
-
+        <button class="btn btn-success btn-lg" type="button" onclick="parseToSend()">Przypisz</button>
     @* a tutaj chce ładne okienka :) *@
-    <div id = "allList">
+    </div>
+        <div class="yellow">
+        <div id="allList" class="recipe-grid">
         @foreach (var recipe in Model)
         {
             <div onclick="AddToList(@recipe.Id)">
@@ -89,10 +112,14 @@
                 <p>Calories: @recipe.CalculateCalories() kcal</p>
             </div>
         }
+     </div>
+
+      <div id="listAtOneDay"></div>
+
+      
+
     </div>
-
-    <div id="listAtOneDay"></div>
-
-    <div type="button" onclick="parseToSend()" style="width:200px; height:200px; background:red;"></div>
-
+    
+   
+</div>
 

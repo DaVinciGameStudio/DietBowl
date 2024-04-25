@@ -105,7 +105,7 @@ p {
 
 .product__disc {
     width: 0px;
-    height: 430px;
+    height: 630px;
     background: #FFCA1B;
     display: flex;
     align-items: center;
@@ -138,7 +138,7 @@ p {
 
 span {
     font-family: 'Lato';
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
     display: flex;
@@ -147,7 +147,8 @@ span {
 
 p {
     margin-top: 35px;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight:normal;
     font-family: 'Poppins';
 }
 

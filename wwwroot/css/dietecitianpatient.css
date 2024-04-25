@@ -37,8 +37,9 @@ td, th {
 th {
     background-color: black;
     color: #fafafa;
-    font-family: 'Open Sans',Sans-serif;
-    font-weight: 200;
+    font-family: Helvetica,Sans-serif;
+    font-weight: bold;
+    font-size:large;
     text-transform: uppercase;
 }
 
@@ -51,3 +52,7 @@ tr {
     tr:nth-child(even) {
         background-color: #eeeeee;
     }
+.action {
+    display: flex;
+    gap:5px;
+}

@@ -37,10 +37,10 @@ else
                     <td>@user.LastName</td>
                     <td>@user.Age</td>
                     <td>@user.Sex</td>
-                    <td>
+                    <td class="action">
                         <form method="post" action="@Url.Action("RemovePatient", "Dietitian")">
                             <input type="hidden" name="userId" value="@user.Id" />
-                            <input class="btn btn-danger" type="submit" value="Usuń  " onclick="return confirm('Czy na pewno chcesz usunąć tego pacjenta?');" />
+                            <input class="btn btn-danger" type="submit" value=" Usuń " onclick="return confirm('Czy na pewno chcesz usunąć tego pacjenta?');" />
                         </form>
                         <a class="btn btn-primary" href="@Url.Action("SetNutritionalRequirements", "Dietitian", new { userId = user.Id })">Makro</a>
                         <a class="btn btn-primary" href="@Url.Action("AddRecipeToDiet", "Dietitian", new { userId = user.Id })">Dieta</a>

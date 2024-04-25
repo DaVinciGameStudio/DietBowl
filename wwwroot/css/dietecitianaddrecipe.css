@@ -1,0 +1,100 @@
+.blue {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    float:right;
+    height:600px;
+    width:300px;
+}
+
+.content {
+    display: grid;
+}
+
+.orange {
+    display: flex;
+    background-color: orange;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center; /* Domyœlnie elementy bêd¹ wyœrodkowane w pionie */
+}
+
+    .orange form {
+        display: flex;
+        align-items: center; /* Aby elementy formularza by³y wyœrodkowane w pionie */
+        margin-right: 20px; /* Dodajemy odstêp miêdzy formularzami */
+    }
+
+        
+        .orange form input[type="date"] {
+            width: 200px; /* Szerokoœæ inputów formularza */
+            padding: 10px;
+            border-radius:15px;
+        }
+        .orange form input[type="text"] {
+            width: 700px; /* Szerokoœæ inputów formularza */
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow:5px;
+        }
+    .orange .send-button {
+        width: 50px;
+        height: 55px;
+        background-color: green;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+
+
+.yellow {
+    flex: 2;
+    background-color: yellow;
+    padding: 10px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Siatka z automatycznym dopasowaniem kolumn */
+    gap: 20px; /* Odstêp miêdzy elementami */
+}
+
+.recipe-item {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+    /* Stylowanie tytu³ów i opisów przepisów */
+    .recipe-item h5 {
+        margin-bottom: 5px;
+    }
+
+    .recipe-item p {
+        margin: 5px 0;
+    }
+
+#allList {
+    max-height: 90%;
+    
+}
+
+    #allList > div {
+        cursor: pointer;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+    }
+
+       
+
+.send-button {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    cursor: pointer;
+}
+
+.form{
+    width:50px;
+}
