@@ -1,12 +1,12 @@
 .blue {
-    background-color:blue;
+    background-color: #E9EAEC;
     color: white;
     padding: 10px;
     float: right;
     height: 100vh;
-    width: 29vw;
-    border:solid;
-    border-color:black;
+    width: 30vw;
+    border: solid;
+    border-color: black;
 }
 
 .content {
@@ -14,8 +14,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
     border: solid;
-    
     border-right: none;
+    height:auto;
+    width:auto;
 }
 
 .orange {
@@ -24,8 +25,7 @@
     height: 10vh;
     width: 70vw;
     display: flex;
-    background-color: orange;
-    
+    background-color: #E9EAEC;
     justify-content: space-between;
     align-items: center; /* Domyœlnie elementy bêd¹ wyœrodkowane w pionie */
     border-bottom: solid;
@@ -60,9 +60,10 @@
 
 .yellow {
     flex: 1;
-    background-color: yellow;
+    background-color: #E9EAEC;
     padding: 20px;
-
+    height:100vh;
+    width:22vh;
 }
 
 .recipe-grid {
@@ -80,10 +81,13 @@
 
     /* Stylowanie tytu³ów i opisów przepisów */
     .recipe-item h5 {
+        font-weight:bold;
+        color:black;
         margin-bottom: 5px;
     }
 
     .recipe-item p {
+        color:black;
         margin: 5px 0;
     }
 
@@ -93,10 +97,11 @@
 }
 
     #allList > div {
+        background-color:white;
         cursor: pointer;
         padding: 10px;
-        margin-bottom: 10px;
         border: 1px solid #ccc;
+        border-radius:15px;
     }
 
        
@@ -134,48 +139,33 @@
     bottom: 70px;
 }
 
-/* Dodatkowe style mo¿esz dopasowaæ wed³ug w³asnych preferencji */
-#glownyDiv {
-    width: 100%;
-    height: 100%; /* Ustaw wysokoœæ wed³ug potrzeb */
-    border: 1px solid #ccc; /* Dodaj obramowanie dla wizualnej separacji */
-    box-sizing: border-box;
-    padding: 10px; /* Dostosuj wype³nienie wed³ug potrzeb */
-}
-
-#gornyDiv {
-    width: 100%;
-    height: 50%; /* Ustaw wysokoœæ wed³ug potrzeb */
-    border-bottom: 1px solid #ccc; /* Obramowanie oddzielaj¹ce od dolnego diva */
-    box-sizing: border-box;
-    padding: 10px; /* Dostosuj wype³nienie wed³ug potrzeb */
-}
-
-#dolnyDiv {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.pojedynczyDiv {
-    height:50%;
-    width: calc(33.33% - 20px); /* Szerokoœæ ka¿dego diva - uwzglêdniaj¹c odstêpy */
-    margin: 10px; /* Odstêp miêdzy divami */
-    border: 1px solid #000; /* Dodatkowy styl ramki dla divów (opcjonalnie) */
-    box-sizing: border-box; /* Uwzglêdnienie marginesów w obliczeniach szerokoœci */
-}
-
-.wolny{
-    border:none;
-}
 
 .dodaniereceptury {
-    border-style: solid;
+    border-style:groove;
     border-color:black;
     height: 20%;
     width: 95%;
-    background-color: gray;
+    background-color: white;
     margin: 10px;
-    color:white;
+    border-radius:15px;
+    color:black;
     text-align:center;
+}
+
+.chartCard {
+    width: 15vw;
+    height: 20vh;
+}
+
+.chartBox {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 3px rgba(54, 162, 235, 1);
+    background: white;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: auto auto;
 }
