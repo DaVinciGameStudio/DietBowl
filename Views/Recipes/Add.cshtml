@@ -3,8 +3,10 @@
 @{
     ViewData["Title"] = "Add Recipe";
 }
-
-<h1>Dodaj przepis</h1>
+<link rel="stylesheet" href="~/css/recipeadd.css" asp-append-version="true" />
+<div class="containerr">
+    <div class="recipe">
+<h1 class="napis">Dodaj przepis</h1>
 
 <form asp-action="Add" method="post">
     <div class="form-group">
@@ -44,5 +46,9 @@
     </div>
 
 
-    <button type="submit" class="btn btn-success">Dodaj przepis</button>
+    <button type="submit" class="btn btn-success float-end">Dodaj przepis</button>
+    <br />
+    <br />
 </form>
+</div>
+</div>

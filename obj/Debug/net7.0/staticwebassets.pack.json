@@ -413,6 +413,10 @@
       "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.js.map"
     },
     {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\addprefuser.css",
+      "PackagePath": "staticwebassets\\css\\addprefuser.css"
+    },
+    {
       "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\dietecitianaddrecipe.css",
       "PackagePath": "staticwebassets\\css\\dietecitianaddrecipe.css"
     },
@@ -429,6 +433,18 @@
       "PackagePath": "staticwebassets\\css\\homepage.css"
     },
     {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\recipeadd.css",
+      "PackagePath": "staticwebassets\\css\\recipeadd.css"
+    },
+    {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\recipeshow.css",
+      "PackagePath": "staticwebassets\\css\\recipeshow.css"
+    },
+    {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\setnutritionalreq.css",
+      "PackagePath": "staticwebassets\\css\\setnutritionalreq.css"
+    },
+    {
       "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -443,6 +459,10 @@
     {
       "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\userbody.css",
       "PackagePath": "staticwebassets\\css\\userbody.css"
+    },
+    {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\viewpref.css",
+      "PackagePath": "staticwebassets\\css\\viewpref.css"
     },
     {
       "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\favicon.ico",

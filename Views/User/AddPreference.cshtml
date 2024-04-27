@@ -3,23 +3,22 @@
 @{
     ViewData["Title"] = "Dodaj preferencje";
 }
+<link rel="stylesheet" href="~/css/addprefuser.css" asp-append-version="true" />
+    <div class="addprefcontainer">
 
-<h2>@ViewData["Title"]</h2>
-
-<link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
-
+    <h2>@ViewData["Title"]</h2>
 <form asp-action="AddPreference" asp-controller="User" method="post">
     <input type="hidden" asp-for="UserId" />
     <div class="form-group">
-        <label asp-for="Description" class="control-label"></label>
+        <label asp-for="Description" class="control-label">Informacje</label>
         <textarea asp-for="Description" class="form-control"></textarea>
     </div>
     <div class="form-group">
-        <label asp-for="WeightGoal" class="control-label"></label>
+        <label asp-for="WeightGoal" class="control-label">Upragniona waga</label>
         <input asp-for="WeightGoal" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="ActivityStatus" class="control-label"></label>
+        <label asp-for="ActivityStatus" class="control-label"> Poziom aktywnosci</label>
         <select asp-for="ActivityStatus" class="form-control">
             <option value="">-- Wybierz swój status aktywności --</option>
             <option value="Low">Niska</option>
@@ -40,3 +39,5 @@
     </div>
     <button type="submit" class="btn btn-success">Zapisz preferencje</button>
 </form>
+
+</div>

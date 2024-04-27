@@ -1,0 +1,83 @@
+/* Global styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:bold;
+}
+
+/* Recipe card styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.recipe-card {
+    background-color: lightyellow;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .recipe-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .recipe-card p {
+        margin-bottom: 5px;
+    }
+
+    .recipe-card strong {
+        font-weight: bold;
+    }
+
+.recipe-actions {
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Button styles */
+.btn {
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+    .btn-danger:focus {
+        outline: none;
+    }
+
+/* Message styles */
+.message {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+
+#listcontainer{
+    border-style:solid;
+}
+p{
+    padding-bottom:10px;
+}

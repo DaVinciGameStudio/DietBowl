@@ -1,6 +1,9 @@
 ﻿@using DietBowl.ViewModel
 @model NutritionalRequirementsVM
 
+<link rel="stylesheet" href="~/css/setnutritionalreq.css" asp-append-version="true" />
+
+<div class="setNutreq">
 <h2>Ustawienia zapotrzebowania kalorycznego i makroskładników</h2>
 
 <form asp-action="SetNutritionalRequirements" method="post">
@@ -25,5 +28,8 @@
         <input class="form-control" asp-for="Carbohydrate" />
         <span asp-validation-for="Carbohydrate" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-primary">Zapisz</button>
+        <button type="submit" class="btn btn-success float-end">Zapisz</button>
+        <br/>
+        <br/>
 </form>
+</div>

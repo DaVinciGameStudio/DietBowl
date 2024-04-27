@@ -3,26 +3,28 @@
 @{
     ViewData["Title"] = "Preferencje użytkownika";
 }
-<link rel="stylesheet" href="~/css/user.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/viewpref.css" asp-append-version="true" />
 
+<div class="prefcontainer">
+    <h1>Preferencje użytkownika</h1>
 
-<h1 style="text-align:center">Preferencje użytkownika</h1>
-
-@if (Model == null)
-{
-    <p style="text-align:center">Preferencje dla tego użytkownika nie zostały jeszcze dodane.</p>
-    <br />
-    <a asp-action="AddPreference" asp-route-userId="@ViewBag.UserId" class="btn btn-success">Dodaj preferencje</a>
-}
-else
-{
-    <h2>Opis preferencji:</h2>
-    <p>@Model.Description</p>
-    <h2>Cele wagowe:</h2>
-    <p>@Model.WeightGoal</p>
-    <h2>Aktywność:</h2>
-    <p>@Model.ActivityStatus</p>
-}
+    @if (Model == null)
+    {
+        <p>Preferencje dla tego użytkownika nie zostały jeszcze dodane.</p>
+        <br />
+        <a asp-action="AddPreference" asp-route-userId="@ViewBag.UserId" class="btn btn-success">Dodaj preferencje</a>
+    }
+    else
+    {
+        <div class="pref-details">
+            <h2>Opis preferencji:</h2>
+            <p>@Model.Description</p>
+            <h2>Cele wagowe:</h2>
+            <p>@Model.WeightGoal<a> kg</a></p>
+            <h2>Aktywność:</h2>
+            <p>@Model.ActivityStatus</p>
+        </div>
+    }
 </div>
 @section Scripts {
     @{

@@ -3,36 +3,10 @@
 @{
     ViewData["Title"] = "Lista Przepisów";
 }
+<link rel="stylesheet" href="~/css/recipeshow.css" asp-append-version="true" />
 
-<style>
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .recipe-card {
-        border: 1px solid #ccc;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .recipe-card h2 {
-        margin-top: 0;
-    }
-
-    .recipe-card p {
-        margin-bottom: 5px;
-    }
-
-    .recipe-actions {
-        display: flex;
-        justify-content: flex-end;
-    }
-</style>
-
-<h1>Lista Przepisów</h1>
+<div class="container" id="listcontainer">
+<h1 class="list">Lista Przepisów</h1>
 
 @if (Model != null && Model.Any())
 {
@@ -50,7 +24,9 @@
                 <div class="recipe-actions">
                     <form asp-action="Delete" method="post" onsubmit="return confirm('Czy na pewno chcesz usunąć ten przepis?');">
                         <input type="hidden" name="id" value="@recipe.Id" />
-                        <button type="submit" class="btn btn-danger">Usuń</button>
+                            <button type="submit" class="btn btn-danger position-relative bottom-30 start-30">Usuń</button>
+                        <br />
+                        <br />
                     </form>
                 </div>
             </div>
@@ -61,3 +37,5 @@ else
 {
     <p>Brak przepisów do wyświetlenia.</p>
 }
+
+                </div>
