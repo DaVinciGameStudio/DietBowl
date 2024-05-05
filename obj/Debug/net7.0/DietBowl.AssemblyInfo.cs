@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DietBowl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+521b90c9d138343a6c9aa86283da9529b9242621")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dbc4efe1220012c46d271a625d31b7149aebccb")]
 [assembly: System.Reflection.AssemblyProductAttribute("DietBowl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DietBowl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

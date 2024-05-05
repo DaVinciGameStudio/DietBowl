@@ -42,6 +42,7 @@
         }
 
         function AddToList(id){
+
             if (list.includes(id)) 
             {
                 for (let i = 0; i < allList.children.length; i++) 
@@ -86,8 +87,8 @@
 <div class="blue">
    
         <div id="listAtOneDay"></div>
-       
-   
+       <div class="proba3">
+        <div class="proba">
         <div class="charts">
     
             <div class="chartCard">
@@ -95,28 +96,29 @@
             <canvas id="proteinChart"></canvas>
                 </div>
             </div>
-            <br />
-            <br/>
+        
+            
     <div class="chartCard">
         <div class="chartBox">
             <canvas id="carbsChart"></canvas>
         </div>
     </div>
-    <br />
-    <br />
+    
+        </div>
+        </div>
+        <div class="proba2">
     <div class="chartCard">
         <div class="chartBox">
             <canvas id="fatsChart"></canvas>
         </div>
     </div>
-    <br/>
-    <br />
+    
     <div class="chartCard">
         <div class="chartBox">
             <canvas id="caloriesChart"></canvas>
         </div>
     </div>
-        
+        </div>
     </div>
 </div>
 
@@ -127,7 +129,9 @@
     <form>
             <div class="input-group">
                 
-                <input class="form-control" placeholder="Wyszukaj przepis..." autocomplete="off" id="inputLiveSearch" type="text" size="30" onkeyup="showResult(this.value)">
+                <input class="form-control" placeholder="Wyszukaj przepis..." 
+                autocomplete="on" id="inputLiveSearch" type="text" size="30" 
+                onkeyup="showResult(this.value)">
                 <div class="input-group-btn">
                     <button class="btn btn-default" ><i class="glyphicon glyphicon-search"></i></button>
                 </div>
