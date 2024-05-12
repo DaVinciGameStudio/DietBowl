@@ -3,6 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa2/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -133,9 +139,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\views\\user\\viewpreference.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\user\\viewpreference.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa2/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|c:\\users\\\u0142ukasz\\desktop\\git_repository\\dietbowl\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -297,11 +300,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 50,
+          "SelectedChildIndex": 71,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -314,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService.cs",
@@ -355,7 +358,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 1,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-12T19:25:37.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "styles.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\styles.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\styles.css",
@@ -367,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "addprefuser.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\addprefuser.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\addprefuser.css",
@@ -379,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "viewpref.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\viewpref.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\viewpref.css",
@@ -391,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "setnutritionalreq.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\setnutritionalreq.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\setnutritionalreq.css",
@@ -403,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "recipeshow.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\recipeshow.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\recipeshow.css",
@@ -415,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "recipeadd.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\recipeadd.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\recipeadd.css",
@@ -427,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -439,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "login.js",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\js\\login.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\login.js",
@@ -451,7 +464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "LogRegForm.js",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\js\\LogRegForm.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\LogRegForm.js",
@@ -463,7 +476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "register.js",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\js\\register.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\register.js",
@@ -475,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
@@ -487,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -499,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
@@ -511,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "homepage.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\homepage.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\homepage.css",
@@ -519,12 +532,11 @@
               "RelativeToolTip": "wwwroot\\css\\homepage.css",
               "ViewState": "AQIAAFEAAAAAAAAAAAAAAGEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-24T18:59:14.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-24T18:59:14.833Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -536,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "dietecitianaddrecipe.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\dietecitianaddrecipe.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\dietecitianaddrecipe.css",
@@ -548,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "Strona.html",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Strona\\Strona.html",
               "RelativeDocumentMoniker": "..\\..\\Strona\\Strona.html",
@@ -560,7 +572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "AddRecipeToDiet.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Dietitian\\AddRecipeToDiet.cshtml",
               "RelativeDocumentMoniker": "Views\\Dietitian\\AddRecipeToDiet.cshtml",
@@ -572,7 +584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "dbo.Users [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa3/True/SqlTable/dbo.Users.sql",
               "ToolTip": "dbo.Users [Data]",
@@ -581,7 +593,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "20240424145844_m5.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Migrations\\20240424145844_m5.cs",
               "RelativeDocumentMoniker": "Migrations\\20240424145844_m5.cs",
@@ -593,7 +605,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -605,7 +617,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "gitattributes",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\gitattributes",
               "RelativeDocumentMoniker": "gitattributes",
@@ -617,7 +629,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -629,7 +641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "DietBowlDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Migrations\\DietBowlDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\DietBowlDbContextModelSnapshot.cs",
@@ -641,7 +653,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "20240406180540_addUserNutritionalRequirement.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Migrations\\20240406180540_addUserNutritionalRequirement.cs",
               "RelativeDocumentMoniker": "Migrations\\20240406180540_addUserNutritionalRequirement.cs",
@@ -653,7 +665,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "20240326114429_migracjaUnikalneEmaile.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Migrations\\20240326114429_migracjaUnikalneEmaile.cs",
               "RelativeDocumentMoniker": "Migrations\\20240326114429_migracjaUnikalneEmaile.cs",
@@ -665,7 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "form.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\form.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\form.css",
@@ -677,7 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Recipes\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Recipes\\Index.cshtml",
@@ -689,7 +701,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Add.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Recipes\\Add.cshtml",
               "RelativeDocumentMoniker": "Views\\Recipes\\Add.cshtml",
@@ -701,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "RecipesController.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\RecipesController.cs",
               "RelativeDocumentMoniker": "Controllers\\RecipesController.cs",
@@ -713,7 +725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "dbo.UserNutritionalRequirement [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa2/True/SqlTable/dbo.UserNutritionalRequirement.sql",
               "ToolTip": "dbo.UserNutritionalRequirement [Data]",
@@ -722,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "UserVM.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\ViewModel\\UserVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\UserVM.cs",
@@ -734,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "SetNutritionalRequirements.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Dietitian\\SetNutritionalRequirements.cshtml",
               "RelativeDocumentMoniker": "Views\\Dietitian\\SetNutritionalRequirements.cshtml",
@@ -746,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "NutritionalRequirementsVM.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\ViewModel\\NutritionalRequirementsVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\NutritionalRequirementsVM.cs",
@@ -758,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "DietitianService.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\DietitianService.cs",
               "RelativeDocumentMoniker": "Services\\DietitianService.cs",
@@ -770,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "IDietitianService.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\Interfaces\\IDietitianService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IDietitianService.cs",
@@ -782,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "DietitianController.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Controllers\\DietitianController.cs",
               "RelativeDocumentMoniker": "Controllers\\DietitianController.cs",
@@ -794,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "UserNutritionalRequirement.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\UserNutritionalRequirement.cs",
               "RelativeDocumentMoniker": "Models\\UserNutritionalRequirement.cs",
@@ -806,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "userbody.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\userbody.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\userbody.css",
@@ -818,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "dietecitianpatient.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\dietecitianpatient.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\dietecitianpatient.css",
@@ -830,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "user.css",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\user.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\user.css",
@@ -842,20 +854,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Register.cshtml",
               "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Register.cshtml",
               "RelativeToolTip": "Views\\User\\Register.cshtml",
-              "ViewState": "AQIAABwAAAAAAAAAAAAQwDIAAAAqAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAQwC8AAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T20:16:36.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T20:16:36.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Preferences.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Preferences.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Preferences.cshtml",
@@ -863,12 +874,11 @@
               "RelativeToolTip": "Views\\User\\Preferences.cshtml",
               "ViewState": "AQIAABUAAAAAAAAAAAAAAA0AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T20:16:36.265Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T20:16:36.265Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\Login.cshtml",
@@ -880,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "BodyParameters.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\BodyParameters.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\BodyParameters.cshtml",
@@ -892,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "AddBodyParameters.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\AddBodyParameters.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\AddBodyParameters.cshtml",
@@ -904,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Dietitians.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Administrator\\Dietitians.cshtml",
               "RelativeDocumentMoniker": "Views\\Administrator\\Dietitians.cshtml",
@@ -916,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "AddDietitian.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Administrator\\AddDietitian.cshtml",
               "RelativeDocumentMoniker": "Views\\Administrator\\AddDietitian.cshtml",
@@ -928,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
@@ -940,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "User.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\User.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\User.cshtml",
@@ -952,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
@@ -964,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
@@ -976,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -988,7 +998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "Dietician.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Dietician.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Dietician.cshtml",
@@ -1000,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "AssignedPatients.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Dietitian\\AssignedPatients.cshtml",
               "RelativeDocumentMoniker": "Views\\Dietitian\\AssignedPatients.cshtml",
@@ -1012,7 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Patients.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Dietitian\\Patients.cshtml",
               "RelativeDocumentMoniker": "Views\\Dietitian\\Patients.cshtml",
@@ -1024,7 +1034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "Recipe.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\Recipe.cs",
               "RelativeDocumentMoniker": "Models\\Recipe.cs",
@@ -1036,7 +1046,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -1048,7 +1058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "BodyParameter.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\BodyParameter.cs",
               "RelativeDocumentMoniker": "Models\\BodyParameter.cs",
@@ -1060,7 +1070,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "Diet.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\Diet.cs",
               "RelativeDocumentMoniker": "Models\\Diet.cs",
@@ -1072,7 +1082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Preferences.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Home\\Preferences.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Preferences.cshtml",
@@ -1084,16 +1094,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 0,
               "Title": "dbo.Users [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa2/True/SqlTable/dbo.Users.sql",
               "ToolTip": "dbo.Users [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-04-08T14:28:43.568Z"
+              "WhenOpened": "2024-04-08T14:28:43.568Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "ViewPreference.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\ViewPreference.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\ViewPreference.cshtml",
@@ -1105,7 +1116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "dbo.Preferences [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa2/True/SqlTable/dbo.Preferences.sql",
               "ToolTip": "dbo.Preferences [Data]",
@@ -1114,7 +1125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -1126,7 +1137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -1138,7 +1149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Services\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IUserService.cs",
@@ -1150,7 +1161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "AddPreference.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Views\\User\\AddPreference.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\AddPreference.cshtml",
@@ -1162,7 +1173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "Allergen.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\Allergen.cs",
               "RelativeDocumentMoniker": "Models\\Allergen.cs",
@@ -1174,7 +1185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "Preference.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\Preference.cs",
               "RelativeDocumentMoniker": "Models\\Preference.cs",
@@ -1186,7 +1197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\Git_repository\\DietBowl\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
