@@ -485,6 +485,10 @@
       "PackagePath": "staticwebassets\\forms\\contact.php"
     },
     {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\arbuz.jpg",
+      "PackagePath": "staticwebassets\\images\\arbuz.jpg"
+    },
+    {
       "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\baner.png",
       "PackagePath": "staticwebassets\\images\\baner.png"
     },
@@ -493,8 +497,20 @@
       "PackagePath": "staticwebassets\\images\\dietetyczny-obiad-zdjecie.jpg"
     },
     {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\female.png",
+      "PackagePath": "staticwebassets\\images\\female.png"
+    },
+    {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\kakaowiec.jpg",
+      "PackagePath": "staticwebassets\\images\\kakaowiec.jpg"
+    },
+    {
       "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\kasza gryczana z warzywami i serem.jpg",
       "PackagePath": "staticwebassets\\images\\kasza gryczana z warzywami i serem.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\kawa.jpg",
+      "PackagePath": "staticwebassets\\images\\kawa.jpg"
     },
     {
       "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\logo.png",
@@ -503,6 +519,10 @@
     {
       "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\majacademy_dania_dieteyczne-768x511.jpg",
       "PackagePath": "staticwebassets\\images\\majacademy_dania_dieteyczne-768x511.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\male.png",
+      "PackagePath": "staticwebassets\\images\\male.png"
     },
     {
       "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\js\\LogRegForm.js",

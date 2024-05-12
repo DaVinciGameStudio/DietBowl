@@ -64,7 +64,7 @@ span {
     letter-spacing: 2px;
     text-transform: uppercase;
     display: flex;
-    color: #283618;
+    color: black;
     text-align: center;
 }
 
@@ -91,6 +91,20 @@ img{
 
 .div1 p,
 .div2 p {
-    color: #80B918;
+    color: black;
     line-height: 1.6;
+}
+
+
+
+/*
+    Galeria
+*/
+.mySlides {
+    display: none;
+}
+
+.text {
+    color: white;
+    
 }
