@@ -21,13 +21,13 @@ namespace DietBowl.Controllers
             _dietBowlDbContext = dietBowlDbContext;
         }
 
-        // GET: Recipes/Add
+        // GET: Recipes /Add
         public IActionResult Add()
         {
             return View();
         }
 
-        // POST: Recipes/Add
+        // POST: Recipes /Add
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "1")]
@@ -49,7 +49,7 @@ namespace DietBowl.Controllers
 
         public IActionResult Index()
         {
-            var recipes = _dietBowlDbContext.Recipes.ToList(); // Pobranie wszystkich przepisÃ³w z bazy danych
+            var recipes = _dietBowlDbContext.Recipes.ToList(); // Pobranie wszystkich przepissow z bazy danych
             return View(recipes);
         }
 
