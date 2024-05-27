@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="field">
-                    <input type="number" name="Age" placeholder="Podaj wiek" required>
+                    <input type="text" inputmode="numeric" name="Age" placeholder="Podaj wiek" required>
                 </div>
                 <div class="field">
                     <input type="tel" name="PhoneNumber" placeholder="Podaj numer telefonu" required>
@@ -27,13 +27,20 @@
                 <div class="field">
                     <input type="password" name="Password" placeholder="Ustal hasło" required>
                 </div>
-                <div class="field">
-                    <label for="Sex">Płeć:</label>
-                    <select class="Sex" id="Sex" name="Sex">
+                <p class="sexchoice">Wybierz płeć:</p>
+                <div>
 
-                        <option value="Mezczyzna">Mężczyzna</option>
-                        <option value="Kobieta">Kobieta</option>
-                    </select>
+                    <div>
+                        <div>
+                            <input type="radio" id="Sex" name="Sex" value="Mezczyzna" checked style="display:true" />
+                            <label class="pole" for="Mezczyzna">Mezczyzna</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="Sex" name="Sex" value="Kobieta" />
+                            <label class="pole" for="Kobieta">Kobieta</label>
+                        </div>
+                    </div>
                 </div>
                 @if (ViewData["errorR"] != null)
                 {
