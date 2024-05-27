@@ -1,29 +1,31 @@
 ﻿<link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
+<br />
+<br />
 <div class="wrapper">
     <div class="title-text">
-        <div class="title signup">Rejestracja</div>
+        <div class="title signup">Dodaj dietetyka</div>
     </div>
     <div class="form-container">
         <div class="form-inner">
             <form class="signup" asp-action="AddDietitian" asp-controller="Administrator" method="post" enctype="multipart/form-data">
                 <div class="field">
-                    <input type="text" name="FirstName" placeholder="Imię" required>
+                    <input type="text" name="FirstName" placeholder="Podaj imię" required><br />
                 </div>
                 <div class="field">
-                    <input type="text" name="LastName" placeholder="Nazwisko" required>
+                    <input type="text" name="LastName" placeholder="Podaj nazwisko" required>
                 </div>
                 <div class="field">
-                    <input type="email" name="Email" placeholder="Adres email" required>
+                    <input type="email" name="Email" placeholder="Podaj email" required>
                 </div>
 
                 <div class="field">
-                    <input type="number" name="Age" placeholder="Wiek" required>
+                    <input type="number" name="Age" placeholder="Podaj wiek" required>
                 </div>
                 <div class="field">
-                    <input type="tel" name="PhoneNumber" placeholder="Numer telefonu" required>
+                    <input type="tel" name="PhoneNumber" placeholder="Podaj numer telefonu" required>
                 </div>
                 <div class="field">
-                    <input type="password" name="Password" placeholder="Hasło" required>
+                    <input type="password" name="Password" placeholder="Ustal hasło" required>
                 </div>
                 <div class="field">
                     <label for="Sex">Płeć:</label>
@@ -39,7 +41,7 @@
                 }
                 <div class="field btn">
                     <div class="btn-layer"></div>
-                    <input type="submit" value="Zarejestruj">
+                    <input type="submit" value="Dodaj dietetyka">
                 </div>
             </form>
         </div>

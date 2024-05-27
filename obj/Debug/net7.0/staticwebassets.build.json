@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2Aoef/iuvZFRI93b0txtu9zWrUtib2ZTLsTxhsz0/bs=",
+  "Hash": "NnVZl6PDmd4NKzSwWFQhUCOJkI2Rnc21A3XWpHrZbjE=",
   "Source": "DietBowl",
   "BasePath": "_content/DietBowl",
   "Mode": "Default",
@@ -2466,6 +2466,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\kawa.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\ketogenic-low-carbs-diet-food-selection-white-wall.jpg",
+      "SourceId": "DietBowl",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\",
+      "BasePath": "_content/DietBowl",
+      "RelativePath": "images/ketogenic-low-carbs-diet-food-selection-white-wall.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ketogenic-low-carbs-diet-food-selection-white-wall.jpg"
     },
     {
       "Identity": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\images\\logo.png",
