@@ -35,7 +35,7 @@ else
                     <td>@user.Email</td>
                     <td>@user.FirstName</td>
                     <td>@user.LastName</td>
-                    <td>@user.Age</td>
+                    <td>@(ObliczWiek(user.DateOfBirth))</td> <!-- Obliczanie wieku -->
                     <td>@user.Sex</td>
                     <td class="action">
                         <form method="post" action="@Url.Action("RemovePatient", "Dietitian")">
@@ -50,3 +50,17 @@ else
        
     </table>
     }
+
+@functions {
+    // Funkcja do obliczania wieku na podstawie daty urodzenia
+    int ObliczWiek(DateTime dataUrodzenia)
+    {
+        DateTime dzisiaj = DateTime.Today;
+        int wiek = dzisiaj.Year - dataUrodzenia.Year;
+        if (dzisiaj.Month < dataUrodzenia.Month || (dzisiaj.Month == dataUrodzenia.Month && dzisiaj.Day < dataUrodzenia.Day))
+        {
+            wiek--;
+        }
+        return wiek;
+    }
+}

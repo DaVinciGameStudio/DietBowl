@@ -22,7 +22,13 @@ namespace DietBowl.Models
         public string Password {get; set;}
         public string FirstName {get; set;}
         public string LastName {get; set;}
-        public int Age {get; set;}
+        //public int Age {get; set;}
+
+        [CustomValidation(typeof(User), nameof(ValidateDateOfBirth))]
+        [Required(ErrorMessage = "Data urodzenia jest wymagana.")]
+        [DataType(DataType.Date)]
+        public DateTime DateOfBirth { get; set; }
+
         public string Sex {get; set;}
         public string PhoneNumber {get; set;}
 
@@ -42,5 +48,14 @@ namespace DietBowl.Models
         //{
         //    throw new NotImplementedException();
         //}
+
+        public static ValidationResult ValidateDateOfBirth(DateTime dateOfBirth, ValidationContext context)
+        {
+            if (dateOfBirth > DateTime.Now)
+            {
+                return new ValidationResult("Data urodzenia nie może być w przyszłości.");
+            }
+            return ValidationResult.Success;
+        }
     }
 }

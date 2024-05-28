@@ -7,6 +7,7 @@ using DietBowl.EF;
 using DietBowl.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace DietBowl.Controllers
@@ -74,6 +75,57 @@ namespace DietBowl.Controllers
         public IActionResult Error()
         {
             return View("Error!");
+        }
+
+
+
+
+        //Ostatnie szlify
+        // GET: Recipes/Edit/{id}
+        [Authorize(Roles = "1")]
+        public IActionResult Edit(int id)
+        {
+            var recipe = _dietBowlDbContext.Recipes.Find(id);
+            if (recipe == null)
+            {
+                return NotFound();
+            }
+            return View(recipe);
+        }
+
+        // POST: Recipes/Edit/{id}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "1")]
+        public IActionResult Edit(int id, [Bind("Id,Title,Ingedients,Instructions,Protein,Fat,Carbohydrate,Calories")] Recipe recipe)
+        {
+            if (id != recipe.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    recipe.Calories = recipe.CalculateCalories(); // Recalculate calories
+                    _dietBowlDbContext.Update(recipe);
+                    _dietBowlDbContext.SaveChanges();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!_dietBowlDbContext.Recipes.Any(e => e.Id == recipe.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(recipe);
         }
     }
 }

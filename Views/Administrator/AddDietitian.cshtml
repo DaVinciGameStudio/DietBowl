@@ -1,4 +1,5 @@
-﻿<link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
+﻿@model User
+<link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
 <div class="wrapper">
     <div class="title-text">
         <div class="title signup">Rejestracja</div>
@@ -17,7 +18,8 @@
                 </div>
 
                 <div class="field">
-                    <input type="number" name="Age" placeholder="Wiek" required>
+                    <input type="date" name="DateOfBirth" placeholder="Data urodzenia" required>
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
                 </div>
                 <div class="field">
                     <input type="tel" name="PhoneNumber" placeholder="Numer telefonu" required>

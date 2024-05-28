@@ -1,0 +1,49 @@
+﻿@model Recipe
+
+@{
+    ViewData["Title"] = "Edytuj przepis";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Ingedients"></label>
+            <input asp-for="Ingedients" class="form-control" />
+            <span asp-validation-for="Ingedients" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Instructions"></label>
+            <textarea asp-for="Instructions" class="form-control"></textarea>
+            <span asp-validation-for="Instructions" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Protein"></label>
+            <input asp-for="Protein" class="form-control" />
+            <span asp-validation-for="Protein" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Fat"></label>
+            <input asp-for="Fat" class="form-control" />
+            <span asp-validation-for="Fat" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Carbohydrate"></label>
+            <input asp-for="Carbohydrate" class="form-control" />
+            <span asp-validation-for="Carbohydrate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Calories"></label>
+            <input asp-for="Calories" class="form-control" readonly />
+            <span asp-validation-for="Calories" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
+    </form>
+</div>
