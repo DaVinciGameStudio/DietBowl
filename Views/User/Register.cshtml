@@ -19,10 +19,11 @@
                 </div>
 
                 <div class="field">
-                    <input type="date" name="DateOfBirth" placeholder="Data urodzenia" required>
+                    <input type="date" name="DateOfBirth" placeholder="Data urodzenia" required max="@DateTime.Now.ToString("yyyy-MM-dd")">
                 </div>
+
                 <div class="field">
-                    <input type="tel" name="PhoneNumber" placeholder="Numer telefonu" required>
+                    <input type="tel" name="PhoneNumber" placeholder="Numer telefonu" required pattern="\d{9}" maxlength="9" title="Numer telefonu musi zawierać dokładnie 9 cyfr.">
                 </div>
                 <div class="field">
                     <input type="password" name="Password" placeholder="Hasło" required>
