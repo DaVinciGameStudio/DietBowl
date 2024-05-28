@@ -17,8 +17,8 @@ namespace DietBowl.Models
         public double Carbohydrate {get; set;}
         public double Calories {get; set;}
 
-        //Relacja wiele do wielu z Diets
-        public List<Diet> Diets { get; set; } = new List<Diet>();
+        //Relacja wiele do wielu z DietRecipe
+        public List<DietRecipe> DietRecipes { get; set; } = new List<DietRecipe>();
 
         //Relacja wiele do wielu z Allergen
         public List<Allergen> Allergens { get; set; } = new List<Allergen>();

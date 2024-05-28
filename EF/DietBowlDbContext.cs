@@ -5,12 +5,13 @@ namespace DietBowl.EF
 {
     public class DietBowlDbContext : DbContext
     {
-        public DbSet<Diet> Diets {get; set;}
-        public DbSet<Recipe> Recipes {get; set;}
-        public DbSet<Allergen> Allergens {get; set;}
-        public DbSet<BodyParameter> BodyParameters {get; set;}
-        public DbSet<User> Users {get; set;}
-        public DbSet<Preference> Preferences {get; set;}
+        public DbSet<Diet> Diets { get; set; }
+        public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<DietRecipe> DietRecipes { get; set; }
+        public DbSet<Allergen> Allergens { get; set; }
+        public DbSet<BodyParameter> BodyParameters { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Preference> Preferences { get; set; }
 
         public DietBowlDbContext(DbContextOptions<DietBowlDbContext> options) : base(options)
         {
@@ -24,14 +25,27 @@ namespace DietBowl.EF
                 optionsBuilder.UseSqlServer("DefaultConnection");
             }
         }
-    
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Relacja wiele do wielu dla diet i recipe
-            modelBuilder.Entity<Diet>()
-                .HasMany(d => d.Recipes)
-                .WithMany(r => r.Diets);
+            ////Relacja wiele do wielu dla diet i recipe
+            //modelBuilder.Entity<Diet>()
+            //    .HasMany(d => d.Recipes)
+            //    .WithMany(r => r.Diets);
+            modelBuilder.Entity<DietRecipe>()
+                .HasKey(dr => new { dr.DietId, dr.RecipeId }); // Ustawienie klucza głównego dla tabeli pośredniczącej
+
+            modelBuilder.Entity<DietRecipe>()
+                .HasOne(dr => dr.Diet)
+                .WithMany(d => d.DietRecipes)
+                .HasForeignKey(dr => dr.DietId); // Definicja klucza obcego dla diety
+
+            modelBuilder.Entity<DietRecipe>()
+                .HasOne(dr => dr.Recipe)
+                .WithMany(r => r.DietRecipes)
+                .HasForeignKey(dr => dr.RecipeId); // Definicja klucza obcego dla przepisu
+
 
             //Relacja wiele do wielu dla allergen i recipe
             modelBuilder.Entity<Allergen>()

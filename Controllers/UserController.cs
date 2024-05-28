@@ -107,7 +107,7 @@ namespace DietBowl.Controllers
                 }
             }
 
-            return Json(new { message = "Nazwa użytkownika lub hasło nieprawidłowe" });
+            return RedirectToAction("Login", "User");
         }
 
         [Authorize(Roles = "0,1,2")]
@@ -281,5 +281,82 @@ namespace DietBowl.Controllers
             return RedirectToAction("Index", "Home"); // Przekierowanie po pomyślnym dodaniu preferencji
         }
 
+
+        [HttpGet]
+        [Authorize(Roles = "2")]
+        public async Task<IActionResult> EditBodyParameter(int id)
+        {
+            // Pobieramy id aktualnie zalogowanego użytkownika
+            var emailUser = User.FindFirstValue(ClaimTypes.Name);
+            var userId = await _userService.GetUserIdByEmail(emailUser);
+
+            if (userId != null)
+            {
+                // Szukamy parametru ciała o podanym id dla danego użytkownika
+                var bodyParameter = await _dietBowlDbContext.BodyParameters
+                    .Where(bp => bp.UserId == userId && bp.Id == id)
+                    .FirstOrDefaultAsync();
+
+                if (bodyParameter != null)
+                {
+                    // Jeśli parametr ciała został znaleziony, zwracamy widok edycji z przekazanym parametrem
+                    return View(bodyParameter);
+                }
+                else
+                {
+                    // Jeśli parametr ciała o podanym id nie został znaleziony dla danego użytkownika
+                    return NotFound();
+                }
+            }
+            else
+            {
+                // Jeśli użytkownik nie został zidentyfikowany, zwracamy błąd
+                return BadRequest("Użytkownik nie został zidentyfikowany.");
+            }
+        }
+
+        // POST: BodyParameters/Edit/{id}
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        [Authorize(Roles = "2")]
+        public async Task<IActionResult> EditBodyParameter(int id, [Bind("Id,Height,Weight")] BodyParameter bodyParameter)
+        {
+            // Pobieramy adres e-mail aktualnie zalogowanego użytkownika
+            var bodyParameters = await _userService.GetBodyParametersById(id);
+
+            // Sprawdzamy, czy przekazane id zgadza się z id parametru ciała
+            if (id != bodyParameter.Id)
+            {
+                return NotFound();
+            }
+
+
+                try
+                {
+                    // Aktualizujemy parametr ciała w bazie danych
+                    bodyParameters.BMI = Math.Round(bodyParameter.Weight / Math.Pow(bodyParameter.Height / 100, 2), 3);
+                    bodyParameters.Weight = bodyParameter.Weight;
+                    bodyParameters.Height = bodyParameter.Height;
+                    _dietBowlDbContext.Update(bodyParameters);
+                    await _dietBowlDbContext.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!_dietBowlDbContext.BodyParameters.Any(bp => bp.Id == bodyParameter.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                
+            }
+            //// Jeśli ModelState nie jest poprawny, zwracamy widok edycji z błędami walidacji
+            //return View(bodyParameter);
+
+            // Po pomyślnej edycji przekierowujemy do widoku z listą parametrów ciała
+            return RedirectToAction("BodyParameters", "User");
+        }
     }
 }

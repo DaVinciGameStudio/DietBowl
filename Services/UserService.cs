@@ -96,6 +96,7 @@ namespace DietBowl.Services
             return await _dietBowlDbContext.BodyParameters.Where(bp => bp.UserId == userId).ToListAsync();
         }
 
+
         //Preferencje
         public async Task<Preference> GetUserPreferences(int userId)
         {
@@ -133,5 +134,11 @@ namespace DietBowl.Services
 
             return user;
         }
+
+        public async Task<BodyParameter> GetBodyParametersById(int id)
+        {
+            return await _dietBowlDbContext.BodyParameters.FirstAsync(bp => bp.Id == id);
+        }
     }
+
 }
