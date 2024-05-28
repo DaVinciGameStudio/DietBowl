@@ -136,11 +136,17 @@ namespace DietBowl.Services
                     .FirstOrDefault()!;
 
 
-                Diet diet = new Diet{
-                Date = day,
-                UserId = userId,
-                User = user,
-                Recipes = recipes
+                Diet diet = new Diet
+                {
+                    Date = day,
+                    UserId = userId,
+                    User = user,
+                    DietRecipes = recipes.Select(recipe => new DietRecipe
+                    {
+                        RecipeId = recipe.Id,
+                        Recipe = recipe,
+                        IsConsumed = false
+                    }).ToList()
                 };
                 await _dietBowlDbContext.Diets.AddAsync(diet);
                 await _dietBowlDbContext.SaveChangesAsync();

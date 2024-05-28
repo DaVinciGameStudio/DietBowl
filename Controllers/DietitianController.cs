@@ -134,16 +134,15 @@ namespace DietBowl.Controllers
          }
 
         [HttpPost]
-         public async Task<IActionResult> AddRecipeAtDay(int userId, DateTime day, string recipeList)
+         public async Task<IActionResult> AddRecipeAtDay(int userId, DateTime date, string recipeList)
          {
-            Console.WriteLine(recipeList, userId, day);
             dynamic jsonData = JsonConvert.DeserializeObject(recipeList)!;
             List<int> idRecipes = new();
             foreach(int idRepice in jsonData)
             {
                 idRecipes.Add(idRepice);
             }
-            await _dietitianService.AddRecipeAtDay(userId, day, idRecipes);
+            await _dietitianService.AddRecipeAtDay(userId, date, idRecipes);
             return RedirectToAction("AssignedPatients", "Dietitian");
          }
     }

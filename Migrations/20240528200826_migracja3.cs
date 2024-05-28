@@ -5,7 +5,7 @@
 namespace DietBowl.Migrations
 {
     /// <inheritdoc />
-    public partial class m5 : Migration
+    public partial class migracja3 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

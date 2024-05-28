@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DietBowl.Migrations
 {
     /// <inheritdoc />
-    public partial class migracjaUnikalneEmaile : Migration
+    public partial class migracjanowabaza : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -55,7 +55,7 @@ namespace DietBowl.Migrations
                     Password = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Age = table.Column<int>(type: "int", nullable: false),
+                    DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Sex = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -154,6 +154,29 @@ namespace DietBowl.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "UserNutritionalRequirement",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Calories = table.Column<double>(type: "float", nullable: false),
+                    Protein = table.Column<double>(type: "float", nullable: false),
+                    Fat = table.Column<double>(type: "float", nullable: false),
+                    Carbohydrate = table.Column<double>(type: "float", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserNutritionalRequirement", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserNutritionalRequirement_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "DietRecipe",
                 columns: table => new
                 {
@@ -231,6 +254,12 @@ namespace DietBowl.Migrations
                 table: "Preferences",
                 column: "UserId",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserNutritionalRequirement_UserId",
+                table: "UserNutritionalRequirement",
+                column: "UserId",
+                unique: true);
         }
 
         /// <inheritdoc />
@@ -247,6 +276,9 @@ namespace DietBowl.Migrations
 
             migrationBuilder.DropTable(
                 name: "DietRecipe");
+
+            migrationBuilder.DropTable(
+                name: "UserNutritionalRequirement");
 
             migrationBuilder.DropTable(
                 name: "Preferences");

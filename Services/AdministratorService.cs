@@ -19,6 +19,13 @@ namespace DietBowl.Services
             return await _dietBowlDbContext.Users.Where(u => u.Role == 1 && u.IdDietician == null).ToListAsync();
         }
 
+        public async Task<List<User>> GetAllUsers()
+        {
+            return await _dietBowlDbContext.Users
+                .Where(u => u.Role == 2)
+                .ToListAsync();
+        }
+
         public bool RegisterDietitian(User user)
         {
             try
@@ -42,5 +49,53 @@ namespace DietBowl.Services
                 throw;
             }
         }
+
+
+        public async Task DeleteUserById(int id)
+        {
+            var user = await _dietBowlDbContext.Users.FindAsync(id);
+            if (user != null)
+            {
+                _dietBowlDbContext.Users.Remove(user);
+                await _dietBowlDbContext.SaveChangesAsync();
+            }
+        }
+
+        public async Task DeleteDietitianById(int id)
+        {
+            var dietitian = await _dietBowlDbContext.Users.FindAsync(id);
+            if (dietitian != null && dietitian.Role == 1)
+            {
+                _dietBowlDbContext.Users.Remove(dietitian);
+                await _dietBowlDbContext.SaveChangesAsync();
+            }
+        }
+
+        public async Task RemoveDietitianAndReleasePatients(int dietitianId)
+        {
+            // Znajdź dietetyka
+            var dietitian = await _dietBowlDbContext.Users.FindAsync(dietitianId);
+
+            if (dietitian != null && dietitian.Role == 1)
+            {
+                // Znajdź pacjentów przypisanych do dietetyka
+                var patients = await _dietBowlDbContext.Users
+                    .Where(u => u.Role == 2 && u.IdDietician == dietitianId)
+                    .ToListAsync();
+
+                // Ustaw IdDietician na NULL dla każdego pacjenta
+                foreach (var patient in patients)
+                {
+                    patient.IdDietician = null;
+                }
+
+                // Usuń dietetyka
+                _dietBowlDbContext.Users.Remove(dietitian);
+
+                // Zapisz zmiany w bazie danych
+                await _dietBowlDbContext.SaveChangesAsync();
+            }
+        }
+
     }
 }

@@ -6,5 +6,9 @@ namespace DietBowl.Services.Interfaces
     {
         Task<List<User>> GetAllDietitians();
         bool RegisterDietitian(User user);
+        Task<List<User>> GetAllUsers();
+        Task DeleteUserById(int id);
+        Task DeleteDietitianById(int id);
+        Task RemoveDietitianAndReleasePatients(int dietitianId);
     }
 }

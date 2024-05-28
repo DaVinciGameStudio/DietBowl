@@ -1,34 +1,22 @@
 ﻿@model IList<DietBowl.Models.User>
+
 <link rel="stylesheet" href="~/css/dietecitianpatient.css" asp-append-version="true" />
-@{
-    ViewData["Title"] = "Przypisani Pacjenci";
-}
 
-<br />
-<br />
-
-<h2 style="text-align:center">@ViewData["Title"]</h2>
-
-
-
-
-@if (Model.Count == 0)
-{
-    <p style="text-align:center">Nie masz przypisanych żadnych pacjentów.</p>
-}
-else
-{
-    <table>
+<h2>Lista użytkowników</h2>
+<div class="filter">
+    <table class="table">
+        <thead>
             <tr>
                 <th>Email</th>
                 <th>Imię</th>
                 <th>Nazwisko</th>
                 <th>Wiek</th>
                 <th>Płeć</th>
-                <th>Akcja</th>
+                <th>Numer telefonu</th>
+                <th>Akcje</th>
             </tr>
-       
-      
+        </thead>
+        <tbody>
             @foreach (var user in Model)
             {
                 <tr>
@@ -37,19 +25,19 @@ else
                     <td>@user.LastName</td>
                     <td>@(ObliczWiek(user.DateOfBirth))</td> <!-- Obliczanie wieku -->
                     <td>@user.Sex</td>
-                    <td class="action">
-                        <form method="post" action="@Url.Action("RemovePatient", "Dietitian")">
-                            <input type="hidden" name="userId" value="@user.Id" />
-                            <input class="btn btn-danger" type="submit" value=" Usuń " onclick="return confirm('Czy na pewno chcesz usunąć tego pacjenta?');" />
+                    <td>@user.PhoneNumber</td>
+                    <td>
+                        <form method="post" asp-action="DeleteUser" asp-route-id="@user.Id" onsubmit="return confirm('Czy na pewno chcesz usunąć użytkownika?');">
+                            <button type="submit" class="btn btn-danger">Usuń</button>
                         </form>
-                        <a class="btn btn-primary" href="@Url.Action("SetNutritionalRequirements", "Dietitian", new { userId = user.Id })">Makro</a>
-                        <a class="btn btn-primary" href="@Url.Action("AddRecipeToDiet", "Dietitian", new { userId = user.Id })">Dieta</a>
                     </td>
                 </tr>
             }
-       
+        </tbody>
     </table>
-    }
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 @functions {
     // Funkcja do obliczania wieku na podstawie daty urodzenia
