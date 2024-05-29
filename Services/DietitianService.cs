@@ -121,7 +121,8 @@ namespace DietBowl.Services
         public async Task<List<Recipe>> GetRecipes()
         {
             return await _dietBowlDbContext.Recipes
-            .ToListAsync();
+                .Include(a=>a.Allergens)
+                .ToListAsync();
         }
 
         public async Task<bool> AddRecipeAtDay(int userId, DateTime day, List<int> idRecipes)

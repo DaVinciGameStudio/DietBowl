@@ -28,6 +28,14 @@
             <p>@Model.WeightGoal<a> kg</a></p>
             <h2>Aktywność:</h2>
             <p>@Model.ActivityStatus</p>
+            <h2>Alergeny:</h2>
+            <ul>
+                @foreach (var allergen in Model.Allergens)
+                {
+                    <li>@allergen.Name</li>
+                }
+            </ul>
+            <a asp-controller="User" asp-action="EditPreference" asp-route-id="@Model.Id" class="btn btn-primary">Edytuj preferencje</a>
         </div>
     }
 </div>

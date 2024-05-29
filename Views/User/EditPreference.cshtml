@@ -1,0 +1,51 @@
+﻿@model Preference
+
+@{
+    ViewBag.Title = "Edit Preference";
+    var allergens = ViewBag.Allergens as List<Allergen>;
+}
+
+<h2>Edit Preference</h2>
+
+<form asp-action="EditPreference" method="post">
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="WeightGoal"></label>
+        <input asp-for="WeightGoal" class="form-control" />
+        <span asp-validation-for="WeightGoal" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ActivityStatus" class="control-label"> Poziom aktywnosci</label>
+        <select asp-for="ActivityStatus" class="form-control">
+            <option value="">-- Wybierz swój status aktywności --</option>
+            <option value="Low">Niska</option>
+            <option value="Medium">Średnia</option>
+            <option value="High">Wysoka</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Allergens</label>
+        <div>
+            @foreach (var allergen in allergens)
+            {
+                <div class="form-check">
+                    <input type="checkbox" name="selectedAllergens" value="@allergen.Id" class="form-check-input"
+                    @(Model.Allergens.Any(a => a.Id == allergen.Id) ? "checked" : "") />
+                    <label class="form-check-label">@allergen.Name</label>
+                </div>
+            }
+        </div>
+    </div>
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

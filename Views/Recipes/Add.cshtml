@@ -44,6 +44,17 @@
         <input asp-for="Fat" class="form-control" />
         <span asp-validation-for="Fat" class="text-danger"></span>
     </div>
+            <div class="form-group">
+                <label>Alergeny:</label>
+                @foreach (var allergen in @Model.Allergens)
+                {
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="SelectedAllergens" value="@allergen.Id" /> @allergen.Name
+                        </label>
+                    </div>
+                }
+            </div>
 
 
     <button type="submit" class="btn btn-success float-end">Dodaj przepis</button>

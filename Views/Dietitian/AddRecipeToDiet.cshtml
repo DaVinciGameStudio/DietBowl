@@ -129,6 +129,14 @@
                 <p>Protein: @recipe.Protein g</p>
                 <p>Fat: @recipe.Fat g</p>
                 <p>Calories: @recipe.CalculateCalories() kcal</p>
+
+                    <p>Alergeny:</p>
+                    <ul>
+                        @foreach (var allergen in recipe.Allergens)
+                        {
+                            <li>@allergen.Name</li>
+                        }
+                    </ul>
             </div>
         }
      </div>
