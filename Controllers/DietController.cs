@@ -18,11 +18,11 @@ namespace DietBowl.Controllers
             return View();
         }
 
-        public IActionResult DietsCalendar()
+        public IActionResult DietsCallendar()
         {
             return View();
         }
-        public async Task<IActionResult> DietsCalendarShow(DateTime date)
+        public async Task<IActionResult> DietsCallendarShow(DateTime date)
         {
             // Pobieramy dietę na podstawie wybranej daty
             var diet = await _dietBowlDbContext.Diets
@@ -65,6 +65,26 @@ namespace DietBowl.Controllers
         // Nowa akcja dla wyświetlania widoku "NoDietForDay"
         public IActionResult NoDietForDay()
         {
+            return View();
+        }
+
+
+
+        //Widok kalendarza dla dietetyka
+        public async Task<IActionResult> DietsCallendarForDietitian(int userId)
+        {
+            // Pobierz wszystkie daty z bazy danych dla danego użytkownika
+            var diets = await _dietBowlDbContext.Diets
+                            .Where(d => d.UserId == userId)
+                            .ToListAsync();
+
+            // Utwórz słownik, w którym kluczem będzie data, a wartością będzie lista obiektów Diet dla tej daty
+            var dietDictionary = diets.GroupBy(d => d.Date.Date)
+                                      .ToDictionary(g => g.Key, g => g.ToList());
+
+            // Przekazanie danych do widoku
+            ViewData["DietDictionary"] = dietDictionary;
+            ViewBag.userId = userId;
             return View();
         }
     }

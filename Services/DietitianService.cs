@@ -125,7 +125,7 @@ namespace DietBowl.Services
                 .ToListAsync();
         }
 
-        public async Task<bool> AddRecipeAtDay(int userId, DateTime day, List<int> idRecipes)
+        public async Task<bool> AddRecipeAtDay(int userId, DateTime date, List<int> idRecipes)
         {
             if(userId > 0)
             {
@@ -139,7 +139,7 @@ namespace DietBowl.Services
 
                 Diet diet = new Diet
                 {
-                    Date = day,
+                    Date = date,
                     UserId = userId,
                     User = user,
                     DietRecipes = recipes.Select(recipe => new DietRecipe

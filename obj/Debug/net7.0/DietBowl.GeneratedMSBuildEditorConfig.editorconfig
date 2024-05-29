@@ -46,12 +46,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGl0aWFuXFNldE51dHJpdGlvbmFsUmVxdWlyZW1lbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/rep/DietBowl/Views/Diet/DietsCalendar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldFxEaWV0c0NhbGVuZGFyLmNzaHRtbA==
+[E:/rep/DietBowl/Views/Diet/DietsCallendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldFxEaWV0c0NhbGxlbmRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/rep/DietBowl/Views/Diet/DietsCalendarShow.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldFxEaWV0c0NhbGVuZGFyU2hvdy5jc2h0bWw=
+[E:/rep/DietBowl/Views/Diet/DietsCallendarForDietitian.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldFxEaWV0c0NhbGxlbmRhckZvckRpZXRpdGlhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/rep/DietBowl/Views/Diet/DietsCallendarShow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldFxEaWV0c0NhbGxlbmRhclNob3cuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/rep/DietBowl/Views/Diet/NoDietForDay.cshtml]

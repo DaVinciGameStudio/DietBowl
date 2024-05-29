@@ -125,11 +125,12 @@ namespace DietBowl.Controllers
             return RedirectToAction("AssignedPatients", "Dietitian"); // Domyślna strona po zalogowaniu
         }
 
-         public async Task<IActionResult> AddRecipeToDiet(int userId)
+         public async Task<IActionResult> AddRecipeToDiet(int userId, DateTime data)
          {
             var recipes = await _dietitianService.GetRecipes();
             ViewData["List"] = recipes.Select(x => x.Title).ToJson();
             ViewData["IdUser"] = userId;
+            ViewBag.date = data;
             return View(recipes);
          }
 
