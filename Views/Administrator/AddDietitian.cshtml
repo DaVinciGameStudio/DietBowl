@@ -2,38 +2,44 @@
 <link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
 <div class="wrapper">
     <div class="title-text">
-        <div class="title signup">Rejestracja</div>
+        <div class="title signup">Dodaj dietetyka</div>
     </div>
     <div class="form-container">
         <div class="form-inner">
             <form class="signup" asp-action="AddDietitian" asp-controller="Administrator" method="post" enctype="multipart/form-data">
                 <div class="field">
-                    <input type="text" name="FirstName" placeholder="Imię" required>
+                    <input type="text" name="FirstName" placeholder="Podaj imię" required>
                 </div>
                 <div class="field">
-                    <input type="text" name="LastName" placeholder="Nazwisko" required>
+                    <input type="text" name="LastName" placeholder="Podaj nazwisko" required>
                 </div>
                 <div class="field">
-                    <input type="email" name="Email" placeholder="Adres email" required>
+                    <input type="email" name="Email" placeholder="Podaj email" required>
                 </div>
 
                 <div class="field">
-                    <input type="date" name="DateOfBirth" placeholder="Data urodzenia" required max="@DateTime.Now.ToString("yyyy-MM-dd")>
-                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                    <input type="date" name="DateOfBirth" placeholder="Data urodzenia" required max="@DateTime.Now.ToString("yyyy-MM-dd")">
                 </div>
                 <div class="field">
-                    <input type="tel" name="PhoneNumber" placeholder="Numer telefonu" required pattern="\d{9}" maxlength="9" title="Numer telefonu musi zawierać dokładnie 9 cyfr.">
+                    <input type="tel" name="PhoneNumber" placeholder="Podaj numer telefonu" required pattern="\d{9}" maxlength="9" title="Numer telefonu musi zawierać dokładnie 9 cyfr.">
                 </div>
                 <div class="field">
-                    <input type="password" name="Password" placeholder="Hasło" required>
+                    <input type="password" name="Password" placeholder="Ustal hasło" required>
                 </div>
-                <div class="field">
-                    <label for="Sex">Płeć:</label>
-                    <select class="Sex" id="Sex" name="Sex">
+                <p class="sexchoice">Wybierz płeć:</p>
+                <div>
 
-                        <option value="Mezczyzna">Mężczyzna</option>
-                        <option value="Kobieta">Kobieta</option>
-                    </select>
+                    <div>
+                        <div>
+                            <input type="radio" id="Sex" name="Sex" value="Mezczyzna" checked style="display:true" />
+                            <label class="pole" for="Mezczyzna">Mezczyzna</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="Sex" name="Sex" value="Kobieta" />
+                            <label class="pole" for="Kobieta">Kobieta</label>
+                        </div>
+                    </div>
                 </div>
                 @if (ViewData["errorR"] != null)
                 {
@@ -41,7 +47,7 @@
                 }
                 <div class="field btn">
                     <div class="btn-layer"></div>
-                    <input type="submit" value="Zarejestruj">
+                    <input type="submit" value="Dodaj dietetyka">
                 </div>
             </form>
         </div>

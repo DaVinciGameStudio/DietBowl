@@ -28,13 +28,20 @@
                 <div class="field">
                     <input type="password" name="Password" placeholder="Hasło" required>
                 </div>
-                <div class="field">
-                    <label for="Sex">Płeć:</label>
-                    <select class="Sex" id="Sex" name="Sex">
-                        
-                        <option value="Mezczyzna">&#9794;</option>
-                        <option value="Kobieta">&#9792;</option>
-                    </select>
+                <p class="sexchoice">Wybierz płeć:</p>
+                <div>
+
+                    <div>
+                        <div>
+                            <input type="radio" id="Sex" name="Sex" value="Mezczyzna" checked style="display:true" />
+                            <label class="pole" for="Mezczyzna">Mezczyzna</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="Sex" name="Sex" value="Kobieta" />
+                            <label class="pole" for="Kobieta">Kobieta</label>
+                        </div>
+                    </div>
                 </div>
                 @if (ViewData["errorR"] != null)
                 {
