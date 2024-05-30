@@ -43,7 +43,7 @@ else
                             <input class="btn btn-danger" type="submit" value=" Usuń " onclick="return confirm('Czy na pewno chcesz usunąć tego pacjenta?');" />
                         </form>
                         <a class="btn btn-primary" href="@Url.Action("SetNutritionalRequirements", "Dietitian", new { userId = user.Id })">Makro</a>
-                        <a class="btn btn-primary" href="@Url.Action("AddRecipeToDiet", "Dietitian", new { userId = user.Id })">Dieta</a>
+                        <a class="btn btn-primary" href="@Url.Action("DietsCallendarForDietitian", "Diet", new { userId = user.Id })">Dieta</a>
                     </td>
                 </tr>
             }

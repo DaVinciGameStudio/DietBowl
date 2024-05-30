@@ -17,15 +17,15 @@
         <label asp-for="WeightGoal" class="control-label">Upragniona waga</label>
         <input asp-for="WeightGoal" class="form-control" />
     </div>
-    <div class="form-group">
-        <label asp-for="ActivityStatus" class="control-label"> Poziom aktywnosci</label>
-        <select asp-for="ActivityStatus" class="form-control">
-            <option value="">-- Wybierz swój status aktywności --</option>
-            <option value="Low">Niska</option>
-            <option value="Medium">Średnia</option>
-            <option value="High">Wysoka</option>
-        </select>
-    </div>
+        <div class="form-group">
+            <label asp-for="ActivityStatus" class="control-label"> Poziom aktywnosci</label>
+            <select asp-for="ActivityStatus" class="form-control">
+                <option value="">-- Wybierz swój status aktywności --</option>
+                <option value="Low">Niska</option>
+                <option value="Medium">Średnia</option>
+                <option value="High">Wysoka</option>
+            </select>
+        </div>
     <div class="form-group">
         <label>Alergeny:</label>
         @foreach (var allergen in ViewBag.Allergens as List<DietBowl.Models.Allergen>)

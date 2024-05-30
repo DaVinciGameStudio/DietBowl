@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Edytuj przepis";
+    var allergens = ViewBag.Allergens as List<Allergen>;
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -43,6 +44,17 @@
             <label asp-for="Calories"></label>
             <input asp-for="Calories" class="form-control" readonly />
             <span asp-validation-for="Calories" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Alergeny:</label>
+            @foreach (var allergen in allergens)
+            {
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="SelectedAllergens" value="@allergen.Id" @(Model.Allergens.Any(a => a.Id == allergen.Id) ? "checked" : "") /> @allergen.Name
+                    </label>
+                </div>
+            }
         </div>
         <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
     </form>

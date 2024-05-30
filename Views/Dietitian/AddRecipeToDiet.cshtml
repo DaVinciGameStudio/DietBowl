@@ -1,6 +1,8 @@
 @model IList<DietBowl.Models.Recipe>
 @{
     int userId = (int)ViewData["IdUser"]!;
+    DateTime ddd = ViewBag.date;
+
 }
 
 <link rel="stylesheet" href="~/css/dietecitianaddrecipe.css" asp-append-version="true" />
@@ -77,17 +79,24 @@
         }
 
     function parseToSend() {
+        var dateOrg = @Html.Raw(Json.Serialize(@ViewBag.date));
+        var date = new Date(dateOrg);
+        // Uzyskaj rok, miesiąc i dzień
+        var year = date.getFullYear();
+        var month = ('0' + (date.getMonth() + 1)).slice(-2); // Dodaj 1 do miesiąca, ponieważ indeksowanie miesięcy zaczyna się od 0
+        var day = ('0' + date.getDate()).slice(-2);
+
+        // Utwórz łańcuch znaków w formacie "yyyy-MM-dd"
+        var formattedDate = year + '-' + month + '-' + day;
+
+        document.getElementById('sendList').children.date.value = formattedDate;
         document.getElementById('recipeList').value = JSON.stringify(list);
         document.getElementById('sendList').submit();
     }
-    
-
 
 </script>
 <div class="blue">
-   
         <div id="listAtOneDay"></div>
-      
 </div>
 
 
@@ -113,7 +122,7 @@
     @* Tutaj dodac brak mozliwosci wybierania daty wstecz (date < today) *@
     <form id="sendList" class="login" asp-action="AddRecipeAtDay" asp-controller="Dietitian" method="post">
         <input name="userId" value="@userId" hidden>
-        <input name="date" type="date"/>
+        <input name="date" type="date" hidden>
         <input hidden name="recipeList" id="recipeList">
     </form>
         <button class="btn btn-success btn-lg" type="button" onclick="parseToSend()">Przypisz</button>
@@ -129,6 +138,14 @@
                 <p>Protein: @recipe.Protein g</p>
                 <p>Fat: @recipe.Fat g</p>
                 <p>Calories: @recipe.CalculateCalories() kcal</p>
+
+                    <p>Alergeny:</p>
+                    <ul>
+                        @foreach (var allergen in recipe.Allergens)
+                        {
+                            <li>@allergen.Name</li>
+                        }
+                    </ul>
             </div>
         }
      </div>
@@ -141,6 +158,3 @@
     
    
 </div>
-
-
-

@@ -238,9 +238,11 @@ namespace DietBowl.Controllers
             // Przekaż listę alergenów do ViewBag, aby móc ją wykorzystać w widoku
             ViewBag.Allergens = allergens;
 
+
             return View(model);
         }
 
+        
         [Authorize(Roles = "2")]
         [HttpPost]
         public async Task<IActionResult> AddPreference(Preference preference, int[] selectedAllergens)
@@ -280,6 +282,9 @@ namespace DietBowl.Controllers
 
             return RedirectToAction("Index", "Home"); // Przekierowanie po pomyślnym dodaniu preferencji
         }
+        
+
+
 
 
         [HttpGet]
@@ -357,6 +362,63 @@ namespace DietBowl.Controllers
 
             // Po pomyślnej edycji przekierowujemy do widoku z listą parametrów ciała
             return RedirectToAction("BodyParameters", "User");
+        }
+
+
+        [Authorize(Roles = "2")]
+        [HttpGet]
+        public async Task<IActionResult> EditPreference(int id)
+        {
+            var preference = await _dietBowlDbContext.Preferences.Include(p => p.Allergens).FirstOrDefaultAsync(p => p.Id == id);
+            if (preference == null)
+            {
+                return NotFound();
+            }
+
+            ViewBag.Allergens = await _dietBowlDbContext.Allergens.ToListAsync();
+            return View(preference);
+        }
+
+        [Authorize(Roles = "2")]
+        [HttpPost]
+        public async Task<IActionResult> EditPreference(Preference preference, int[] selectedAllergens)
+        {
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState.Values.SelectMany(v => v.Errors);
+                foreach (var error in errors)
+                {
+                    Console.WriteLine(error.ErrorMessage); // Logowanie błędów
+                }
+
+                ViewBag.Allergens = await _dietBowlDbContext.Allergens.ToListAsync();
+                return View(preference);
+            }
+
+            var existingPreference = await _dietBowlDbContext.Preferences.Include(p => p.Allergens).FirstOrDefaultAsync(p => p.Id == preference.Id);
+            if (existingPreference == null)
+            {
+                return NotFound();
+            }
+
+            // Aktualizacja danych preferencji
+            existingPreference.Description = preference.Description;
+            existingPreference.WeightGoal = preference.WeightGoal;
+            existingPreference.ActivityStatus = preference.ActivityStatus;
+
+            // Aktualizacja alergenów
+            existingPreference.Allergens.Clear();
+            foreach (var allergenId in selectedAllergens)
+            {
+                var allergen = await _dietBowlDbContext.Allergens.FindAsync(allergenId);
+                if (allergen != null)
+                {
+                    existingPreference.Allergens.Add(allergen);
+                }
+            }
+
+            await _dietBowlDbContext.SaveChangesAsync();
+            return RedirectToAction("ViewPreference", "User");
         }
     }
 }

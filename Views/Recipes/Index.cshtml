@@ -21,6 +21,16 @@
                     <p><strong>Tłuszcz:</strong> @recipe.Fat</p>
                     <p><strong>Węglowodany:</strong> @recipe.Carbohydrate</p>
                     <p><strong>Kalorie:</strong> @recipe.Calories</p>
+                    <div class="form-group">
+                        <label>Alergeny:</label>
+
+                        <ul>
+                            @foreach (var allergen in recipe.Allergens)
+                            {
+                                <li>@allergen.Name</li>
+                            }
+                        </ul>
+                    </div>
                     <div class="recipe-actions">
                         <form asp-action="Delete" method="post" onsubmit="return confirm('Czy na pewno chcesz usunąć ten przepis?');">
                             <input type="hidden" name="id" value="@recipe.Id" />

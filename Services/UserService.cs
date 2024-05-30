@@ -102,6 +102,7 @@ namespace DietBowl.Services
         {
             // Pobierz preferencje użytkownika na podstawie podanego userId
             var userPreferences = await _dietBowlDbContext.Preferences
+                .Include(a=>a.Allergens)
                 .FirstOrDefaultAsync(p => p.UserId == userId);
 
             return userPreferences;

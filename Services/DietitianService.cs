@@ -121,10 +121,11 @@ namespace DietBowl.Services
         public async Task<List<Recipe>> GetRecipes()
         {
             return await _dietBowlDbContext.Recipes
-            .ToListAsync();
+                .Include(a=>a.Allergens)
+                .ToListAsync();
         }
 
-        public async Task<bool> AddRecipeAtDay(int userId, DateTime day, List<int> idRecipes)
+        public async Task<bool> AddRecipeAtDay(int userId, DateTime date, List<int> idRecipes)
         {
             if(userId > 0)
             {
@@ -138,7 +139,7 @@ namespace DietBowl.Services
 
                 Diet diet = new Diet
                 {
-                    Date = day,
+                    Date = date,
                     UserId = userId,
                     User = user,
                     DietRecipes = recipes.Select(recipe => new DietRecipe
