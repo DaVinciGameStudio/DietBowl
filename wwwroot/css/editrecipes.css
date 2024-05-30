@@ -1,0 +1,67 @@
+/* Styl dla formularza */
+form {
+    max-width: 600px; /* Maksymalna szerokoœæ formularza */
+    margin: 0 auto; /* Wyœrodkowanie formularza */
+    padding: 20px; /* Wewnêtrzny odstêp */
+    background-color: #f9f9f9; /* Kolor t³a formularza */
+    border-radius: 8px; /* Zaokr¹glenie rogów */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cieñ formularza */
+}
+
+/* Styl dla tytu³u formularza */
+h1 {
+    text-align: center; /* Wyœrodkowanie tekstu */
+    margin-bottom: 30px; /* Dolny odstêp */
+    color: #333; /* Kolor tekstu */
+}
+
+/* Styl dla etykiet */
+label {
+    font-weight: bold; /* Pogrubienie tekstu */
+}
+
+/* Styl dla pól formularza */
+input[type="text"],
+textarea,
+select {
+    width: 100%; /* Pe³na szerokoœæ */
+    padding: 10px; /* Wewnêtrzny odstêp */
+    margin-bottom: 15px; /* Dolny odstêp */
+    border: 1px solid #ccc; /* Gruboœæ i kolor obramowania */
+    border-radius: 4px; /* Zaokr¹glenie rogów */
+    box-sizing: border-box; /* W³¹cz model pude³ka */
+}
+
+/* Styl dla checkboxów */
+input[type="checkbox"] {
+    margin-right: 5px;
+    font-weight:400;
+}
+
+/* Styl dla przycisku */
+button {
+    display: block; /* Blokowy element */
+    width: 100%; /* Pe³na szerokoœæ */
+    padding: 10px; /* Wewnêtrzny odstêp */
+    background-color: green; /* Kolor t³a przycisku */
+    color: #fff; /* Kolor tekstu */
+    border: none; /* Brak obramowania */
+    border-radius: 4px; /* Zaokr¹glenie rogów */
+    cursor: pointer; /* Kursor wskazuj¹cy */
+}
+
+    /* Styl dla przycisku po najechaniu */
+    button:hover {
+        background-color: darkgreen; /* Zmiana koloru t³a po najechaniu */
+    }
+
+/* Styl dla komunikatów o b³êdach */
+.text-danger {
+    color: #dc3545; /* Czerwony kolor tekstu */
+    font-size: 0.875rem; /* Rozmiar tekstu */
+}
+
+/* Styl dla etykiet checkboxów */
+.checkbox label {
+    font-weight: normal; /* Normalna waga tekstu */
+}

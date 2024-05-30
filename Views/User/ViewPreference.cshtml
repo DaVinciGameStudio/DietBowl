@@ -6,12 +6,10 @@
 <link rel="stylesheet" href="~/css/viewpref.css" asp-append-version="true" />
 <br />
 <br />
-<br />
-<br />
-<br />
-<br />
+<h1>Preferencje użytkownika</h1>
 <div class="prefcontainer">
-    <h1>Preferencje użytkownika</h1>
+   
+    
 
     @if (Model == null)
     {
@@ -22,20 +20,24 @@
     else
     {
         <div class="pref-details">
-            <h2>Opis preferencji:</h2>
-            <p>@Model.Description</p>
-            <h2>Cele wagowe:</h2>
-            <p>@Model.WeightGoal<a> kg</a></p>
-            <h2>Aktywność:</h2>
-            <p>@Model.ActivityStatus</p>
-            <h2>Alergeny:</h2>
-            <ul>
-                @foreach (var allergen in Model.Allergens)
-                {
-                    <li>@allergen.Name</li>
-                }
-            </ul>
-            <a asp-controller="User" asp-action="EditPreference" asp-route-id="@Model.Id" class="btn btn-primary">Edytuj preferencje</a>
+            <div>
+                <h2>Opis preferencji:</h2>
+                <p>@Model.Description</p>
+                <h2>Cele wagowe:</h2>
+                <p>@Model.WeightGoal<a> kg</a></p>
+                <h2>Aktywność:</h2>
+                <p>@Model.ActivityStatus</p>
+                <h2>Alergeny:</h2>
+                <ul>
+                    @foreach (var allergen in Model.Allergens)
+                    {
+                        <li>@allergen.Name</li>
+                    }
+                </ul>
+            </div>
+            <div>
+                <a asp-controller="User" asp-action="EditPreference" asp-route-id="@Model.Id" class="btn btn-success">Edytuj preferencje</a>
+            </div>
         </div>
     }
 </div>

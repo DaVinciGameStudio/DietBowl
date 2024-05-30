@@ -13,7 +13,7 @@
         font-size: 32px;
         font-weight: bold;
         margin-bottom: 20px;
-        font-family: Arial, sans-serif;
+        font-family: Lato;
     }
 
 .pref-details {
@@ -29,7 +29,7 @@
     .pref-details p {
         margin-bottom: 20px;
         font-size: 18px;
-        line-height: 1.6;
+        
     }
 
 .btn {
@@ -47,7 +47,7 @@
 }
 
     .btn:hover {
-        background-color: #0056b3;
+        background-color: darkgreen;
     }
 
 p {
@@ -62,3 +62,36 @@ h1 {
     font-weight: bold;
     font-family: Arial, sans-serif;
 }
+.pref-details {
+    display: flex; /* Ustawienie jako kontener flexbox */
+    flex-direction: column; /* Uk³ad w kolumnie */
+    justify-content: space-between; /* Roz³o¿enie elementów równomiernie */
+    height: 100%; /* Wysokoœæ kontenera, aby ustawiæ przycisk na dole */
+}
+
+    .pref-details div:nth-child(2) {
+        margin-top: auto; /* Ustawienie przycisku na dole */
+    }
+
+.pref-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .pref-details > div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        .pref-details > div > * {
+            flex: 0 0 50%; /* Nag³ówki i paragrafy w jednej linii */
+        }
+
+        .pref-details > div ul {
+            flex-basis: 100%; /* Alergeny w jednej kolumnie */
+        }
+
+        .pref-details > div:nth-child(2) {
+            margin-top: auto; /* Przycisk na dole, na œrodku */
+        }

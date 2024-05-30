@@ -4,44 +4,48 @@
     ViewData["Title"] = "Edytuj przepis";
     var allergens = ViewBag.Allergens as List<Allergen>;
 }
+<link rel="stylesheet" href="~/css/editrecipes.css" asp-append-version="true" />
 
-<h1>@ViewData["Title"]</h1>
+<br />
+<br />
+
+<h1 style="text-align:center">@ViewData["Title"]</h1>
 
 <div>
     <form asp-action="Edit" method="post">
         <input type="hidden" asp-for="Id" />
         <div class="form-group">
-            <label asp-for="Title"></label>
+            <label asp-for="Title">Nazwa przepisu</label>
             <input asp-for="Title" class="form-control" />
             <span asp-validation-for="Title" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="Ingedients"></label>
-            <input asp-for="Ingedients" class="form-control" />
+            <label asp-for="Ingedients">Składniki</label>
+            <textarea asp-for="Ingedients" class="form-control"></textarea>
             <span asp-validation-for="Ingedients" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="Instructions"></label>
+            <label asp-for="Instructions">Przygotowanie</label>
             <textarea asp-for="Instructions" class="form-control"></textarea>
             <span asp-validation-for="Instructions" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="Protein"></label>
+            <label asp-for="Protein">Białko</label>
             <input asp-for="Protein" class="form-control" />
             <span asp-validation-for="Protein" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="Fat"></label>
+            <label asp-for="Fat">Tłuszcze</label>
             <input asp-for="Fat" class="form-control" />
             <span asp-validation-for="Fat" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="Carbohydrate"></label>
+            <label asp-for="Carbohydrate">Węglowodany</label>
             <input asp-for="Carbohydrate" class="form-control" />
             <span asp-validation-for="Carbohydrate" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="Calories"></label>
+            <label asp-for="Calories">Kalorie</label>
             <input asp-for="Calories" class="form-control" readonly />
             <span asp-validation-for="Calories" class="text-danger"></span>
         </div>
@@ -49,7 +53,7 @@
             <label>Alergeny:</label>
             @foreach (var allergen in allergens)
             {
-                <div class="checkbox">
+				<div class="checkbox">
                     <label>
                         <input type="checkbox" name="SelectedAllergens" value="@allergen.Id" @(Model.Allergens.Any(a => a.Id == allergen.Id) ? "checked" : "") /> @allergen.Name
                     </label>

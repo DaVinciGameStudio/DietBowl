@@ -4,7 +4,9 @@
     ViewData["Title"] = "Lista Przepisów";
 }
 <link rel="stylesheet" href="~/css/recipeshow.css" asp-append-version="true" />
-
+<br />
+<br />
+<br />
 <div class="container" id="listcontainer">
     <h1 class="list">Lista Przepisów</h1>
 
@@ -22,7 +24,7 @@
                     <p><strong>Węglowodany:</strong> @recipe.Carbohydrate</p>
                     <p><strong>Kalorie:</strong> @recipe.Calories</p>
                     <div class="form-group">
-                        <label>Alergeny:</label>
+                        <label><strong>Alergeny:</strong></label>
 
                         <ul>
                             @foreach (var allergen in recipe.Allergens)

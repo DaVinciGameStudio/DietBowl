@@ -5,49 +5,104 @@
     <style>
         #calendarContainer {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             max-width: 600px;
             margin: 0 auto;
             padding: 10px;
+            font-family: Arial, sans-serif;
+            border: 2px solid #007BFF; /* Niebieskie obramowanie */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        #calendarNavigation {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
         }
 
         #calendar {
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
         }
 
-        .day {
-            display: inline-block;
-            width: 14.28%; /* One seventh of calendar width */
-            padding: 10px;
+        .day, .day-name {
+            padding: 15px;
             box-sizing: border-box;
             text-align: center;
             cursor: pointer;
-            background-color: lightgray; /* Default grey background */
+            border: 1px solid #ddd; /* Lekkie obramowanie między datami */
+        }
+
+        .day {
+            background-color: #fafafa;
         }
 
             .day:hover {
-                background-color: darkgray;
+                background-color: lightblue;
             }
 
-        .navigationButton {
-            cursor: pointer;
+        .day-name {
+            background-color: #f0f0f0;
+            font-weight: bold;
         }
 
         .hasDiet {
-            background-color: lightgreen; /* Green color for days with a diet */
+            background-color: lightgreen;
+        }
+
+        .currentDay {
+            border: 3px solid black; /* Dodanie obramowania dla aktualnego dnia */
+            font-weight: bold;
+            border-radius: 5px; /* Dodanie zaokrąglenia obramowania */
+        }
+
+        .navigationButton {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007BFF; /* Niebieski kolor przycisków */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .navigationButton:hover {
+                background-color: #0056b3;
+            }
+
+        .month-year-display {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase; /* Zawsze duże litery */
         }
     </style>
 </head>
 <body>
+    <br />
+    <br />
+    <br />
     <div id="calendarContainer">
-        <button id="prevMonth" class="navigationButton">Poprzedni miesiąc</button>
+        <div id="calendarNavigation">
+            <button id="prevMonth" class="navigationButton">&lt;</button>
+            <div class="month-year-display" id="monthYearDisplay"></div>
+            <button id="nextMonth" class="navigationButton">&gt;</button>
+        </div>
         <div id="calendar"></div>
-        <button id="nextMonth" class="navigationButton">Następny miesiąc</button>
     </div>
-
 </body>
 </html>
 <script>
@@ -55,20 +110,36 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         const calendar = document.getElementById('calendar');
+        const monthYearDisplay = document.getElementById('monthYearDisplay');
 
         function renderCalendar() {
             const currentMonth = currentDate.getMonth();
             const currentYear = currentDate.getFullYear();
             const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            const firstDayOfMonth = (new Date(currentYear, currentMonth, 1).getDay() + 6) % 7;
+            const today = new Date();
 
             calendar.innerHTML = ''; // Clear previous content
 
-            // Display the current month and year
-            const monthYearDisplay = document.createElement('div');
-            monthYearDisplay.style.textAlign = 'center';
-            monthYearDisplay.style.width = '100%';
-            monthYearDisplay.textContent = `${currentDate.toLocaleString('default', { month: 'long' })} ${currentYear}`;
-            calendar.appendChild(monthYearDisplay);
+            // Display the current month and year with uppercase month names
+            monthYearDisplay.textContent = `${currentDate.toLocaleString('default', { month: 'long' }).toUpperCase()} ${currentYear}`;
+
+            // Create day names in Polish
+            const dayNames = ['Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob', 'Ndz'];
+            for (let dayName of dayNames) {
+                const dayNameElement = document.createElement('div');
+                dayNameElement.classList.add('day-name');
+                dayNameElement.textContent = dayName;
+                calendar.appendChild(dayNameElement);
+            }
+
+            // Create empty days for the first week
+            for (let i = 0; i < firstDayOfMonth; i++) {
+                const emptyDay = document.createElement('div');
+                emptyDay.classList.add('day');
+                emptyDay.style.visibility = 'hidden';
+                calendar.appendChild(emptyDay);
+            }
 
             // Create the days of the month
             const dietDictionary = JSON.parse('@Html.Raw(Json.Serialize(ViewData["DietDictionary"]))');
@@ -77,13 +148,17 @@
                 dayElement.classList.add('day');
                 dayElement.textContent = day;
 
-                // Ensure the month and day are two digits
                 const monthString = String(currentMonth + 1).padStart(2, '0');
                 const dayString = String(day).padStart(2, '0');
                 const dateString = `${currentYear}-${monthString}-${dayString}T00:00:00`;
 
                 if (dietDictionary[dateString]) {
                     dayElement.classList.add('hasDiet');
+                }
+
+                // Highlight the current day
+                if (today.getDate() == day && today.getMonth() == currentMonth && today.getFullYear() == currentYear) {
+                    dayElement.classList.add('currentDay');
                 }
 
                 dayElement.addEventListener('click', function () {
@@ -110,5 +185,4 @@
 
         renderCalendar();
     });
-
 </script>

@@ -4,10 +4,12 @@
     ViewBag.Title = "Edit Preference";
     var allergens = ViewBag.Allergens as List<Allergen>;
 }
+<link rel="stylesheet" href="~/css/editpref.css" asp-append-version="true" />
+<br />
+<br />
+<h2 style="text-align:center">Edytuj preferencje</h2>
 
-<h2>Edit Preference</h2>
-
-<form asp-action="EditPreference" method="post">
+<form asp-action="EditPreference" method="post" class="preference-form">
     <div class="form-group">
         <label asp-for="Description"></label>
         <input asp-for="Description" class="form-control" />
@@ -19,7 +21,7 @@
         <span asp-validation-for="WeightGoal" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="ActivityStatus" class="control-label"> Poziom aktywnosci</label>
+        <label asp-for="ActivityStatus" class="control-label"> Poziom aktywności</label>
         <select asp-for="ActivityStatus" class="form-control">
             <option value="">-- Wybierz swój status aktywności --</option>
             <option value="Low">Niska</option>
@@ -28,8 +30,8 @@
         </select>
     </div>
     <div class="form-group">
-        <label>Allergens</label>
-        <div>
+        <label>Alergeny</label>
+        <div class="allergens-grid">
             @foreach (var allergen in allergens)
             {
                 <div class="form-check">
@@ -41,7 +43,9 @@
         </div>
     </div>
     <input type="hidden" asp-for="Id" />
-    <button type="submit" class="btn btn-primary">Save</button>
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-success">Zapisz zmiany</button>
+    </div>
 </form>
 
 @section Scripts {

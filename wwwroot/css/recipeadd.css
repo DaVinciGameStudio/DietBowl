@@ -25,7 +25,7 @@
 
 .control-label {
     font-weight: bold;
-    font-size:large;
+    font-size: large;
 }
 
 .form-control {
@@ -56,3 +56,5 @@ textarea.form-control {
     .btn-success:hover {
         background-color: #218838;
     }
+
+
