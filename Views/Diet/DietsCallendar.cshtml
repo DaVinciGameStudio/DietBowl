@@ -155,7 +155,7 @@
                 dayElement.addEventListener('click', function () {
                     const selectedDate = new Date(currentYear, currentMonth, day);
                     var localDate = new Date(selectedDate.getTime() - (selectedDate.getTimezoneOffset() * 60000)).toISOString().split("T")[0];
-                    window.location.href = '/Diet/DietsCalendarShow?date=' + localDate;
+                    window.location.href = '/Diet/DietsCallendarShow?date=' + localDate;
                 });
                 calendar.appendChild(dayElement);
             }

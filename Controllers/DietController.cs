@@ -58,7 +58,7 @@ namespace DietBowl.Controllers
             _dietBowlDbContext.Update(dietRecipe);
             await _dietBowlDbContext.SaveChangesAsync();
 
-            return RedirectToAction("DietsCalendarShow", new { date = dietRecipe.Diet.Date.ToString("yyyy-MM-dd") });
+            return RedirectToAction("DietsCallendarShow", new { date = dietRecipe.Diet.Date.ToString("yyyy-MM-dd") });
         }
 
 
