@@ -1,0 +1,55 @@
+﻿@using DietBowl.ViewModel
+@model UserMacronutrientsVM
+
+<h1>Set User Macronutrients</h1>
+
+<form asp-action="SetUserMacronutrients">
+    <input type="hidden" asp-for="UserId" />
+
+    <div>
+        <label asp-for="FirstName">First Name:</label>
+        <input asp-for="FirstName" readonly />
+    </div>
+
+    <div>
+        <label asp-for="LastName">Last Name:</label>
+        <input asp-for="LastName" readonly />
+    </div>
+
+    <div>
+        <label for="Age">Age:</label>
+        <input type="text" id="Age" value="@Model.Age" readonly />
+    </div>
+
+    <div>
+        <label asp-for="Sex">Sex:</label>
+        <input asp-for="Sex" readonly />
+    </div>
+
+    <div>
+        <label asp-for="WeightGoal">Weight Goal:</label>
+        <input asp-for="WeightGoal" readonly />
+    </div>
+
+    <div>
+        <label asp-for="ActivityStatus">Activity Status:</label>
+        <input asp-for="ActivityStatus" readonly />
+    </div>
+
+    <div>
+        <label asp-for="Protein">Protein (g):</label>
+        <input asp-for="Protein" />
+    </div>
+
+    <div>
+        <label asp-for="Fat">Fat (g):</label>
+        <input asp-for="Fat" />
+    </div>
+
+    <div>
+        <label asp-for="Carbohydrate">Carbohydrate (g):</label>
+        <input asp-for="Carbohydrate" />
+    </div>
+
+    <button type="submit">Save</button>
+</form>

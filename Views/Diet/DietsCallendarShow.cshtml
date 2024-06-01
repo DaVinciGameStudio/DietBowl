@@ -27,6 +27,7 @@ else
                 <form method="post" action="/Diet/MarkAsConsumed">
                     <input type="hidden" name="dietId" value="@dietRecipe.DietId" />
                     <input type="hidden" name="recipeId" value="@dietRecipe.RecipeId" />
+                    <input type="hidden" name="userId" value="@dietRecipe.Diet.UserId" /> <!-- Dodane przekazanie ID użytkownika -->
                     @if (!dietRecipe.IsConsumed)
                     {
                         <button type="submit" onclick="return confirm('Czy na pewno zjadłeś ten posiłek?')">Zaznacz jako zjedzony</button>

@@ -23,18 +23,73 @@ namespace DietBowl.Controllers
         }
 
 
+        //[HttpPost]
+        ////[ValidateAntiForgeryToken]
+        //[Authorize(Roles = "1")]
+        //public IActionResult Add([Bind("Title,Category,Ingedients,Instructions,Protein,Fat,Carbohydrate,Calories")] Recipe recipe, int[] selectedAllergens)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        // Calculate calories based on the provided values
+        //        recipe.Calories = recipe.CalculateCalories();
+
+        //        // Add the recipe to the database
+        //        _dietBowlDbContext.Recipes.Add(recipe);
+
+        //        // Associate selected allergens with the recipe
+        //        if (selectedAllergens != null)
+        //        {
+        //            foreach (var allergenId in selectedAllergens)
+        //            {
+        //                var allergen = _dietBowlDbContext.Allergens.Find(allergenId);
+        //                if (allergen != null)
+        //                {
+        //                    recipe.Allergens.Add(allergen);
+        //                }
+        //            }
+        //        }
+
+        //        _dietBowlDbContext.SaveChanges();
+
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(recipe);
+        //}
+
+        //[HttpGet]
+        //[Authorize(Roles = "1")]
+        //public IActionResult Add()
+        //{
+        //    // Create an empty Recipe object
+        //    var newRecipe = new Recipe();
+        //    List<Allergen> allergens = _dietBowlDbContext.Allergens.ToList();
+        //    newRecipe.Allergens = allergens;
+        //    // Pass the empty Recipe object to the view
+        //    return View(newRecipe);
+        //}
+
+
+        [HttpGet]
+        [Authorize(Roles = "1")]
+        public IActionResult Add()
+        {
+            var newRecipe = new Recipe();
+            List<Allergen> allergens = _dietBowlDbContext.Allergens.ToList();
+            newRecipe.Allergens = allergens;
+
+            ViewBag.Categories = new List<string> { "Śniadanie", "Obiad", "Podwieczorek", "Kolacja" };
+            return View(newRecipe);
+        }
+
         [HttpPost]
         //[ValidateAntiForgeryToken]
         [Authorize(Roles = "1")]
-        public IActionResult Add([Bind("Title,Ingedients,Instructions,Protein,Fat,Carbohydrate,Calories")] Recipe recipe, int[] selectedAllergens)
+        public IActionResult Add([Bind("Title,Category,Ingedients,Instructions,Protein,Fat,Carbohydrate,Calories")] Recipe recipe, int[] selectedAllergens)
         {
             if (ModelState.IsValid)
             {
                 // Calculate calories based on the provided values
                 recipe.Calories = recipe.CalculateCalories();
-
-                // Add the recipe to the database
-                _dietBowlDbContext.Recipes.Add(recipe);
 
                 // Associate selected allergens with the recipe
                 if (selectedAllergens != null)
@@ -49,24 +104,22 @@ namespace DietBowl.Controllers
                     }
                 }
 
+                // Add the recipe to the database
+                _dietBowlDbContext.Recipes.Add(recipe);
                 _dietBowlDbContext.SaveChanges();
 
                 return RedirectToAction(nameof(Index));
             }
+
+            // Repopulate the ViewBag and allergens list if ModelState is not valid
+            ViewBag.Categories = new List<string> { "Śniadanie", "Obiad", "Przekąska", "Kolacja" };
+            recipe.Allergens = _dietBowlDbContext.Allergens.ToList();
             return View(recipe);
         }
 
-        [HttpGet]
-        [Authorize(Roles = "1")]
-        public IActionResult Add()
-        {
-            // Create an empty Recipe object
-            var newRecipe = new Recipe();
-            List<Allergen> allergens = _dietBowlDbContext.Allergens.ToList();
-            newRecipe.Allergens = allergens;
-            // Pass the empty Recipe object to the view
-            return View(newRecipe);
-        }
+
+
+
 
         public IActionResult Index()
         {
@@ -102,28 +155,106 @@ namespace DietBowl.Controllers
 
 
 
-        // GET: Recipes/Edit/{id}
+
+
+
+        //// GET: Recipes/Edit/{id}
         [Authorize(Roles = "1")]
         public IActionResult Edit(int id)
         {
             var recipe = _dietBowlDbContext.Recipes
-                .Include(r => r.Allergens) // Dodaj Include dla alergenów
+                .Include(r => r.Allergens)
                 .FirstOrDefault(r => r.Id == id);
-            ViewBag.Allergens = _dietBowlDbContext.Allergens.ToList();
             if (recipe == null)
             {
                 return NotFound();
             }
+
+            ViewBag.Allergens = _dietBowlDbContext.Allergens.ToList();
+            ViewBag.Categories = new List<string> { "Śniadanie", "Obiad", "Przekąska", "Kolacja" };
+
             return View(recipe);
         }
 
 
-        /*
+        // GET: Recipes/Edit/{id}
+        //[Authorize(Roles = "1")]
+        //public IActionResult Edit(int id)
+        //{
+        //    var recipe = _dietBowlDbContext.Recipes
+        //        .Include(r => r.Allergens) // Dodaj Include dla alergenów
+        //        .FirstOrDefault(r => r.Id == id);
+        //    ViewBag.Allergens = _dietBowlDbContext.Allergens.ToList();
+        //    if (recipe == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(recipe);
+        //}
+
+
         // POST: Recipes/Edit/{id}
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //[Authorize(Roles = "1")]
+        //public IActionResult Edit(int id, [Bind("Id,Title,Category,Ingedients,Instructions,Protein,Fat,Carbohydrate,Calories")] Recipe recipe, int[] selectedAllergens)
+        //{
+        //    if (id != recipe.Id)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            recipe.Calories = recipe.CalculateCalories(); // Recalculate calories
+
+        //            // Update the recipe
+        //            _dietBowlDbContext.Update(recipe);
+
+        //            // Clear existing allergens associated with the recipe
+        //            var existingRecipe = _dietBowlDbContext.Recipes.Include(r => r.Allergens).FirstOrDefault(r => r.Id == id);
+        //            if (existingRecipe != null)
+        //            {
+        //                existingRecipe.Allergens.Clear();
+        //            }
+
+        //            // Associate selected allergens with the recipe
+        //            if (selectedAllergens != null)
+        //            {
+        //                foreach (var allergenId in selectedAllergens)
+        //                {
+        //                    var allergen = _dietBowlDbContext.Allergens.Find(allergenId);
+        //                    if (allergen != null)
+        //                    {
+        //                        recipe.Allergens.Add(allergen);
+        //                    }
+        //                }
+        //            }
+
+        //            _dietBowlDbContext.SaveChanges();
+        //        }
+        //        catch (DbUpdateConcurrencyException)
+        //        {
+        //            if (!_dietBowlDbContext.Recipes.Any(e => e.Id == recipe.Id))
+        //            {
+        //                return NotFound();
+        //            }
+        //            else
+        //            {
+        //                throw;
+        //            }
+        //        }
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(recipe);
+        //}
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         [Authorize(Roles = "1")]
-        public IActionResult Edit(int id, [Bind("Id,Title,Ingedients,Instructions,Protein,Fat,Carbohydrate,Calories")] Recipe recipe)
+        public IActionResult Edit(int id, [Bind("Id,Title,Category,Ingedients,Instructions,Protein,Fat,Carbohydrate,Calories")] Recipe recipe, int[] selectedAllergens)
         {
             if (id != recipe.Id)
             {
@@ -135,52 +266,16 @@ namespace DietBowl.Controllers
                 try
                 {
                     recipe.Calories = recipe.CalculateCalories(); // Recalculate calories
-                    _dietBowlDbContext.Update(recipe);
-                    _dietBowlDbContext.SaveChanges();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!_dietBowlDbContext.Recipes.Any(e => e.Id == recipe.Id))
+
+                    // Fetch the existing recipe with its allergens
+                    var existingRecipe = _dietBowlDbContext.Recipes.Include(r => r.Allergens).FirstOrDefault(r => r.Id == id);
+                    if (existingRecipe == null)
                     {
                         return NotFound();
                     }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(recipe);
-        }
-        */
-
-        // POST: Recipes/Edit/{id}
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize(Roles = "1")]
-        public IActionResult Edit(int id, [Bind("Id,Title,Ingedients,Instructions,Protein,Fat,Carbohydrate,Calories")] Recipe recipe, int[] selectedAllergens)
-        {
-            if (id != recipe.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    recipe.Calories = recipe.CalculateCalories(); // Recalculate calories
-
-                    // Update the recipe
-                    _dietBowlDbContext.Update(recipe);
 
                     // Clear existing allergens associated with the recipe
-                    var existingRecipe = _dietBowlDbContext.Recipes.Include(r => r.Allergens).FirstOrDefault(r => r.Id == id);
-                    if (existingRecipe != null)
-                    {
-                        existingRecipe.Allergens.Clear();
-                    }
+                    existingRecipe.Allergens.Clear();
 
                     // Associate selected allergens with the recipe
                     if (selectedAllergens != null)
@@ -190,10 +285,20 @@ namespace DietBowl.Controllers
                             var allergen = _dietBowlDbContext.Allergens.Find(allergenId);
                             if (allergen != null)
                             {
-                                recipe.Allergens.Add(allergen);
+                                existingRecipe.Allergens.Add(allergen);
                             }
                         }
                     }
+
+                    // Update the existing recipe with new values
+                    existingRecipe.Title = recipe.Title;
+                    existingRecipe.Category = recipe.Category;
+                    existingRecipe.Ingedients = recipe.Ingedients;
+                    existingRecipe.Instructions = recipe.Instructions;
+                    existingRecipe.Protein = recipe.Protein;
+                    existingRecipe.Fat = recipe.Fat;
+                    existingRecipe.Carbohydrate = recipe.Carbohydrate;
+                    existingRecipe.Calories = recipe.Calories;
 
                     _dietBowlDbContext.SaveChanges();
                 }
@@ -212,5 +317,65 @@ namespace DietBowl.Controllers
             }
             return View(recipe);
         }
+
+
+
+        //// POST: Recipes/Edit/{id}
+        //[HttpPost]
+        ////[ValidateAntiForgeryToken]
+        //[Authorize(Roles = "1")]
+        //public IActionResult Edit(int id, [Bind("Id,Title,Category,Ingedients,Instructions,Protein,Fat,Carbohydrate,Calories")] Recipe recipe, int[] selectedAllergens)
+        //{
+        //    if (id != recipe.Id)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            recipe.Calories = recipe.CalculateCalories(); // Recalculate calories
+
+        //            // Update the recipe
+        //            _dietBowlDbContext.Update(recipe);
+
+        //            // Clear existing allergens associated with the recipe
+        //            var existingRecipe = _dietBowlDbContext.Recipes.Include(r => r.Allergens).FirstOrDefault(r => r.Id == id);
+        //            if (existingRecipe != null)
+        //            {
+        //                existingRecipe.Allergens.Clear();
+        //            }
+
+        //            // Associate selected allergens with the recipe
+        //            if (selectedAllergens != null)
+        //            {
+        //                foreach (var allergenId in selectedAllergens)
+        //                {
+        //                    var allergen = _dietBowlDbContext.Allergens.Find(allergenId);
+        //                    if (allergen != null)
+        //                    {
+        //                        recipe.Allergens.Add(allergen);
+        //                    }
+        //                }
+        //            }
+
+        //            _dietBowlDbContext.SaveChanges();
+        //        }
+        //        catch (DbUpdateConcurrencyException)
+        //        {
+        //            if (!_dietBowlDbContext.Recipes.Any(e => e.Id == recipe.Id))
+        //            {
+        //                return NotFound();
+        //            }
+        //            else
+        //            {
+        //                throw;
+        //            }
+        //        }
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(recipe);
+        //}
     }
 }

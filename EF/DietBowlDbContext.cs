@@ -12,6 +12,7 @@ namespace DietBowl.EF
         public DbSet<BodyParameter> BodyParameters { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Preference> Preferences { get; set; }
+        public DbSet<UserNutritionalRequirement> UserNutritionalRequirements { get; set; }
 
         public DietBowlDbContext(DbContextOptions<DietBowlDbContext> options) : base(options)
         {

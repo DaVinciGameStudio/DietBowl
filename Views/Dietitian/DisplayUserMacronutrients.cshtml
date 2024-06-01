@@ -1,0 +1,17 @@
+﻿@using DietBowl.ViewModel
+@model UserMacronutrientsVM
+
+<h1>User Macronutrients</h1>
+
+<div>
+    <p><strong>User ID:</strong> @Model.UserId</p>
+    <p><strong>First Name:</strong> @Model.FirstName</p>
+    <p><strong>Last Name:</strong> @Model.LastName</p>
+    <p><strong>Calories:</strong> @Model.Calories</p>
+    <p><strong>Protein (g):</strong> @Model.Protein</p>
+    <p><strong>Fat (g):</strong> @Model.Fat</p>
+    <p><strong>Carbohydrate (g):</strong> @Model.Carbohydrate</p>
+</div>
+<div>
+    <a class="btn btn-primary" href="@Url.Action("EditUserMacronutrients", "Dietitian", new { userId = Model.UserId })">Edytuj</a>
+</div>

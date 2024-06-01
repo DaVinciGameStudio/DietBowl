@@ -15,6 +15,11 @@ namespace DietBowl.Services.Interfaces
         Task UpdateNutritionalRequirements(NutritionalRequirementsVM model);
         Task<List<Recipe>> GetRecipes();
         Task<bool> AddRecipeAtDay(int userId, DateTime day, List<int> idRecipes);
-
+        void SetUserMacronutrients(int userId, double protein, double fat, double carbohydrate);
+        User GetUserWithPreference(int userId);
+        User GetUserWithUserNutritionalRequirements(int userId);
+        User GetUserWithPreferenceAndUserNutritionalRequirements(int userId);
+        UserMacronutrientsVM GetUserMacronutrients(int userId);
+        void UpdateUserMacronutrients(UserMacronutrientsVM model);
     }
 }

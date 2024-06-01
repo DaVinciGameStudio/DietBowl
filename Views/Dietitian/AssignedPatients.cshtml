@@ -27,26 +27,40 @@ else
                 <th>Płeć</th>
                 <th>Akcja</th>
             </tr>
-       
-      
-            @foreach (var user in Model)
-            {
-                <tr>
-                    <td>@user.Email</td>
-                    <td>@user.FirstName</td>
-                    <td>@user.LastName</td>
-                    <td>@(ObliczWiek(user.DateOfBirth))</td> <!-- Obliczanie wieku -->
-                    <td>@user.Sex</td>
-                    <td class="action">
-                        <form method="post" action="@Url.Action("RemovePatient", "Dietitian")">
-                            <input type="hidden" name="userId" value="@user.Id" />
-                            <input class="btn btn-danger" type="submit" value=" Usuń " onclick="return confirm('Czy na pewno chcesz usunąć tego pacjenta?');" />
+
+
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Email</td>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                <td>@(ObliczWiek(user.DateOfBirth))</td> <!-- Obliczanie wieku -->
+                <td>@user.Sex</td>
+                <td class="action">
+                    <form method="post" action="@Url.Action("RemovePatient", "Dietitian")">
+                        <input type="hidden" name="userId" value="@user.Id" />
+                        <input class="btn btn-danger" type="submit" value=" Usuń " onclick="return confirm('Czy na pewno chcesz usunąć tego pacjenta?');" />
+                    </form>
+
+                    @if (user.UserNutritionalRequirement == null)
+                    {
+                        <button class="btn btn-primary disabled" disabled>Najpierw należy ustawić makro</button>
+                    }
+                    else
+                    {
+                        <form method="post" action="@Url.Action("DietsCallendarForDietitian", "Diet", new { userId = user.Id })">
+                            <input class="btn btn-primary" type="submit" value="Dieta" />
                         </form>
-                        <a class="btn btn-primary" href="@Url.Action("SetNutritionalRequirements", "Dietitian", new { userId = user.Id })">Makro</a>
-                        <a class="btn btn-primary" href="@Url.Action("DietsCallendarForDietitian", "Diet", new { userId = user.Id })">Dieta</a>
-                    </td>
-                </tr>
-            }
+                    }
+
+                    <form method="post" action="@Url.Action("SetOrDisplayUserMacronutrients", "Dietitian")">
+                        <input type="hidden" name="userId" value="@user.Id" />
+                        <input class="btn btn-primary" type="submit" value="Makro" />
+                    </form>
+                </td>
+            </tr>
+        }
        
     </table>
     }

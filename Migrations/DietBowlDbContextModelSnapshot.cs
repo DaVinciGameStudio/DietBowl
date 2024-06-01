@@ -182,6 +182,10 @@ namespace DietBowl.Migrations
                     b.Property<double>("Carbohydrate")
                         .HasColumnType("float");
 
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("Fat")
                         .HasColumnType("float");
 
@@ -280,7 +284,7 @@ namespace DietBowl.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("UserNutritionalRequirement");
+                    b.ToTable("UserNutritionalRequirements");
                 });
 
             modelBuilder.Entity("AllergenPreference", b =>

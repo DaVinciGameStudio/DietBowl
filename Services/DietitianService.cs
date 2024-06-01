@@ -21,7 +21,7 @@ namespace DietBowl.Services
 
         public async Task<List<User>> GetAssignedPatients(int dietitianId)
         {
-            return await _dietBowlDbContext.Users
+            return await _dietBowlDbContext.Users.Include(u => u.UserNutritionalRequirement)
                         .Where(u => u.Role == 2 && u.IdDietician == dietitianId)
                         .ToListAsync();
         }
@@ -155,6 +155,93 @@ namespace DietBowl.Services
             }
             
            return false;
+        }
+
+        public void SetUserMacronutrients(int userId, double protein, double fat, double carbohydrate)
+        {
+            var userNutritionalRequirement = new UserNutritionalRequirement
+            {
+                UserId = userId,
+                Calories = CalculateCalories(protein, fat, carbohydrate),
+                Protein = protein,
+                Fat = fat,
+                Carbohydrate = carbohydrate
+            };
+
+            _dietBowlDbContext.UserNutritionalRequirements.Add(userNutritionalRequirement);
+            _dietBowlDbContext.SaveChanges();
+        }
+
+        private double CalculateCalories(double protein, double fat, double carbohydrate)
+        {
+            return (protein * 4) + (fat * 9) + (carbohydrate * 4);
+        }
+
+        public User GetUserWithPreference(int userId)
+        {
+            return _dietBowlDbContext.Users.Include(u => u.Preference).FirstOrDefault(u => u.Id == userId);
+        }
+
+        public User GetUserWithUserNutritionalRequirements(int userId)
+        {
+            return _dietBowlDbContext.Users.Include(u => u.UserNutritionalRequirement).FirstOrDefault(u => u.Id == userId);
+        }
+
+        public User GetUserWithPreferenceAndUserNutritionalRequirements(int userId)
+        {
+            return _dietBowlDbContext.Users.Include(u => u.Preference).Include(u => u.UserNutritionalRequirement).FirstOrDefault(u => u.Id == userId);
+        }
+
+        public UserMacronutrientsVM GetUserMacronutrients(int userId)
+        {
+            var user = _dietBowlDbContext.Users
+                .Include(u => u.UserNutritionalRequirement)
+                .FirstOrDefault(u => u.Id == userId);
+
+            if (user == null)
+            {
+                return null;
+            }
+
+            var userMacronutrientsVM = new UserMacronutrientsVM
+            {
+                UserId = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Calories = user.UserNutritionalRequirement != null ? user.UserNutritionalRequirement.Calories : 0,
+                Protein = user.UserNutritionalRequirement != null ? user.UserNutritionalRequirement.Protein : 0,
+                Fat = user.UserNutritionalRequirement != null ? user.UserNutritionalRequirement.Fat : 0,
+                Carbohydrate = user.UserNutritionalRequirement != null ? user.UserNutritionalRequirement.Carbohydrate : 0
+            };
+
+            return userMacronutrientsVM;
+        }
+
+        public void UpdateUserMacronutrients(UserMacronutrientsVM model)
+        {
+            // Oblicz kalorie na podstawie podanych wartości węglowodanów, białka i tłuszczu
+            double calories = CalculateCalories(model.Protein, model.Fat, model.Carbohydrate);
+
+            var user = _dietBowlDbContext.Users
+                .Include(u => u.UserNutritionalRequirement)
+                .FirstOrDefault(u => u.Id == model.UserId);
+
+            if (user != null)
+            {
+                if (user.UserNutritionalRequirement == null)
+                {
+                    // Jeśli użytkownik nie ma jeszcze ustawionych wymagań dotyczących makroskładników, stwórz nowy obiekt
+                    user.UserNutritionalRequirement = new UserNutritionalRequirement();
+                }
+
+                // Aktualizuj wartości makroskładników na podstawie danych z formularza
+                user.UserNutritionalRequirement.Calories = calories; // Ustaw obliczone kalorie
+                user.UserNutritionalRequirement.Protein = model.Protein;
+                user.UserNutritionalRequirement.Fat = model.Fat;
+                user.UserNutritionalRequirement.Carbohydrate = model.Carbohydrate;
+
+                _dietBowlDbContext.SaveChanges();
+            }
         }
     }
 }

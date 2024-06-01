@@ -1,0 +1,31 @@
+﻿@model DietBowl.ViewModel.UserMacronutrientsVM
+
+<h1>Edit User Macronutrients</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>First Name:</label>
+        <p>@Model.FirstName</p>
+    </div>
+    <div class="form-group">
+        <label>Last Name:</label>
+        <p>@Model.LastName</p>
+    </div>
+    <div class="form-group">
+        <label>Calories:</label>
+        <p>@Model.Calories</p>
+    </div>
+    <div class="form-group">
+        <label for="Protein">Protein (g):</label>
+        <input type="text" class="form-control" id="Protein" name="Protein" value="@Model.Protein" />
+    </div>
+    <div class="form-group">
+        <label for="Fat">Fat (g):</label>
+        <input type="text" class="form-control" id="Fat" name="Fat" value="@Model.Fat" />
+    </div>
+    <div class="form-group">
+        <label for="Carbohydrate">Carbohydrate (g):</label>
+        <input type="text" class="form-control" id="Carbohydrate" name="Carbohydrate" value="@Model.Carbohydrate" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form> 

@@ -38,12 +38,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGl0aWFuXEFzc2lnbmVkUGF0aWVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/rep/DietBowl/Views/Dietitian/DisplayUserMacronutrients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGl0aWFuXERpc3BsYXlVc2VyTWFjcm9udXRyaWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/rep/DietBowl/Views/Dietitian/EditUserMacronutrients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGl0aWFuXEVkaXRVc2VyTWFjcm9udXRyaWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/rep/DietBowl/Views/Dietitian/Patients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGl0aWFuXFBhdGllbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/rep/DietBowl/Views/Dietitian/SetNutritionalRequirements.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGl0aWFuXFNldE51dHJpdGlvbmFsUmVxdWlyZW1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/rep/DietBowl/Views/Dietitian/SetUserMacronutrients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlldGl0aWFuXFNldFVzZXJNYWNyb251dHJpZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/rep/DietBowl/Views/Diet/DietsCallendar.cshtml]
@@ -124,10 +136,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/rep/DietBowl/Views/User/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/rep/DietBowl/Views/User/Ograniczenia.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxPZ3JhbmljemVuaWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/rep/DietBowl/Views/User/Preferences.cshtml]

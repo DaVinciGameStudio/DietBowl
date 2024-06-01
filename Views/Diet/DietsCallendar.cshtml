@@ -105,75 +105,88 @@
         </div>
         <div id="calendar"></div>
     </div>
+
+    <script>
+        let currentDate = new Date();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const calendar = document.getElementById('calendar');
+            const monthYearDisplay = document.getElementById('monthYearDisplay');
+
+            function renderCalendar() {
+                const currentMonth = currentDate.getMonth();
+                const currentYear = currentDate.getFullYear();
+                const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+                const firstDayOfMonth = (new Date(currentYear, currentMonth, 1).getDay() + 6) % 7;
+                const today = new Date();
+
+                calendar.innerHTML = ''; // Clear previous content
+
+                // Display the current month and year with uppercase month names
+                monthYearDisplay.textContent = `${currentDate.toLocaleString('default', { month: 'long' }).toUpperCase()} ${currentYear}`;
+
+                // Create day names in Polish
+                const dayNames = ['Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob', 'Ndz'];
+                for (let dayName of dayNames) {
+                    const dayNameElement = document.createElement('div');
+                    dayNameElement.classList.add('day-name');
+                    dayNameElement.textContent = dayName;
+                    calendar.appendChild(dayNameElement);
+                }
+
+                // Create empty days for the first week
+                for (let i = 0; i < firstDayOfMonth; i++) {
+                    const emptyDay = document.createElement('div');
+                    emptyDay.classList.add('day');
+                    emptyDay.style.visibility = 'hidden';
+                    calendar.appendChild(emptyDay);
+                }
+
+                // Create the days of the month
+                const dietDataJson = '@Html.Raw(Json.Serialize(ViewData["DietData"]))';
+                const dietData = JSON.parse(dietDataJson);
+                const dietDates = new Set(dietData.map(d => new Date(d.Date)));
+
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.classList.add('day');
+                    dayElement.textContent = day;
+
+                    const selectedDate = new Date(currentYear, currentMonth, day);
+
+                    if (dietDates.has(selectedDate)) {
+                        dayElement.classList.add('hasDiet');
+                    }
+
+                    // Highlight the current day
+                    if (today.getDate() == day && today.getMonth() == currentMonth && today.getFullYear() == currentYear) {
+                        dayElement.classList.add('currentDay');
+                    }
+
+                    dayElement.addEventListener('click', function () {
+                        const localDate = selectedDate.toISOString().split("T")[0];
+                        const userId = @ViewBag.userId;
+                        const url = '/Dietitian/AddRecipeToDiet?userId=' + userId + '&data=' + localDate;
+                        window.location.href = url;
+                    });
+
+                    calendar.appendChild(dayElement);
+                }
+            }
+
+            document.getElementById('prevMonth').addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                renderCalendar();
+            });
+
+            document.getElementById('nextMonth').addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                renderCalendar();
+            });
+
+            renderCalendar();
+        });
+
+    </script>
 </body>
 </html>
-<script>
-    let currentDate = new Date();
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const calendar = document.getElementById('calendar');
-        const monthYearDisplay = document.getElementById('monthYearDisplay');
-
-        function renderCalendar() {
-            const currentMonth = currentDate.getMonth();
-            const currentYear = currentDate.getFullYear();
-            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-            const firstDayOfMonth = (new Date(currentYear, currentMonth, 1).getDay() + 6) % 7;
-            const today = new Date();
-
-            calendar.innerHTML = ''; // Clear previous content
-
-            // Display the current month and year with uppercase month names
-            monthYearDisplay.textContent = `${currentDate.toLocaleString('default', { month: 'long' }).toUpperCase()} ${currentYear}`;
-                        // Create day names in Polish
-            const dayNames = ['Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob', 'Ndz'];
-            for (let dayName of dayNames) {
-                const dayNameElement = document.createElement('div');
-                dayNameElement.classList.add('day-name');
-                dayNameElement.textContent = dayName;
-                calendar.appendChild(dayNameElement);
-            }
-
-            // Create empty days for the first week
-            for (let i = 0; i < firstDayOfMonth; i++) {
-                const emptyDay = document.createElement('div');
-                emptyDay.classList.add('day');
-                emptyDay.style.visibility = 'hidden';
-                calendar.appendChild(emptyDay);
-            }
-
-
-            // Create the days of the month
-            for (let day = 1; day <= daysInMonth; day++) {
-                const dayElement = document.createElement('div');
-                dayElement.classList.add('day');
-                dayElement.textContent = day;
-                // Dodaj klasę .currentDay, jeśli to aktualny dzień
-                if (currentYear === today.getFullYear() && currentMonth === today.getMonth() && day === today.getDate()) {
-                    dayElement.classList.add('currentDay');
-                }
-                dayElement.addEventListener('click', function () {
-                    const selectedDate = new Date(currentYear, currentMonth, day);
-                    var localDate = new Date(selectedDate.getTime() - (selectedDate.getTimezoneOffset() * 60000)).toISOString().split("T")[0];
-                    window.location.href = '/Diet/DietsCallendarShow?date=' + localDate;
-                });
-                calendar.appendChild(dayElement);
-            }
-
-
-    }
-
-    document.getElementById('prevMonth').addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar();
-    });
-
-    document.getElementById('nextMonth').addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar();
-    });
-
-    renderCalendar();
-});
-
-</script>
