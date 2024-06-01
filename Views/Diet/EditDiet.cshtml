@@ -1,0 +1,171 @@
+﻿@model IList<DietBowl.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Edit Diet";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h3>Edit Diet for: @ViewBag.Date</h3>
+</div>
+
+<form id="editDietForm" asp-action="EditDiet" asp-controller="Diet" method="post">
+    <input type="hidden" name="userId" value="@ViewBag.UserId" />
+    <input type="hidden" name="date" value="@ViewBag.Date" />
+
+    <div class="blue">
+        <div id="listAtOneDay">
+            <h4>Recipes in the diet:</h4>
+            @foreach (var recipe in Model)
+            {
+                <div onclick="AddToList(@recipe.Id)" id="@recipe.Id">
+                    <h5>@recipe.Title</h5>
+                    <p>Category: @recipe.Category</p>
+                    <p>Carbohydrate: @recipe.Carbohydrate g</p>
+                    <p>Protein: @recipe.Protein g</p>
+                    <p>Fat: @recipe.Fat g</p>
+                    <p>Calories: @recipe.CalculateCalories() kcal</p>
+                    <p>Allergens:</p>
+                    <ul>
+                        @foreach (var allergen in recipe.Allergens)
+                        {
+                            <li>@allergen.Name</li>
+                        }
+                    </ul>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="orange">
+            <div class="input-group">
+                <input class="form-control" placeholder="Search for recipe..." autocomplete="on" id="inputLiveSearch" type="text" size="30" onkeyup="showResult(this.value)">
+                <div class="input-group-btn">
+                    <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+
+            <div id="allList" class="recipe-grid">
+                <h4>All Recipes:</h4>
+                @foreach (var recipe in ViewBag.AllRecipes)
+                {
+                    <div onclick="AddToList(@recipe.Id)" id="@recipe.Id">
+                        <h5>@recipe.Title</h5>
+                        <p>Category: @recipe.Category</p>
+                        <p>Carbohydrate: @recipe.Carbohydrate g</p>
+                        <p>Protein: @recipe.Protein g</p>
+                        <p>Fat: @recipe.Fat g</p>
+                        <p>Calories: @recipe.CalculateCalories() kcal</p>
+                        <p>Allergens:</p>
+                        <ul>
+                            @foreach (var allergen in recipe.Allergens)
+                            {
+                                <li>@allergen.Name</li>
+                            }
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-success btn-lg" type="button" onclick="parseToSend()">Assign</button>
+    <a href="@Url.Action("DietsCallendarForDietitian", "Diet", new { userId = ViewBag.UserId })" class="btn btn-primary">Back to Calendar</a>
+</form>
+
+<link rel="stylesheet" href="~/css/dietecitianaddrecipe.css" asp-append-version="true" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script>
+    var list = new Array();
+    var tab = JSON.parse('@Html.Raw(ViewData["List"])');
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var listAtOneDayElement = document.getElementById('listAtOneDay');
+        if (!listAtOneDayElement) {
+            console.error("Element with id 'listAtOneDay' not found!");
+        }
+    });
+
+    function reset() {
+        for (let i = 0; i < allList.children.length; i++) {
+            allList.children[i].hidden = false;
+        }
+    }
+
+    function showResult(str) {
+        var result = new Array();
+        if (str.length < 1) {
+            reset();
+            return;
+        }
+        tab.forEach(function (element) {
+            let x = element.toLowerCase()
+            if (x.includes(str.toLowerCase()))
+                result.push(element);
+        });
+        searchHiden(result);
+    }
+
+    function searchHiden(result) {
+        for (let i = 0; i < allList.children.length; i++) {
+            if (result.includes(allList.children[i].getElementsByTagName("h5")[0].innerText)) {
+                allList.children[i].hidden = false;
+            } else {
+                allList.children[i].hidden = true;
+            }
+        }
+    }
+
+    function AddToList(id) {
+        if (list.includes(id)) {
+            for (let i = 0; i < allList.children.length; i++) {
+                if (list[i] == id) {
+                    list.splice(i, 1);
+                }
+            }
+        }
+        else {
+            list.push(id)
+        }
+        console.log(list)
+        listAtOneDay.innerHTML = ""
+        list.forEach(item => {
+            const listItem = document.createElement('div')
+            listItem.classList = "dodaniereceptury"
+            const temp = document.getElementById('allList').children
+            for (let i = 0; i < temp.length; i++) {
+                if (temp[i].id == item) {
+                    const originalElement = temp[i].cloneNode(true)
+                    const copy = originalElement.querySelector("h5")
+                    copy.addEventListener('click', () => { AddToList(item) })
+                    listItem.appendChild(copy)
+                }
+            }
+            listAtOneDay.appendChild(listItem)
+        });
+    }
+
+    function parseToSend() {
+        var listAtOneDayElement = document.getElementById('listAtOneDay');
+        if (!listAtOneDayElement) {
+            console.error("Element with id 'listAtOneDay' not found!");
+            return;
+        }
+
+        var dateOrg = @Html.Raw(Json.Serialize(@ViewBag.Date));
+        var date = new Date(dateOrg);
+        var year = date.getFullYear();
+        var month = ('0' + (date.getMonth() + 1)).slice(-2);
+        var day = ('0' + date.getDate()).slice(-2);
+        var formattedDate = year + '-' + month + '-' + day;
+
+        document.getElementById('sendList').children.date.value = formattedDate;
+        document.getElementById('recipeList').value = JSON.stringify(list);
+        document.getElementById('sendList').submit();
+    }
+</script>

@@ -1,0 +1,50 @@
+﻿@model DietBowl.Models.Diet
+
+@{
+    ViewData["Title"] = "Diet Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h3>Dieta na dzień: @Model.Date.ToString("dd-MM-yyyy")</h3>
+    <p>Użytkownik: @Model.User.FirstName @Model.User.LastName</p>
+    <p>Kalorie: @Model.Calories</p>
+    <p>Białko: @Model.Protein</p>
+    <p>Tłuszcz: @Model.Fat</p>
+    <p>Węglowodany: @Model.Carbohydrate</p>
+</div>
+
+<h4>Przepisy</h4>
+<table>
+    <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Kategoria</th>
+            <th>Składniki</th>
+            <th>Instrukcje</th>
+            <th>Białko</th>
+            <th>Tłuszcz</th>
+            <th>Węglowodany</th>
+            <th>Kalorie</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dietRecipe in Model.DietRecipes)
+        {
+            <tr>
+                <td>@dietRecipe.Recipe.Title</td>
+                <td>@dietRecipe.Recipe.Category</td>
+                <td>@dietRecipe.Recipe.Ingedients</td>
+                <td>@dietRecipe.Recipe.Instructions</td>
+                <td>@dietRecipe.Recipe.Protein</td>
+                <td>@dietRecipe.Recipe.Fat</td>
+                <td>@dietRecipe.Recipe.Carbohydrate</td>
+                <td>@dietRecipe.Recipe.Calories</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("EditDiet", "Diet", new { userId = Model.UserId, date = Model.Date.ToString("yyyy-MM-dd"), dietId = Model.Id })" class="btn btn-primary">Edytuj dietę</a>
+<a href="@Url.Action("DietsCallendarForDietitian", "Diet", new { userId = Model.UserId })" class="btn btn-secondary">Powrót do kalendarza</a>

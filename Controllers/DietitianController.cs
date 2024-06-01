@@ -92,29 +92,27 @@ namespace DietBowl.Controllers
             return RedirectToAction("Index", "Home"); // Domyślna strona po zalogowaniu
         }
 
-         public async Task<IActionResult> AddRecipeToDiet(int userId, DateTime data)
-         {
+        public async Task<IActionResult> AddRecipeToDiet(int userId, DateTime data)
+        {
             var recipes = await _dietitianService.GetRecipes();
             ViewData["List"] = recipes.Select(x => x.Title).ToJson();
             ViewData["IdUser"] = userId;
             ViewBag.date = data;
             return View(recipes);
-         }
+        }
 
         [HttpPost]
-         public async Task<IActionResult> AddRecipeAtDay(int userId, DateTime date, string recipeList)
-         {
+        public async Task<IActionResult> AddRecipeAtDay(int userId, DateTime date, string recipeList)
+        {
             dynamic jsonData = JsonConvert.DeserializeObject(recipeList)!;
             List<int> idRecipes = new();
-            foreach(int idRepice in jsonData)
+            foreach (int idRepice in jsonData)
             {
                 idRecipes.Add(idRepice);
             }
             await _dietitianService.AddRecipeAtDay(userId, date, idRecipes);
-            return RedirectToAction("AssignedPatients", "Dietitian");
-         }
-
-
+            return RedirectToAction("DietsCallendarForDietitian", "Diet", new { userId = userId });
+        }
 
 
         //spaghetti
@@ -242,6 +240,15 @@ namespace DietBowl.Controllers
             _dietitianService.UpdateUserMacronutrients(model);
 
             return RedirectToAction("DisplayUserMacronutrients", new { userId = model.UserId });
+        }
+
+
+        [Authorize(Roles = "1")]
+        public async Task<IActionResult> UserBMIHistory(int userId)
+        {
+
+            var bodyParameters = await _dietitianService.GetBodyParameters((int)userId);
+            return View(bodyParameters);
         }
     }
 

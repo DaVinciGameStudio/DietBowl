@@ -165,8 +165,13 @@
                     const selectedDate = new Date(currentYear, currentMonth, day);
                     const localDate = new Date(selectedDate.getTime() - (selectedDate.getTimezoneOffset() * 60000)).toISOString().split("T")[0];
                     const userId = @ViewBag.userId;
-                    const url = '/Dietitian/AddRecipeToDiet?userId=' + userId + '&data=' + localDate;
-                    window.location.href = url;
+                    if (dietDictionary[dateString]) {
+                        const url = '/Diet/ViewDiet?userId=' + userId + '&date=' + localDate;
+                        window.location.href = url;
+                    } else {
+                        const url = '/Dietitian/AddRecipeToDiet?userId=' + userId + '&data=' + localDate;
+                        window.location.href = url;
+                    }
                 });
 
                 calendar.appendChild(dayElement);

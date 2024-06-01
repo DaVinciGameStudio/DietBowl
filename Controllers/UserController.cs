@@ -177,26 +177,6 @@ namespace DietBowl.Controllers
         }
 
 
-
-        //Preferencje
-        //[Authorize(Roles = "2")]
-        //[HttpGet]
-        //public async Task<IActionResult> ViewPreference()
-        //{
-        //    var emailUser = User.FindFirstValue(ClaimTypes.Name);
-        //    var userId = await _userService.GetUserIdByEmail(emailUser);
-
-        //    // Pobierz preferencje użytkownika o podanym userId
-        //    var userPreferences = await _userService.GetUserPreferences((int)userId);
-
-        //    if (userPreferences == null)
-        //    {
-        //        return NotFound(); // Jeśli preferencje nie zostały znalezione, zwróć 404
-        //    }
-
-        //    return View(userPreferences); // Wyświetl widok z preferencjami użytkownika
-        //}
-
         [Authorize(Roles = "2")]
         [HttpGet]
         public async Task<IActionResult> ViewPreference()

@@ -26,6 +26,14 @@ namespace DietBowl.Services
                         .ToListAsync();
         }
 
+        public async Task<int?> GetUserIdByEmail(string email)
+        {
+            var user = await _dietBowlDbContext.Users
+                                .FirstOrDefaultAsync(u => u.Email == email && u.Role == 2);
+
+            return user?.Id; // Zwróć ID user lub null, jeśli nie znaleziono
+        }
+
         public async Task<int?> GetDietitianIdByEmail(string email)
         {
             var dietitian = await _dietBowlDbContext.Users
@@ -127,7 +135,7 @@ namespace DietBowl.Services
 
         public async Task<bool> AddRecipeAtDay(int userId, DateTime date, List<int> idRecipes)
         {
-            if(userId > 0)
+            if (userId > 0)
             {
                 List<Recipe> recipes = _dietBowlDbContext.Recipes
                     .Where(r => idRecipes.Contains(r.Id))
@@ -135,7 +143,6 @@ namespace DietBowl.Services
                 User user = _dietBowlDbContext.Users
                     .Where(u => u.Id == userId)
                     .FirstOrDefault()!;
-
 
                 Diet diet = new Diet
                 {
@@ -149,12 +156,18 @@ namespace DietBowl.Services
                         IsConsumed = false
                     }).ToList()
                 };
+
+                diet.Protein = diet.DietRecipes.Sum(dr => dr.Recipe.Protein);
+                diet.Fat = diet.DietRecipes.Sum(dr => dr.Recipe.Fat);
+                diet.Carbohydrate = diet.DietRecipes.Sum(dr => dr.Recipe.Carbohydrate);
+                diet.Calories = diet.DietRecipes.Sum(dr => dr.Recipe.CalculateCalories());
+
                 await _dietBowlDbContext.Diets.AddAsync(diet);
                 await _dietBowlDbContext.SaveChangesAsync();
                 return true;
             }
-            
-           return false;
+
+            return false;
         }
 
         public void SetUserMacronutrients(int userId, double protein, double fat, double carbohydrate)
@@ -242,6 +255,11 @@ namespace DietBowl.Services
 
                 _dietBowlDbContext.SaveChanges();
             }
+        }
+
+        public async Task<List<BodyParameter>> GetBodyParameters(int userId)
+        {
+            return await _dietBowlDbContext.BodyParameters.Where(bp => bp.UserId == userId).ToListAsync();
         }
     }
 }

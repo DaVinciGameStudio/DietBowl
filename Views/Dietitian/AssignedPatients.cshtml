@@ -58,6 +58,12 @@ else
                         <input type="hidden" name="userId" value="@user.Id" />
                         <input class="btn btn-primary" type="submit" value="Makro" />
                     </form>
+
+                    <!-- Przycisk "Historia BMI" -->
+                    <form method="get" action="@Url.Action("UserBMIHistory", "Dietitian", new { userId = user.Id })">
+                        <input type="hidden" name="userId" value="@user.Id" />
+                        <input class="btn btn-info" type="submit" value="Historia BMI" />
+                    </form>
                 </td>
             </tr>
         }

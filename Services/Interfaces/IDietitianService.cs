@@ -8,6 +8,7 @@ namespace DietBowl.Services.Interfaces
     {
         Task<List<User>> GetAllFreePatients();
         Task<List<User>> GetAssignedPatients(int dietitianId);
+        Task<int?> GetUserIdByEmail(string email);
         Task<int?> GetDietitianIdByEmail(string email);
         Task<bool> AddPatient(int dietitianId, int userId);
         Task<bool> RemovePatient(int dietitianId, int userId);
@@ -21,5 +22,6 @@ namespace DietBowl.Services.Interfaces
         User GetUserWithPreferenceAndUserNutritionalRequirements(int userId);
         UserMacronutrientsVM GetUserMacronutrients(int userId);
         void UpdateUserMacronutrients(UserMacronutrientsVM model);
+        Task<List<BodyParameter>> GetBodyParameters(int userId);
     }
 }

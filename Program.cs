@@ -44,6 +44,7 @@ namespace DietBowl
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IDietitianService, DietitianService>();
             builder.Services.AddScoped<IAdministratorService, AdministratorService>();
+            builder.Services.AddScoped<IDietService, DietService>();
 
             var app = builder.Build();
 
