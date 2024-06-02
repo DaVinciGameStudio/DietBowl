@@ -180,10 +180,9 @@ namespace DietBowl.Controllers
                 idRecipes.Add(idRepice);
             }
 
-            var cos = await _dietService.EditDiet(dietId, idRecipes);
+            await _dietService.EditDiet(dietId, idRecipes);
             //await _dietitianService.AddRecipeAtDay(userId, date, idRecipes);
-            //return RedirectToAction("DietsCallendarForDietitian", "Diet", new { userId = userId });
-            return RedirectToAction("User", "Home");
+            return RedirectToAction("AssignedPatients", "Dietitian");
         }
 
 

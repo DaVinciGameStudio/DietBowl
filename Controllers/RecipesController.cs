@@ -193,6 +193,8 @@ namespace DietBowl.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.Allergens = _dietBowlDbContext.Allergens.ToList();
+            ViewBag.Categories = new List<string> { "Śniadanie", "Obiad", "Przekąska", "Kolacja" };
             return View(recipe);
         }
     }
