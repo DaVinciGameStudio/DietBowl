@@ -1,18 +1,20 @@
 ﻿@model List<DietBowl.Models.BodyParameter>
 
 <link rel="stylesheet" href="~/css/userbody.css" asp-append-version="true" />
-
+<br />
+<div>
+    <h1 style="text-align:center">Parametry ciała</h1>
+</div>
 <br />
 <br />
 <br />
 <br />
-<h1 style="text-align:center">Parametry ciała</h1>
 
 @if (Model.Count > 0)
 {
     <div class="filter">
-    <table>
-        
+        <br />
+        <table>
             <tr>
                 <th>Wzrost (cm)</th>
                 <th>Waga (kg)</th>
@@ -20,9 +22,8 @@
                 <th>Data</th>
                 <th>Akcje</th>
             </tr>
-        
-       
-            @foreach (var bodyParameter in Model)
+
+            @foreach (var bodyParameter in Model.OrderByDescending(bp => bp.Date))
             {
                 <tr>
                     <td>@bodyParameter.Height</td>
@@ -37,8 +38,8 @@
                     </td>
                 </tr>
             }
-        
-    </table>
+
+        </table>
     </div>
 }
 else

@@ -41,7 +41,7 @@
         </div>
     <div class="yellow">
         <div id="allList" class="recipe-grid">
-            @foreach (var recipe in Model)
+            @foreach (var recipe in ViewBag.AllRecipes)
             {
                 <div onclick="AddToList(@recipe.Id)" id="@recipe.Id">
                     <h5>@recipe.Title</h5>

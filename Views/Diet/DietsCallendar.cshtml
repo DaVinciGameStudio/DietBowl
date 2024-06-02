@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model DietBowl.Models.User
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>Kalendarz</title>
@@ -90,12 +92,29 @@
             font-weight: bold;
             text-transform: uppercase; /* Zawsze duże litery */
         }
+
+        .information{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: #fafafa;
+            text-align: center;
+            top: 50%;
+            right: 50%;
+            z-index: 100;
+/*             visibility: hidden; */
+        }
     </style>
 </head>
 <body>
     <br />
     <br />
     <br />
+    @if(!ViewBag.userBody)
+    {
+        <div class="information">Uzupełnij BodyParamiters!</div>
+    }
+
     <div id="calendarContainer">
         <div id="calendarNavigation">
             <button id="prevMonth" class="navigationButton">&lt;</button>
@@ -141,8 +160,7 @@
                 }
 
                 // Create the days of the month
-                 dietDictionary = JSON.parse('@Html.Raw(Json.Serialize(ViewData["DietDictionary"]))');
-                console.log(dietDictionary)
+                var dietDictionary = JSON.parse('@Html.Raw(Json.Serialize(ViewData["DietDictionary"]))');
                 for (let day = 1; day <= daysInMonth; day++) {
                     const dayElement = document.createElement('div');
                     dayElement.classList.add('day');

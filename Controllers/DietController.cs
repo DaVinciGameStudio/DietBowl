@@ -32,8 +32,10 @@ namespace DietBowl.Controllers
 
         public async Task<IActionResult> DietsCallendar()
         {
+
             var emailUser = User.FindFirstValue(ClaimTypes.Name);
             var user = await _dietBowlDbContext.Users
+                        .Include(b=>b.BodyParameters)
                         .FirstOrDefaultAsync(u => u.Email == emailUser && u.Role == 2);
             var userId = user.Id;
 
@@ -50,7 +52,8 @@ namespace DietBowl.Controllers
             // Przekazanie danych do widoku
             ViewData["DietDictionary"] = dietDictionary;
             ViewBag.userId = userId;
-            return View();
+            ViewBag.userBody = user.BodyParameters.Any(x => x.Date.Date == DateTime.Today);
+            return View(user);
         }
 
 
