@@ -43,6 +43,12 @@ else
                         <input class="btn btn-danger" type="submit" value=" Usuń " onclick="return confirm('Czy na pewno chcesz usunąć tego pacjenta?');" />
                     </form>
 
+                   
+
+                    <form method="post" action="@Url.Action("SetOrDisplayUserMacronutrients", "Dietitian")">
+                        <input type="hidden" name="userId" value="@user.Id" />
+                        <input class="btn btn-primary" type="submit" value="Makro" />
+                    </form>
                     @if (user.UserNutritionalRequirement == null)
                     {
                         <button class="btn btn-primary disabled" disabled>Najpierw należy ustawić makro</button>
@@ -53,12 +59,6 @@ else
                             <input class="btn btn-primary" type="submit" value="Dieta" />
                         </form>
                     }
-
-                    <form method="post" action="@Url.Action("SetOrDisplayUserMacronutrients", "Dietitian")">
-                        <input type="hidden" name="userId" value="@user.Id" />
-                        <input class="btn btn-primary" type="submit" value="Makro" />
-                    </form>
-
                     <!-- Przycisk "Historia BMI" -->
                     <form method="get" action="@Url.Action("UserBMIHistory", "Dietitian", new { userId = user.Id })">
                         <input type="hidden" name="userId" value="@user.Id" />

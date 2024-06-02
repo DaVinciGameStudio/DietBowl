@@ -4,10 +4,9 @@
     ViewData["Title"] = "Edit Diet";
     var dietRecipesJson = Json.Serialize(ViewBag.DietRecipes);
 }
+<link rel="stylesheet" href="~/css/dietecitianaddrecipe.css" asp-append-version="true" />
 
-<div>
-    <h3>Edit Diet for: @ViewBag.Date</h3>
-</div>
+
 
 <form>
     <input type="hidden" name="userId" value="@ViewBag.UserId" />
@@ -21,36 +20,49 @@
 
     <div class="content">
         <div class="orange">
-            <div class="input-group">
-                <input class="form-control" placeholder="Search for recipe..." autocomplete="on" id="inputLiveSearch" type="text" size="30" onkeyup="showResult(this.value)">
-                <div class="input-group-btn">
-                    <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="input-group" style="width: 70%;">
+                    <input class="form-control" placeholder="Wyszukaj przepis..."
+                           autocomplete="on" id="inputLiveSearch" type="text" size="40"
+                           onkeyup="showResult(this.value)">
+                    <div class="input-group-addon" style="cursor: default;">
+                        <span class="bi bi-search"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="d-flex ml-auto">
+                    <button class="btn btn-success " type="button" onclick="parseToSend()">Zapisz edycje</button>
+                    <a href="@Url.Action("DietsCallendarForDietitian", "Diet", new { userId = ViewBag.UserId })" class="btn btn-primary">Powrót do kalendarza</a>
                 </div>
             </div>
+
+
+
         </div>
-    </div>
-    <div id="allList" class="recipe-grid">
-        @foreach (var recipe in ViewBag.AllRecipes)
-        {
-            <div onclick="AddToList(@recipe.Id)" id="@recipe.Id">
-                <h5>@recipe.Title</h5>
-                <p>Category: @recipe.Category</p>
-                <p>Carbohydrate: @recipe.Carbohydrate g</p>
-                <p>Protein: @recipe.Protein g</p>
-                <p>Fat: @recipe.Fat g</p>
-                <p>Calories: @recipe.CalculateCalories() kcal</p>
-                <p>Allergens:</p>
-                <ul>
-                    @foreach (var allergen in recipe.Allergens)
-                    {
-                        <li>@allergen.Name</li>
-                    }
-                </ul>
-            </div>
-        }
-    </div>
-    <button class="btn btn-success btn-lg" type="button" onclick="parseToSend()">Assign</button>
-    <a href="@Url.Action("DietsCallendarForDietitian", "Diet", new { userId = ViewBag.UserId })" class="btn btn-primary">Back to Calendar</a>
+    <div class="yellow">
+        <div id="allList" class="recipe-grid">
+            @foreach (var recipe in Model)
+            {
+                <div onclick="AddToList(@recipe.Id)" id="@recipe.Id">
+                    <h5>@recipe.Title</h5>
+                    <p>Category: @recipe.Category</p>
+                    <p>Carbohydrate: @recipe.Carbohydrate g</p>
+                    <p>Protein: @recipe.Protein g</p>
+                    <p>Fat: @recipe.Fat g</p>
+                    <p>Calories: @recipe.CalculateCalories() kcal</p>
+
+                    <p>Alergeny:</p>
+                    <ul>
+                        @foreach (var allergen in recipe.Allergens)
+                        {
+                            <li>@allergen.Name</li>
+                        }
+                    </ul>
+                </div>
+            }
+        </div>
+        </div>
+    
 </form>
 
 <link rel="stylesheet" href="~/css/dietecitianaddrecipe.css" asp-append-version="true" />
