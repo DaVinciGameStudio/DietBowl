@@ -15,7 +15,9 @@
     padding: 20px;
     height: 89.5vh;
     width: 30vh;
+    overflow: auto; /* Dodaje pasek przewijania */
 }
+
 .orange {
     padding: 20px;
     height: 10vh;
@@ -24,6 +26,7 @@
     background-color: #E9EAEC;
     justify-content: space-between;
     border-bottom: solid;
+    overflow:auto;
 }
 
 

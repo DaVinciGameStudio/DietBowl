@@ -50,3 +50,11 @@ tr {
     tr:nth-child(even) {
         background-color: #eeeeee;
     }
+
+
+.chart {
+    width: 50%;
+    margin: 0 auto; /* This centers the div horizontally */
+    display: flex;
+    justify-content: center;
+}
