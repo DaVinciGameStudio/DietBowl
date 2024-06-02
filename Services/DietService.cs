@@ -147,5 +147,43 @@ namespace DietBowl.Services
 
             return true;
         }
+
+        public async Task<bool> EditDiet(int dietId, List<int> idRecipes)
+        {
+
+            if (dietId > 0)
+            {
+                Diet diet = await _dietBowlDbContext.Diets
+                     .Include(d => d.DietRecipes)
+                     .ThenInclude(dr => dr.Recipe)
+                     .FirstAsync(d => d.Id == dietId);
+
+                _dietBowlDbContext.DietRecipes.RemoveRange(diet.DietRecipes);
+
+                List<Recipe> recipes = await _dietBowlDbContext.Recipes
+                    .Where(r => idRecipes.Contains(r.Id))
+                    .ToListAsync();
+
+                diet.DietRecipes = recipes.Select(recipe => new DietRecipe
+                {
+                    DietId = dietId,
+                    RecipeId = recipe.Id,
+                    Recipe = recipe,
+                    IsConsumed = false
+                }).ToList();
+
+
+                diet.Protein = diet.DietRecipes.Sum(dr => dr.Recipe.Protein);
+                diet.Fat = diet.DietRecipes.Sum(dr => dr.Recipe.Fat);
+                diet.Carbohydrate = diet.DietRecipes.Sum(dr => dr.Recipe.Carbohydrate);
+                diet.Calories = diet.DietRecipes.Sum(dr => dr.Recipe.CalculateCalories());
+
+                _dietBowlDbContext.Diets.Update(diet);
+                await _dietBowlDbContext.SaveChangesAsync();
+                return true;
+            };
+
+            return false;
+        }
     }
 }

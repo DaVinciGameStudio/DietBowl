@@ -13,5 +13,6 @@ namespace DietBowl.Services.Interfaces
         Task<List<Recipe>> GetRecipesInDiet(int dietId);
         Task<Diet> GetDietById(int dietId, int userId);
         Task<bool> DeleteDiet(int dietId, int userId);
+        Task<bool> EditDiet(int dietId, List<int> idRecipes);
     }
 }

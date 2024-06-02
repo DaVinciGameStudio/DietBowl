@@ -2,9 +2,11 @@
 using DietBowl.Models;
 using DietBowl.Services;
 using DietBowl.Services.Interfaces;
+using DietBowl.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using NuGet.Protocol;
 using System.Collections.Generic;
 using System.Security.Claims;
 
@@ -155,10 +157,13 @@ namespace DietBowl.Controllers
             List<Recipe> allRecipes = await _dietService.GetRecipes();
             List<int> listIds = new List<int>();
             foreach (var recipe in dietRecipes) {
-                listIds.Add(recipe.Id); 
+                listIds.Add(recipe.Id);
             }
 
             // Przekazujemy listę przepisów w diecie i wszystkie przepisy do widoku
+
+            ViewData["List"] = allRecipes.Select(x => x.Title).ToJson();
+            ViewBag.dietId = dietId;
             ViewBag.DietRecipes = listIds;
             ViewData["AllRecipes"] = allRecipes;
 
@@ -166,29 +171,22 @@ namespace DietBowl.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditDiet(Diet model)
+        public async Task<IActionResult> EditDiet(int dietId, string recipeList)
         {
-            try
+            dynamic jsonData = JsonConvert.DeserializeObject(recipeList)!;
+            List<int> idRecipes = new();
+            foreach (int idRepice in jsonData)
             {
-                bool success = await _dietService.EditDiet(model);
+                idRecipes.Add(idRepice);
+            }
 
-                if (success)
-                {
-                    return RedirectToAction("AssignedPatients", "Dietitian");
-                }
-                else
-                {
-                    TempData["ErrorMessage"] = "Failed to edit the diet.";
-                    return RedirectToAction("AssignedPatients", "Dietitian");
-                }
-            }
-            catch (Exception ex)
-            {
-                TempData["ErrorMessage"] = "An error occurred while processing your request.";
-                Console.WriteLine($"Error: {ex.Message}");
-                return RedirectToAction("AssignedPatients", "Dietitian");
-            }
+            var cos = await _dietService.EditDiet(dietId, idRecipes);
+            //await _dietitianService.AddRecipeAtDay(userId, date, idRecipes);
+            //return RedirectToAction("DietsCallendarForDietitian", "Diet", new { userId = userId });
+            return RedirectToAction("User", "Home");
         }
+
+
         //Usuwanie diety
         [HttpGet]
         public async Task<IActionResult> DeleteDiet(int dietId, int userId, string date)

@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "E:\\rep\\DietBowl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\dietservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\dietservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\controllers\\dietcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:controllers\\dietcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\interfaces\\idietservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\interfaces\\idietservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\dietservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\dietservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\diet\\viewdiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\diet\\viewdiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\models\\dietrecipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\dietrecipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\models\\diet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\diet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\dietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\dietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\diet\\editdiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -37,6 +21,42 @@
     {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\diet\\viewdiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\diet\\viewdiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\controllers\\dietitiancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:controllers\\dietitiancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\interfaces\\idietservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\interfaces\\idietservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\dietitian\\addrecipetodiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\dietitian\\addrecipetodiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\models\\usernutritionalrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\usernutritionalrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\models\\dietrecipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\dietrecipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\models\\diet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\diet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\diet\\dietscallendar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -48,14 +68,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa3/True/SqlTable/dbo.Diets.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\dietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\dietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\dietitian\\addrecipetodiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\dietitian\\addrecipetodiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\user\\addbodyparameters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -110,10 +122,6 @@
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\dietitian\\displayusermacronutrients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\controllers\\dietitiancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:controllers\\dietitiancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\views\\dietitian\\assignedpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:views\\dietitian\\assignedpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -134,10 +142,6 @@
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\interfaces\\idietitianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|e:\\rep\\dietbowl\\models\\bodyparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9BA4C19-A928-4735-9907-0C5E5113043C}|DietBowl.csproj|solutionrelative:models\\bodyparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -149,24 +153,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 34,
+          "SelectedChildIndex": 32,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
+              "Title": "UserNutritionalRequirement.cs",
+              "DocumentMoniker": "E:\\rep\\DietBowl\\Models\\UserNutritionalRequirement.cs",
+              "RelativeDocumentMoniker": "Models\\UserNutritionalRequirement.cs",
+              "ToolTip": "E:\\rep\\DietBowl\\Models\\UserNutritionalRequirement.cs",
+              "RelativeToolTip": "Models\\UserNutritionalRequirement.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T19:14:49.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Recipe.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Models\\Recipe.cs",
               "RelativeDocumentMoniker": "Models\\Recipe.cs",
               "ToolTip": "E:\\rep\\DietBowl\\Models\\Recipe.cs",
               "RelativeToolTip": "Models\\Recipe.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAA4wB4AAAAFAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAzwB0AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T18:04:43.061Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "Diet.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Models\\Diet.cs",
               "RelativeDocumentMoniker": "Models\\Diet.cs",
@@ -174,12 +191,11 @@
               "RelativeToolTip": "Models\\Diet.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T18:03:58.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-02T18:03:58.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "dbo.Diets [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BazaTestowa3/True/SqlTable/dbo.Diets.sql",
               "ToolTip": "dbo.Diets [Data]",
@@ -188,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "AddPreference.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\User\\AddPreference.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\AddPreference.cshtml",
@@ -200,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "AddBodyParameters.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\User\\AddBodyParameters.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\AddBodyParameters.cshtml",
@@ -212,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "viewdiet.css",
               "DocumentMoniker": "E:\\rep\\DietBowl\\wwwroot\\css\\viewdiet.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\viewdiet.css",
@@ -224,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "dietecitianaddrecipe.css",
               "DocumentMoniker": "E:\\rep\\DietBowl\\wwwroot\\css\\dietecitianaddrecipe.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\dietecitianaddrecipe.css",
@@ -236,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "dietcallendarshow.css",
               "DocumentMoniker": "E:\\rep\\DietBowl\\wwwroot\\css\\dietcallendarshow.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\dietcallendarshow.css",
@@ -248,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -260,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -272,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Recipes\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Recipes\\Index.cshtml",
@@ -284,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "no-diet.css",
               "DocumentMoniker": "E:\\rep\\DietBowl\\wwwroot\\css\\no-diet.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\no-diet.css",
@@ -296,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "NoDietForDay.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Diet\\NoDietForDay.cshtml",
               "RelativeDocumentMoniker": "Views\\Diet\\NoDietForDay.cshtml",
@@ -308,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "displayusermacro.css",
               "DocumentMoniker": "E:\\rep\\DietBowl\\wwwroot\\css\\displayusermacro.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\displayusermacro.css",
@@ -320,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "DisplayUserMacronutrients.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Dietitian\\DisplayUserMacronutrients.cshtml",
               "RelativeDocumentMoniker": "Views\\Dietitian\\DisplayUserMacronutrients.cshtml",
@@ -332,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "AssignedPatients.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Dietitian\\AssignedPatients.cshtml",
               "RelativeDocumentMoniker": "Views\\Dietitian\\AssignedPatients.cshtml",
@@ -344,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "UserBMIHistory.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Dietitian\\UserBMIHistory.cshtml",
               "RelativeDocumentMoniker": "Views\\Dietitian\\UserBMIHistory.cshtml",
@@ -356,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "RecipesController.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Controllers\\RecipesController.cs",
               "RelativeDocumentMoniker": "Controllers\\RecipesController.cs",
@@ -368,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "IDietitianService.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\Interfaces\\IDietitianService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IDietitianService.cs",
@@ -380,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 5,
               "Title": "UserService.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService.cs",
@@ -388,11 +404,12 @@
               "RelativeToolTip": "Services\\UserService.cs",
               "ViewState": "AQIAAFMAAAAAAAAAAAAwwF0AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T22:55:29.839Z"
+              "WhenOpened": "2024-06-01T22:55:29.839Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "BodyParameters.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\User\\BodyParameters.cshtml",
               "RelativeDocumentMoniker": "Views\\User\\BodyParameters.cshtml",
@@ -404,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "BodyParameter.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Models\\BodyParameter.cs",
               "RelativeDocumentMoniker": "Models\\BodyParameter.cs",
@@ -416,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "DietsCallendarShow.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Diet\\DietsCallendarShow.cshtml",
               "RelativeDocumentMoniker": "Views\\Diet\\DietsCallendarShow.cshtml",
@@ -428,69 +445,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "UserController.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "E:\\rep\\DietBowl\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAAJIAAAAAAAAAAAAswKcAAAAIAAAA",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAAwGwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-01T22:16:03.775Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 8,
               "Title": "DietitianController.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Controllers\\DietitianController.cs",
               "RelativeDocumentMoniker": "Controllers\\DietitianController.cs",
               "ToolTip": "E:\\rep\\DietBowl\\Controllers\\DietitianController.cs",
               "RelativeToolTip": "Controllers\\DietitianController.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAUwPcAAAAJAAAA",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAqwHAAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T21:46:09.896Z"
+              "WhenOpened": "2024-06-01T21:46:09.896Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "IDietService.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\Interfaces\\IDietService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IDietService.cs",
               "ToolTip": "E:\\rep\\DietBowl\\Services\\Interfaces\\IDietService.cs",
               "RelativeToolTip": "Services\\Interfaces\\IDietService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA2AAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwA8AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-01T21:43:13.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "DietitianService.cs",
-              "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\DietitianService.cs",
-              "RelativeDocumentMoniker": "Services\\DietitianService.cs",
-              "ToolTip": "E:\\rep\\DietBowl\\Services\\DietitianService.cs",
-              "RelativeToolTip": "Services\\DietitianService.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAuwAQBAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T21:42:40.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 10,
               "Title": "AddRecipeToDiet.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Dietitian\\AddRecipeToDiet.cshtml",
               "RelativeDocumentMoniker": "Views\\Dietitian\\AddRecipeToDiet.cshtml",
               "ToolTip": "E:\\rep\\DietBowl\\Views\\Dietitian\\AddRecipeToDiet.cshtml",
               "RelativeToolTip": "Views\\Dietitian\\AddRecipeToDiet.cshtml",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAuwHkAAAAEAAAA",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAH4AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-01T21:37:26.122Z"
+              "WhenOpened": "2024-06-01T21:37:26.122Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "DietRecipe.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Models\\DietRecipe.cs",
               "RelativeDocumentMoniker": "Models\\DietRecipe.cs",
@@ -498,12 +505,11 @@
               "RelativeToolTip": "Models\\DietRecipe.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T21:33:05.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-01T21:33:05.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "DietsCallendar.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Diet\\DietsCallendar.cshtml",
               "RelativeDocumentMoniker": "Views\\Diet\\DietsCallendar.cshtml",
@@ -515,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "DietsCallendarForDietitian.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Diet\\DietsCallendarForDietitian.cshtml",
               "RelativeDocumentMoniker": "Views\\Diet\\DietsCallendarForDietitian.cshtml",
@@ -527,52 +533,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "ViewDiet.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Diet\\ViewDiet.cshtml",
               "RelativeDocumentMoniker": "Views\\Diet\\ViewDiet.cshtml",
               "ToolTip": "E:\\rep\\DietBowl\\Views\\Diet\\ViewDiet.cshtml",
               "RelativeToolTip": "Views\\Diet\\ViewDiet.cshtml",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAiwFYAAAAnAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAAiwFYAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-01T21:21:42.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DietController.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Controllers\\DietController.cs",
               "RelativeDocumentMoniker": "Controllers\\DietController.cs",
               "ToolTip": "E:\\rep\\DietBowl\\Controllers\\DietController.cs",
               "RelativeToolTip": "Controllers\\DietController.cs",
-              "ViewState": "AQIAALYAAAAAAAAAAAAkwL8AAAAYAAAA",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAqwLoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-01T21:21:06.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "EditDiet.cshtml",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Views\\Diet\\EditDiet.cshtml",
               "RelativeDocumentMoniker": "Views\\Diet\\EditDiet.cshtml",
               "ToolTip": "E:\\rep\\DietBowl\\Views\\Diet\\EditDiet.cshtml",
               "RelativeToolTip": "Views\\Diet\\EditDiet.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAEIAAAAXAAAA",
+              "ViewState": "AQIAAIIAAAAAAAAAAAAAAIsAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-01T21:53:18.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "DietitianService.cs",
+              "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\DietitianService.cs",
+              "RelativeDocumentMoniker": "Services\\DietitianService.cs",
+              "ToolTip": "E:\\rep\\DietBowl\\Services\\DietitianService.cs",
+              "RelativeToolTip": "Services\\DietitianService.cs",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAgwJgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T21:42:40.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "DietService.cs",
               "DocumentMoniker": "E:\\rep\\DietBowl\\Services\\DietService.cs",
               "RelativeDocumentMoniker": "Services\\DietService.cs",
               "ToolTip": "E:\\rep\\DietBowl\\Services\\DietService.cs",
               "RelativeToolTip": "Services\\DietService.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAkwJEAAAA4AAAA",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAQwKgAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-01T21:28:05.716Z",
               "EditorCaption": ""

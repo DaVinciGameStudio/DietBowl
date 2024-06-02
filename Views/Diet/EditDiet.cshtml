@@ -2,15 +2,14 @@
 
 @{
     ViewData["Title"] = "Edit Diet";
+    var dietRecipesJson = Json.Serialize(ViewBag.DietRecipes);
 }
-
-<h2>@ViewData["Title"]</h2>
 
 <div>
     <h3>Edit Diet for: @ViewBag.Date</h3>
 </div>
 
-<form id="editDietForm" asp-action="EditDiet" asp-controller="Diet" method="post">
+<form>
     <input type="hidden" name="userId" value="@ViewBag.UserId" />
     <input type="hidden" name="date" value="@ViewBag.Date" />
 
@@ -28,31 +27,28 @@
                     <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
                 </div>
             </div>
-
-            <div id="allList" class="recipe-grid">
-                <h4>All Recipes:</h4>
-                @foreach (var recipe in ViewBag.AllRecipes)
-                {
-                    <div onclick="AddToList(@recipe.Id)" id="@recipe.Id">
-                        <h5>@recipe.Title</h5>
-                        <p>Category: @recipe.Category</p>
-                        <p>Carbohydrate: @recipe.Carbohydrate g</p>
-                        <p>Protein: @recipe.Protein g</p>
-                        <p>Fat: @recipe.Fat g</p>
-                        <p>Calories: @recipe.CalculateCalories() kcal</p>
-                        <p>Allergens:</p>
-                        <ul>
-                            @foreach (var allergen in recipe.Allergens)
-                            {
-                                <li>@allergen.Name</li>
-                            }
-                        </ul>
-                    </div>
-                }
-            </div>
         </div>
     </div>
-
+    <div id="allList" class="recipe-grid">
+        @foreach (var recipe in ViewBag.AllRecipes)
+        {
+            <div onclick="AddToList(@recipe.Id)" id="@recipe.Id">
+                <h5>@recipe.Title</h5>
+                <p>Category: @recipe.Category</p>
+                <p>Carbohydrate: @recipe.Carbohydrate g</p>
+                <p>Protein: @recipe.Protein g</p>
+                <p>Fat: @recipe.Fat g</p>
+                <p>Calories: @recipe.CalculateCalories() kcal</p>
+                <p>Allergens:</p>
+                <ul>
+                    @foreach (var allergen in recipe.Allergens)
+                    {
+                        <li>@allergen.Name</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
     <button class="btn btn-success btn-lg" type="button" onclick="parseToSend()">Assign</button>
     <a href="@Url.Action("DietsCallendarForDietitian", "Diet", new { userId = ViewBag.UserId })" class="btn btn-primary">Back to Calendar</a>
 </form>
@@ -64,14 +60,15 @@
 
 <script>
     var list = new Array();
-     inna = '@Html.Raw(ViewBag.DietRecipes)'
-
+    var tab = JSON.parse('@Html.Raw(ViewData["List"])');
 
     document.addEventListener("DOMContentLoaded", function () {
         var listAtOneDayElement = document.getElementById('listAtOneDay');
         if (!listAtOneDayElement) {
             console.error("Element with id 'listAtOneDay' not found!");
         }
+        var inna = @Html.Raw(dietRecipesJson)
+            for (var i = 0; i < inna.length; i++) { AddToList(inna[i]) }
     });
 
     function reset() {
@@ -140,15 +137,17 @@
             return;
         }
 
-        var dateOrg = @Html.Raw(Json.Serialize(@ViewBag.Date));
-        var date = new Date(dateOrg);
-        var year = date.getFullYear();
-        var month = ('0' + (date.getMonth() + 1)).slice(-2);
-        var day = ('0' + date.getDate()).slice(-2);
-        var formattedDate = year + '-' + month + '-' + day;
+        var dietId = @Html.Raw(Json.Serialize(@ViewBag.dietId));
 
-        document.getElementById('sendList').children.date.value = formattedDate;
+        document.getElementById('dietId').value = parseInt(dietId);
         document.getElementById('recipeList').value = JSON.stringify(list);
-        document.getElementById('sendList').submit();
+        document.getElementById('editDietForm').submit();
     }
+
 </script>
+
+<form id="editDietForm" asp-action="EditDiet" asp-controller="Diet" method="post">
+    <input hidden name="dietId" id="dietId">
+    <input hidden name="recipeList" id="recipeList">
+</form>
+
