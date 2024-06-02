@@ -11,5 +11,7 @@ namespace DietBowl.Services.Interfaces
         Task<bool> EditDiet(Diet model);
         Task<List<Diet>> GetDietsForDietitian(int userId);
         Task<List<Recipe>> GetRecipesInDiet(int dietId);
+        Task<Diet> GetDietById(int dietId, int userId);
+        Task<bool> DeleteDiet(int dietId, int userId);
     }
 }

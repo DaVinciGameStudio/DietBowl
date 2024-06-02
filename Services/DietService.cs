@@ -125,5 +125,27 @@ namespace DietBowl.Services
                 .Where(d => d.UserId == userId)
                 .ToListAsync();
         }
+
+        public async Task<Diet> GetDietById(int dietId, int userId)
+        {
+            return await _dietBowlDbContext.Diets
+                .Include(d => d.DietRecipes)
+                .FirstOrDefaultAsync(d => d.Id == dietId && d.UserId == userId);
+        }
+
+        public async Task<bool> DeleteDiet(int dietId, int userId)
+        {
+            var diet = await GetDietById(dietId, userId);
+
+            if (diet == null)
+            {
+                return false;
+            }
+
+            _dietBowlDbContext.Diets.Remove(diet);
+            await _dietBowlDbContext.SaveChangesAsync();
+
+            return true;
+        }
     }
 }

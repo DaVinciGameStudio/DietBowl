@@ -5,6 +5,7 @@ using DietBowl.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Security.Claims;
 
 namespace DietBowl.Controllers
@@ -35,13 +36,17 @@ namespace DietBowl.Controllers
             var userId = user.Id;
 
             // Pobierz wszystkie daty z bazy danych dla danego użytkownika
-            var dietData = await _dietBowlDbContext.Diets
-                                .Where(d => d.UserId == userId)
-                                .Select(d => new { Date = d.Date.Date.ToString("yyyy-MM-dd"), UserId = d.UserId })
-                                .ToListAsync();
+            var diets = await _dietBowlDbContext.Diets
+                            .Where(d => d.UserId == userId)
+                            .Select(d => d.Date)
+                            .ToListAsync();
+
+            // Utwórz słownik, w którym kluczem będzie data, a wartością będzie lista obiektów Diet dla tej daty
+            var dietDictionary = diets.GroupBy(d => d.Date.Date)
+                                      .ToDictionary(g => g.Key, g => g.ToList());
 
             // Przekazanie danych do widoku
-            ViewData["DietData"] = dietData;
+            ViewData["DietDictionary"] = dietDictionary;
             ViewBag.userId = userId;
             return View();
         }
@@ -146,11 +151,15 @@ namespace DietBowl.Controllers
         [HttpGet]
         public async Task<IActionResult> EditDiet(int userId, DateTime date, int dietId)
         {
-            var dietRecipes = await _dietService.GetRecipesInDiet(dietId);
-            var allRecipes = await _dietService.GetRecipes();
+            List<Recipe> dietRecipes = await _dietService.GetRecipesInDiet(dietId);
+            List<Recipe> allRecipes = await _dietService.GetRecipes();
+            List<int> listIds = new List<int>();
+            foreach (var recipe in dietRecipes) {
+                listIds.Add(recipe.Id); 
+            }
 
             // Przekazujemy listę przepisów w diecie i wszystkie przepisy do widoku
-            ViewData["DietRecipes"] = dietRecipes;
+            ViewBag.DietRecipes = listIds;
             ViewData["AllRecipes"] = allRecipes;
 
             return View(dietRecipes);
@@ -179,6 +188,19 @@ namespace DietBowl.Controllers
                 Console.WriteLine($"Error: {ex.Message}");
                 return RedirectToAction("AssignedPatients", "Dietitian");
             }
+        }
+        //Usuwanie diety
+        [HttpGet]
+        public async Task<IActionResult> DeleteDiet(int dietId, int userId, string date)
+        {
+            bool success = await _dietService.DeleteDiet(dietId, userId);
+
+            if (!success)
+            {
+                return NotFound("Diet not found.");
+            }
+
+            return RedirectToAction("DietsCallendarForDietitian", new { userId = userId });
         }
     }
 }

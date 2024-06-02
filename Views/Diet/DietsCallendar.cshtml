@@ -60,7 +60,6 @@
 
         .currentDay {
             border: 3px solid black; /* Dodanie obramowania dla aktualnego dnia */
-            background-color: #fafafa; /* Zmiana koloru tekstu, aby pasował do obramowania */
             font-weight: bold;
             border-radius: 5px; /* Dodanie zaokrąglenia obramowania */
         }
@@ -142,11 +141,20 @@
                 }
 
                 // Create the days of the month
+                 dietDictionary = JSON.parse('@Html.Raw(Json.Serialize(ViewData["DietDictionary"]))');
+                console.log(dietDictionary)
                 for (let day = 1; day <= daysInMonth; day++) {
                     const dayElement = document.createElement('div');
                     dayElement.classList.add('day');
                     dayElement.textContent = day;
 
+                    const monthString = String(currentMonth + 1).padStart(2, '0');
+                    const dayString = String(day).padStart(2, '0');
+                    const dateString = `${currentYear}-${monthString}-${dayString}T00:00:00`;
+
+                    if (dietDictionary[dateString]) {
+                        dayElement.classList.add('hasDiet');
+                    }
 
                     // Highlight the current day
                     if (today.getDate() == day && today.getMonth() == currentMonth && today.getFullYear() == currentYear) {

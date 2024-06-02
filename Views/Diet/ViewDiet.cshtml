@@ -67,6 +67,7 @@
     <div class="buttons mt-4 text-right">
         <a href="@Url.Action("EditDiet", "Diet", new { userId = Model.UserId, date = Model.Date.ToString("yyyy-MM-dd"), dietId = Model.Id })" class="btn btn-primary">Edytuj dietę</a>
         <a href="@Url.Action("DietsCallendarForDietitian", "Diet", new { userId = Model.UserId })" class="btn btn-secondary ml-2">Powrót do kalendarza</a>
+        <button type="button" class="btn btn-danger" onclick="confirmDelete('@Model.Id')">Usuń dietę</button>
     </div>
 </div>
 
@@ -80,5 +81,12 @@
         var modal = document.getElementById("myModal_" + recipeId);
         modal.style.display = "none";
     }
-</script>
 
+    function confirmDelete(dietId) {
+        if (confirm("Czy na pewno chcesz usunąć dietę?")) {
+            var userId = @Model.UserId;
+            var date = "@Model.Date.ToString("yyyy-MM-dd")";
+            window.location.href = '@Url.Action("DeleteDiet", "Diet")' + '?dietId=' + dietId + '&userId=' + userId + '&date=' + date;
+        }
+    }
+</script>

@@ -16,25 +16,7 @@
 
     <div class="blue">
         <div id="listAtOneDay">
-            <h4>Recipes in the diet:</h4>
-            @foreach (var recipe in Model)
-            {
-                <div onclick="AddToList(@recipe.Id)" id="@recipe.Id">
-                    <h5>@recipe.Title</h5>
-                    <p>Category: @recipe.Category</p>
-                    <p>Carbohydrate: @recipe.Carbohydrate g</p>
-                    <p>Protein: @recipe.Protein g</p>
-                    <p>Fat: @recipe.Fat g</p>
-                    <p>Calories: @recipe.CalculateCalories() kcal</p>
-                    <p>Allergens:</p>
-                    <ul>
-                        @foreach (var allergen in recipe.Allergens)
-                        {
-                            <li>@allergen.Name</li>
-                        }
-                    </ul>
-                </div>
-            }
+
         </div>
     </div>
 
@@ -82,7 +64,8 @@
 
 <script>
     var list = new Array();
-    var tab = JSON.parse('@Html.Raw(ViewData["List"])');
+     inna = '@Html.Raw(ViewBag.DietRecipes)'
+
 
     document.addEventListener("DOMContentLoaded", function () {
         var listAtOneDayElement = document.getElementById('listAtOneDay');
