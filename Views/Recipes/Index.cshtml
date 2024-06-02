@@ -18,12 +18,12 @@
                 <div class="recipe-card">
                     <h2>@recipe.Title</h2>
                     <p><strong>Kategoria:</strong> @recipe.Category</p>
-                    <p><strong>Składniki:</strong> @recipe.Ingedients</p>
-                    <p><strong>Instrukcje:</strong> @recipe.Instructions</p>
                     <p><strong>Białko:</strong> @recipe.Protein</p>
                     <p><strong>Tłuszcz:</strong> @recipe.Fat</p>
                     <p><strong>Węglowodany:</strong> @recipe.Carbohydrate</p>
                     <p><strong>Kalorie:</strong> @recipe.Calories</p>
+                    <p style="display:none"><strong>Składniki:</strong> @recipe.Ingedients</p>
+                    <p style="display:none"><strong>Instrukcje:</strong> @recipe.Instructions</p>
                     <div class="form-group">
                         <label><strong>Alergeny:</strong></label>
 
@@ -39,8 +39,14 @@
                             <input type="hidden" name="id" value="@recipe.Id" />
                             <button type="submit" class="btn btn-danger position-relative bottom-30 start-30">Usuń</button>
                             <a href="@Url.Action("Edit", "Recipes", new { id = recipe.Id })" class="btn btn-primary position-relative bottom-30 start-30">Edytuj</a>
+                            <button type="button" class="btn btn-success show-details">Pokaż szczegóły</button> <!-- Dodany przycisk -->
                             <br /><br />
                         </form>
+                        <div class="recipe-details" style="display: none;">
+                            <!-- Div z detalami, początkowo ukryty -->
+                            <p><strong>Składniki:</strong> @recipe.Ingedients</p>
+                            <p><strong>Instrukcje:</strong> @recipe.Instructions</p>
+                        </div>
                     </div>
                 </div>
             }
@@ -50,5 +56,73 @@
     {
         <p>Brak przepisów do wyświetlenia.</p>
     }
-
 </div>
+
+<script>
+    // Pobierz przyciski "Pokaż szczegóły"
+    var showDetailsButtons = document.querySelectorAll('.show-details');
+
+    // Dodaj obsługę kliknięcia do każdego przycisku
+    showDetailsButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            // Znajdź rodzica przycisku, który jest kartą przepisu
+            var recipeCard = button.closest('.recipe-card');
+            // Pobierz wszystkie pola przepisu
+            var title = recipeCard.querySelector('h2').innerText;
+            var category = recipeCard.querySelector('p:nth-child(2)').innerText;
+            var protein = recipeCard.querySelector('p:nth-child(3)').innerText;
+            var fat = recipeCard.querySelector('p:nth-child(4)').innerText;
+            var carbohydrate = recipeCard.querySelector('p:nth-child(5)').innerText;
+            var calories = recipeCard.querySelector('p:nth-child(6)').innerText;
+            var instruction = recipeCard.querySelector('p:nth-child(7)').innerText;
+            var ingredients = recipeCard.querySelector('p:nth-child(8)').innerText;
+
+            var allergens = recipeCard.querySelector('.form-group ul').innerHTML;
+
+            // Utwórz treść modala z pobranymi danymi
+            var modalContent = `
+                    <h2>${title}</h2>
+                    <p><strong>Kategoria:</strong> ${category}</p>
+                    <p><strong>Białko:</strong> ${protein}</p>
+                    <p><strong>Tłuszcz:</strong> ${fat}</p>
+                    <p><strong>Węglowodany:</strong> ${carbohydrate}</p>
+                    <p><strong>Kalorie:</strong> ${calories}</p>
+                    <p><strong>Składniki:</strong> ${ingredients}</p>
+                    <p><strong>Sposób przygotowania:</strong> ${instruction}</p>
+                    <div class="form-group">
+                        <label><strong>Alergeny:</strong></label>
+                        <ul>${allergens}</ul>
+                    </div>
+                `;
+
+            // Utwórz element modalu
+            var modal = document.createElement('div');
+            modal.classList.add('modal', 'fade', 'show');
+            modal.innerHTML = `
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Szczegóły przepisu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ${modalContent}
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+            // Dodaj modal do body
+            document.body.appendChild(modal);
+
+            // Wyświetl modal
+            var myModal = new bootstrap.Modal(modal);
+            myModal.show();
+
+            // Usuń modal z DOM po zamknięciu
+            modal.addEventListener('hidden.bs.modal', function () {
+                modal.remove();
+            });
+        });
+    });
+</script>

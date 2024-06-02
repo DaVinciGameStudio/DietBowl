@@ -63,8 +63,8 @@ namespace DietBowl.Controllers
 
             if (diet == null)
             {
-                // Możesz zdecydować, co zrobić, jeśli nie ma diety na wybrany dzień
-                return RedirectToAction("NoDietForDay");
+                // Przekazanie daty do akcji "NoDietForDay"
+                return RedirectToAction("NoDietForDay", new { date = date.ToString("yyyy-MM-dd") });
             }
 
             return View(diet);
@@ -92,8 +92,9 @@ namespace DietBowl.Controllers
 
 
         // Nowa akcja dla wyświetlania widoku "NoDietForDay"
-        public IActionResult NoDietForDay()
+        public IActionResult NoDietForDay(string date)
         {
+            ViewBag.Date = date;
             return View();
         }
 

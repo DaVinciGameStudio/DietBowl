@@ -4,47 +4,81 @@
     ViewData["Title"] = "Diet Details";
 }
 
-<h2>@ViewData["Title"]</h2>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/viewdiet.css" asp-append-version="true" />
 
-<div>
-    <h3>Dieta na dzień: @Model.Date.ToString("dd-MM-yyyy")</h3>
-    <p>Użytkownik: @Model.User.FirstName @Model.User.LastName</p>
-    <p>Kalorie: @Model.Calories</p>
-    <p>Białko: @Model.Protein</p>
-    <p>Tłuszcz: @Model.Fat</p>
-    <p>Węglowodany: @Model.Carbohydrate</p>
+<div class="container">
+    <div class="diet-details">
+        <h3>Dieta na dzień: @Model.Date.ToString("dd-MM-yyyy")</h3>
+        <p><strong>Użytkownik:</strong> @Model.User.FirstName @Model.User.LastName</p>
+        <p><strong>Kalorie:</strong> @Model.Calories</p>
+        <p><strong>Białko: </strong>@Model.Protein</p>
+        <p><strong>Tłuszcz:</strong> @Model.Fat</p>
+        <p><strong>Węglowodany:</strong> @Model.Carbohydrate</p>
+    </div>
+
+    <h4>Przepisy</h4>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th><strong>Tytuł</strong></th>
+                    <th><strong>Kategoria</strong></th>
+                    <th><strong>Białko</strong></th>
+                    <th><strong>Tłuszcz</strong></th>
+                    <th><strong>Węglowodany</strong></th>
+                    <th><strong>Kalorie</strong></th>
+                    <th><strong>Akcje</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var dietRecipe in Model.DietRecipes)
+                {
+                    <tr>
+                        <td>@dietRecipe.Recipe.Title</td>
+                        <td>@dietRecipe.Recipe.Category</td>
+                        <td>@dietRecipe.Recipe.Protein</td>
+                        <td>@dietRecipe.Recipe.Fat</td>
+                        <td>@dietRecipe.Recipe.Carbohydrate</td>
+                        <td>@dietRecipe.Recipe.Calories</td>
+                        <td>
+                            <button type="button" class="btn btn-success" onclick="openModal('@dietRecipe.RecipeId')">Pokaż szczegóły</button>
+                            <div id="myModal_@dietRecipe.RecipeId" class="modal">
+                                <div class="modal-content">
+                                    <span class="close" onclick="closeModal('@dietRecipe.RecipeId')">&times;</span>
+                                    <p><strong>Nazwa przepisu:</strong> @dietRecipe.Recipe.Title</p>
+                                    <p><strong>Kategoria:</strong> @dietRecipe.Recipe.Category</p>
+                                    <p><strong>Białko:</strong> @dietRecipe.Recipe.Protein</p>
+                                    <p><strong>Tłuszcze:</strong> @dietRecipe.Recipe.Fat</p>
+                                    <p><strong>Węglowodany:</strong> @dietRecipe.Recipe.Carbohydrate</p>
+                                    <p><strong>Kalorie:</strong> @dietRecipe.Recipe.Calories</p>
+                                    <p><strong>Składniki:</strong> @dietRecipe.Recipe.Ingedients</p>
+                                    <p><strong>Sposób przygotowania:</strong> @dietRecipe.Recipe.Instructions</p>
+                                    <!-- Dodaj inne informacje, jakie chcesz wyświetlić -->
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="buttons mt-4 text-right">
+        <a href="@Url.Action("EditDiet", "Diet", new { userId = Model.UserId, date = Model.Date.ToString("yyyy-MM-dd"), dietId = Model.Id })" class="btn btn-primary">Edytuj dietę</a>
+        <a href="@Url.Action("DietsCallendarForDietitian", "Diet", new { userId = Model.UserId })" class="btn btn-secondary ml-2">Powrót do kalendarza</a>
+    </div>
 </div>
 
-<h4>Przepisy</h4>
-<table>
-    <thead>
-        <tr>
-            <th>Tytuł</th>
-            <th>Kategoria</th>
-            <th>Składniki</th>
-            <th>Instrukcje</th>
-            <th>Białko</th>
-            <th>Tłuszcz</th>
-            <th>Węglowodany</th>
-            <th>Kalorie</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var dietRecipe in Model.DietRecipes)
-        {
-            <tr>
-                <td>@dietRecipe.Recipe.Title</td>
-                <td>@dietRecipe.Recipe.Category</td>
-                <td>@dietRecipe.Recipe.Ingedients</td>
-                <td>@dietRecipe.Recipe.Instructions</td>
-                <td>@dietRecipe.Recipe.Protein</td>
-                <td>@dietRecipe.Recipe.Fat</td>
-                <td>@dietRecipe.Recipe.Carbohydrate</td>
-                <td>@dietRecipe.Recipe.Calories</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<script>
+    function openModal(recipeId) {
+        var modal = document.getElementById("myModal_" + recipeId);
+        modal.style.display = "block";
+    }
 
-<a href="@Url.Action("EditDiet", "Diet", new { userId = Model.UserId, date = Model.Date.ToString("yyyy-MM-dd"), dietId = Model.Id })" class="btn btn-primary">Edytuj dietę</a>
-<a href="@Url.Action("DietsCallendarForDietitian", "Diet", new { userId = Model.UserId })" class="btn btn-secondary">Powrót do kalendarza</a>
+    function closeModal(recipeId) {
+        var modal = document.getElementById("myModal_" + recipeId);
+        modal.style.display = "none";
+    }
+</script>
+

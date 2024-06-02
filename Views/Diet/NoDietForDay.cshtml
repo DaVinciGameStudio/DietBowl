@@ -1,7 +1,17 @@
-﻿@model DateTime
+﻿@{
+    ViewBag.Title = "No Diet For Day";
+}
 
-<h2>Brak diety na @Model.ToString("dd-MM-yyyy")</h2>
-
-<p>Brak diety na wybrany dzień.</p>
-
-<a href="/Diet/DietsCallendar" class="btn btn-primary">Wróć do kalendarza</a>
+<link rel="stylesheet" href="~/css/no-diet.css" asp-append-version="true" />
+<br />
+<br />
+<div class="no-diet-container">
+    <br />
+    <img src="~/images/nodiet.jpg" style="width:15%">
+    <br />
+    <br />
+    <h2>Brak diety na @ViewBag.Date</h2>
+    <a href="/Diet/DietsCallendar" class="btn btn-primary">Wróć do kalendarza</a>
+    <br />
+    <br />
+</div>

@@ -3,37 +3,81 @@
 @{
     ViewData["Title"] = "Dieta na " + Model.Date.ToString("dd-MM-yyyy");
 }
+<link rel="stylesheet" href="~/css/dietcallendarshow.css" asp-append-version="true" />
+<br />
+<br />
+<div class="containerr">
+    <h2>@ViewData["Title"]</h2>
 
-<h2>@ViewData["Title"]</h2>
+    @if (Model == null)
+    {
+        <p class="no-diet">Brak diety na wybrany dzień.</p>
+    }
+    else
+    {
+        <div class="diet-container">
+            <h3>Posiłki:</h3>
+            <ul class="meals-list">
+                @foreach (var dietRecipe in Model.DietRecipes)
+                {
+                    <li class="meal-item">
+                        <div class="meal-header">
+                            <strong>@dietRecipe.Recipe.Title</strong>
+                        </div>
+                        <div>
+                            <span class="consumed-status">Zjedzony: @(dietRecipe.IsConsumed ? "Tak" : "Nie")</span>
+                        </div>
+                        <ul class="nutrients-list">
+                            <li><span class="nutrient-label">Posiłek:</span> @dietRecipe.Recipe.Category</li>
+                            <li><span class="nutrient-label">Białko:</span> @dietRecipe.Recipe.Protein g</li>
+                            <li><span class="nutrient-label">Tłuszcz:</span> @dietRecipe.Recipe.Fat g</li>
+                            <li><span class="nutrient-label">Węglowodany:</span> @dietRecipe.Recipe.Carbohydrate g</li>
+                            <li><span class="nutrient-label">Kalorie:</span> @dietRecipe.Recipe.Calories kcal</li>
+                        </ul>
+                        <div id="myModal_@dietRecipe.RecipeId" class="modal">
+                            <div class="modal-content">
+                                <div class="meal-header">
+                                    <strong>@dietRecipe.Recipe.Title</strong>
+                                </div>
+                                <span class="close" onclick="closeModal('@dietRecipe.RecipeId')">&times;</span>
+                                <ul class="nutrients-list">
+                                    <li><span class="nutrient-label">Posiłek:</span> @dietRecipe.Recipe.Category</li>
+                                    <li><span class="nutrient-label">Białko:</span> @dietRecipe.Recipe.Protein g</li>
+                                    <li><span class="nutrient-label">Tłuszcz:</span> @dietRecipe.Recipe.Fat g</li>
+                                    <li><span class="nutrient-label">Węglowodany:</span> @dietRecipe.Recipe.Carbohydrate g</li>
+                                    <li><span class="nutrient-label">Kalorie:</span> @dietRecipe.Recipe.Calories kcal</li>
+                                </ul>
+                                <ul class="nutrients-list">
+                                    <li><span class="nutrient-label">Składniki:</span> @dietRecipe.Recipe.Ingedients</li>
+                                    <li><span class="nutrient-label">Sposób przygotowania:</span> @dietRecipe.Recipe.Instructions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <form method="post" action="/Diet/MarkAsConsumed" class="mark-consumed-form">
+                            <input type="hidden" name="dietId" value="@dietRecipe.DietId" />
+                            <input type="hidden" name="recipeId" value="@dietRecipe.RecipeId" />
+                            <input type="hidden" name="userId" value="@dietRecipe.Diet.UserId" />
+                            @if (!dietRecipe.IsConsumed)
+                            {
+                                <button type="submit" class="btn-consumed" onclick="return confirm('Czy na pewno zjadłeś ten posiłek?')">Zaznacz jako zjedzony</button>
+                            }
+                            <button type="button" class="btn-consumed" onclick="openModal('@dietRecipe.RecipeId')">Pokaż szczegóły</button>
+                        </form>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+</div>
 
-@if (Model == null)
-{
-    <p>Brak diety na wybrany dzień.</p>
-}
-else
-{
-    <h3>Posiłki:</h3>
-    <ul>
-        @foreach (var dietRecipe in Model.DietRecipes)
-        {
-            <li>
-                <strong>@dietRecipe.Recipe.Title</strong> - Zjedzony: @(dietRecipe.IsConsumed ? "Tak" : "Nie")
-                <ul>
-                    <li>Białko: @dietRecipe.Recipe.Protein</li>
-                    <li>Tłuszcz: @dietRecipe.Recipe.Fat</li>
-                    <li>Węglowodany: @dietRecipe.Recipe.Carbohydrate</li>
-                    <li>Kalorie: @dietRecipe.Recipe.Calories</li>
-                </ul>
-                <form method="post" action="/Diet/MarkAsConsumed">
-                    <input type="hidden" name="dietId" value="@dietRecipe.DietId" />
-                    <input type="hidden" name="recipeId" value="@dietRecipe.RecipeId" />
-                    <input type="hidden" name="userId" value="@dietRecipe.Diet.UserId" /> <!-- Dodane przekazanie ID użytkownika -->
-                    @if (!dietRecipe.IsConsumed)
-                    {
-                        <button type="submit" onclick="return confirm('Czy na pewno zjadłeś ten posiłek?')">Zaznacz jako zjedzony</button>
-                    }
-                </form>
-            </li>
-        }
-    </ul>
-}
+<script>
+    function openModal(recipeId) {
+        var modal = document.getElementById("myModal_" + recipeId);
+        modal.style.display = "block";
+    }
+
+    function closeModal(recipeId) {
+        var modal = document.getElementById("myModal_" + recipeId);
+        modal.style.display = "none";
+    }
+</script>

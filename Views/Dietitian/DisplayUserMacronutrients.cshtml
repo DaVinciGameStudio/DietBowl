@@ -1,17 +1,37 @@
 ﻿@using DietBowl.ViewModel
 @model UserMacronutrientsVM
 
-<h1>User Macronutrients</h1>
+<link rel="stylesheet" href="~/css/displayusermacro.css" asp-append-version="true" />
+
+<h1><strong>Makroelementy użytkownika</strong></h1>
+
+<table class="user-details">
+    <tr>
+        <th>Imię</th>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <th>Nazwisko</th>
+        <td>@Model.LastName</td>
+    </tr>
+    <tr>
+        <th>Kalorie</th>
+        <td>@Model.Calories</td>
+    </tr>
+    <tr>
+        <th>Białko (g)</th>
+        <td>@Model.Protein</td>
+    </tr>
+    <tr>
+        <th>Tłuszcz (g)</th>
+        <td>@Model.Fat</td>
+    </tr>
+    <tr>
+        <th>Węglowodany (g)</th>
+        <td>@Model.Carbohydrate</td>
+    </tr>
+</table>
 
 <div>
-    <p><strong>User ID:</strong> @Model.UserId</p>
-    <p><strong>First Name:</strong> @Model.FirstName</p>
-    <p><strong>Last Name:</strong> @Model.LastName</p>
-    <p><strong>Calories:</strong> @Model.Calories</p>
-    <p><strong>Protein (g):</strong> @Model.Protein</p>
-    <p><strong>Fat (g):</strong> @Model.Fat</p>
-    <p><strong>Carbohydrate (g):</strong> @Model.Carbohydrate</p>
-</div>
-<div>
-    <a class="btn btn-primary" href="@Url.Action("EditUserMacronutrients", "Dietitian", new { userId = Model.UserId })">Edytuj</a>
+    <a class="btn btn-success" href="@Url.Action("EditUserMacronutrients", "Dietitian", new { userId = Model.UserId })">Edytuj</a>
 </div>
