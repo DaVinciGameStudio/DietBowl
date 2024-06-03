@@ -1,55 +1,65 @@
 ﻿@using DietBowl.ViewModel
 @model UserMacronutrientsVM
 
-<h1>Set User Macronutrients</h1>
+<link rel="stylesheet" href="~/css/setusermacro.css" asp-append-version="true" />
 
+<br />
+
+<h1 style="text-align:center">
+    <strong>Ustaw preferencje użytkownika</strong>
+</h1>
+
+<br />
+<div class="position-relative">
 <form asp-action="SetUserMacronutrients">
     <input type="hidden" asp-for="UserId" />
 
     <div>
-        <label asp-for="FirstName">First Name:</label>
+        <label asp-for="FirstName"><strong>Imię:</strong></label>
         <input asp-for="FirstName" readonly />
     </div>
 
     <div>
-        <label asp-for="LastName">Last Name:</label>
+        <label asp-for="LastName"><strong>Nazwisko:</strong></label>
         <input asp-for="LastName" readonly />
     </div>
 
     <div>
-        <label for="Age">Age:</label>
+        <label for="Age"><strong>Wiek:</strong></label>
         <input type="text" id="Age" value="@Model.Age" readonly />
     </div>
 
     <div>
-        <label asp-for="Sex">Sex:</label>
+        <label asp-for="Sex"><strong>Płeć:</strong></label>
         <input asp-for="Sex" readonly />
     </div>
 
     <div>
-        <label asp-for="WeightGoal">Weight Goal:</label>
+        <label asp-for="WeightGoal"><strong>Upragniona waga:</strong></label>
         <input asp-for="WeightGoal" readonly />
     </div>
 
     <div>
-        <label asp-for="ActivityStatus">Activity Status:</label>
+        <label asp-for="ActivityStatus"><strong>Poziom aktywności:</strong></label>
         <input asp-for="ActivityStatus" readonly />
     </div>
 
     <div>
-        <label asp-for="Protein">Protein (g):</label>
+        <label asp-for="Protein"><strong>Białko (g):</strong></label>
         <input asp-for="Protein" />
     </div>
 
     <div>
-        <label asp-for="Fat">Fat (g):</label>
+        <label asp-for="Fat"><strong>Tłuszcze (g):</strong></label>
         <input asp-for="Fat" />
     </div>
 
     <div>
-        <label asp-for="Carbohydrate">Carbohydrate (g):</label>
+        <label asp-for="Carbohydrate"><strong>Węglowodany (g):</strong></label>
         <input asp-for="Carbohydrate" />
+        <button class="btn btn-success " type="button" onclick="parseToSend()">Zapisz edycje</button>
     </div>
 
-    <button type="submit">Save</button>
+    
 </form>
+</div>

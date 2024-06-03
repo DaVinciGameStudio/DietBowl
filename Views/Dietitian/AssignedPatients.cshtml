@@ -64,6 +64,10 @@ else
                         <input type="hidden" name="userId" value="@user.Id" />
                         <input class="btn btn-info" type="submit" value="Historia BMI" />
                     </form>
+                    <form method="get" action="@Url.Action("ViewUserPreferences", "Dietitian", new { userId = user.Id })">
+                        <input type="hidden" name="userId" value="@user.Id" />
+                        <input class="btn btn-info" type="submit" value="Preferencje" />
+                    </form>
                 </td>
             </tr>
         }

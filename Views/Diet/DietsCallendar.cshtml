@@ -3,227 +3,225 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kalendarz</title>
-    <style>
-        #calendarContainer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-            border: 2px solid #007BFF; /* Niebieskie obramowanie */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #f9f9f9;
-            font-size: 16px;
-        }
+	<title>Kalendarz</title>
+	<style>
+		#calendarContainer {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 10px;
+			font-family: Arial, sans-serif;
+			border: 2px solid #007BFF; /* Niebieskie obramowanie */
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			background-color: #f9f9f9;
+			font-size: 16px;
+		}
 
-        #calendarNavigation {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+		#calendarNavigation {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 20px;
+		}
 
-        #calendar {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 1px;
-        }
+		#calendar {
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(7, 1fr);
+			gap: 1px;
+		}
 
-        .day, .day-name {
-            padding: 20px;
-            box-sizing: border-box;
-            text-align: center;
-            cursor: pointer;
-            border: 1px solid #ddd; /* Lekkie obramowanie między datami */
-        }
+		.day, .day-name {
+			padding: 20px;
+			box-sizing: border-box;
+			text-align: center;
+			cursor: pointer;
+			border: 1px solid #ddd; /* Lekkie obramowanie między datami */
+		}
 
-        .day {
-            background-color: #fafafa;
-        }
+		.day {
+			background-color: #fafafa;
+		}
 
-            .day:hover {
-                background-color: lightblue;
-            }
+			.day:hover {
+				background-color: lightblue;
+			}
 
-        .day-name {
-            background-color: #f0f0f0;
-            font-weight: bold;
-        }
+		.day-name {
+			background-color: #f0f0f0;
+			font-weight: bold;
+		}
 
-        .hasDiet {
-            background-color: lightgreen;
-        }
+		.hasDiet {
+			background-color: lightgreen;
+		}
 
-        .currentDay {
-            border: 3px solid black; /* Dodanie obramowania dla aktualnego dnia */
-            font-weight: bold;
-            border-radius: 5px; /* Dodanie zaokrąglenia obramowania */
-        }
+		.currentDay {
+			border: 3px solid black; /* Dodanie obramowania dla aktualnego dnia */
+			font-weight: bold;
+			border-radius: 5px; /* Dodanie zaokrąglenia obramowania */
+		}
 
-        .navigationButton {
-            cursor: pointer;
-            padding: 10px;
-            background-color: #007BFF; /* Niebieski kolor przycisków */
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+		.navigationButton {
+			cursor: pointer;
+			padding: 10px;
+			background-color: #007BFF; /* Niebieski kolor przycisków */
+			color: white;
+			border: none;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
-            .navigationButton:hover {
-                background-color: #0056b3;
-            }
+			.navigationButton:hover {
+				background-color: #0056b3;
+			}
 
-        .month-year-display {
-            width: 100%;
-            text-align: center;
-            margin: 20px 0;
-            font-size: 1.2em;
-            font-weight: bold;
-            text-transform: uppercase; /* Zawsze duże litery */
-        }
+		.month-year-display {
+			width: 100%;
+			text-align: center;
+			margin: 20px 0;
+			font-size: 1.2em;
+			font-weight: bold;
+			text-transform: uppercase; /* Zawsze duże litery */
+		}
 
-        .allSite{
-            width:100%;
-            height:90%;
-            display:grid;
-            position:absolute;
-            justify-content: center;
-            align-items: center;
-        }
+		.allSite {
+			width: 100%;
+			height: 90%;
+			display: grid;
+			position: absolute;
+			justify-content: center;
+			align-items: center;
+		}
 
-        .information{
-            display: grid;
-            width: 800px;
-            height: 400px;
-            background-color: #fafafa;
-            text-align: center;
-            opacity:0.8;
-            font-size: 64px;
-            z-index: 100;
-        }
-    </style>
+		.information {
+			display: grid;
+			width: 800px;
+			height: 400px;
+			background-color: #fafafa;
+			text-align: center;
+			opacity: 0.8;
+			font-size: 64px;
+			z-index: 100;
+		}
+	</style>
 </head>
-<div class="allSite">
-
-    @if (!ViewBag.userBody)
-    {
-        <div onclick="deleteThis(this)" class="information">
-            Uzupełnij parametry ciała na dzisiaj!
-         </div>
-    }
-
-</div>
+@if (!ViewBag.userBody)
+{
+	<div class="allSite">
+		<div onclick="deleteThis(this)" class="information">
+			Uzupełnij parametry ciała na dzisiaj!
+		</div>
+	</div>
+}
 <body>
-    <br />
-    <br />
-    <br />
-   
-    <div id="calendarContainer">
-        <div id="calendarNavigation">
-            <button id="prevMonth" class="navigationButton">&lt;</button>
-            <div class="month-year-display" id="monthYearDisplay"></div>
-            <button id="nextMonth" class="navigationButton">&gt;</button>
+	<br />
+	<br />
+	<br />
 
-        </div>
-        <div id="calendar"></div>
-        
-    </div>
+	<div id="calendarContainer">
+		<div id="calendarNavigation">
+			<button id="prevMonth" class="navigationButton">&lt;</button>
+			<div class="month-year-display" id="monthYearDisplay"></div>
+			<button id="nextMonth" class="navigationButton">&gt;</button>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const calendar = document.getElementById('calendar');
-            const monthYearDisplay = document.getElementById('monthYearDisplay');
-            let currentDate = new Date();
+		</div>
+		<div id="calendar"></div>
 
-            function renderCalendar() {
-                const currentMonth = currentDate.getMonth();
-                const currentYear = currentDate.getFullYear();
-                const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-                const firstDayOfMonth = (new Date(currentYear, currentMonth, 1).getDay() + 6) % 7;
-                const today = new Date();
+	</div>
 
-                calendar.innerHTML = ''; // Clear previous content
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const calendar = document.getElementById('calendar');
+			const monthYearDisplay = document.getElementById('monthYearDisplay');
+			let currentDate = new Date();
 
-                // Display the current month and year with uppercase month names
-                monthYearDisplay.textContent = `${currentDate.toLocaleString('default', { month: 'long' }).toUpperCase()} ${currentYear}`;
+			function renderCalendar() {
+				const currentMonth = currentDate.getMonth();
+				const currentYear = currentDate.getFullYear();
+				const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+				const firstDayOfMonth = (new Date(currentYear, currentMonth, 1).getDay() + 6) % 7;
+				const today = new Date();
 
-                // Create day names in Polish
-                const dayNames = ['Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob', 'Ndz'];
-                for (let dayName of dayNames) {
-                    const dayNameElement = document.createElement('div');
-                    dayNameElement.classList.add('day-name');
-                    dayNameElement.textContent = dayName;
-                    calendar.appendChild(dayNameElement);
-                }
+				calendar.innerHTML = ''; // Clear previous content
 
-                // Create empty days for the first week
-                for (let i = 0; i < firstDayOfMonth; i++) {
-                    const emptyDay = document.createElement('div');
-                    emptyDay.classList.add('day');
-                    emptyDay.style.visibility = 'hidden';
-                    calendar.appendChild(emptyDay);
-                }
+				// Display the current month and year with uppercase month names
+				monthYearDisplay.textContent = `${currentDate.toLocaleString('default', { month: 'long' }).toUpperCase()} ${currentYear}`;
 
-                // Create the days of the month
-                var dietDictionary = JSON.parse('@Html.Raw(Json.Serialize(ViewData["DietDictionary"]))');
-                for (let day = 1; day <= daysInMonth; day++) {
-                    const dayElement = document.createElement('div');
-                    dayElement.classList.add('day');
-                    dayElement.textContent = day;
+				// Create day names in Polish
+				const dayNames = ['Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob', 'Ndz'];
+				for (let dayName of dayNames) {
+					const dayNameElement = document.createElement('div');
+					dayNameElement.classList.add('day-name');
+					dayNameElement.textContent = dayName;
+					calendar.appendChild(dayNameElement);
+				}
 
-                    const monthString = String(currentMonth + 1).padStart(2, '0');
-                    const dayString = String(day).padStart(2, '0');
-                    const dateString = `${currentYear}-${monthString}-${dayString}T00:00:00`;
+				// Create empty days for the first week
+				for (let i = 0; i < firstDayOfMonth; i++) {
+					const emptyDay = document.createElement('div');
+					emptyDay.classList.add('day');
+					emptyDay.style.visibility = 'hidden';
+					calendar.appendChild(emptyDay);
+				}
 
-                    if (dietDictionary[dateString]) {
-                        dayElement.classList.add('hasDiet');
-                    }
+				// Create the days of the month
+				var dietDictionary = JSON.parse('@Html.Raw(Json.Serialize(ViewData["DietDictionary"]))');
+				for (let day = 1; day <= daysInMonth; day++) {
+					const dayElement = document.createElement('div');
+					dayElement.classList.add('day');
+					dayElement.textContent = day;
 
-                    // Highlight the current day
-                    if (today.getDate() == day && today.getMonth() == currentMonth && today.getFullYear() == currentYear) {
-                        dayElement.classList.add('currentDay');
-                    }
+					const monthString = String(currentMonth + 1).padStart(2, '0');
+					const dayString = String(day).padStart(2, '0');
+					const dateString = `${currentYear}-${monthString}-${dayString}T00:00:00`;
 
-                    dayElement.addEventListener('click', function () {
-                        const selectedDate = new Date(currentYear, currentMonth, day);
-                        var localDate = new Date(selectedDate.getTime() - (selectedDate.getTimezoneOffset() * 60000)).toISOString().split("T")[0];
-                        window.location.href = '/Diet/DietsCallendarShow?date=' + localDate;
-                    });
+					if (dietDictionary[dateString]) {
+						dayElement.classList.add('hasDiet');
+					}
 
-                    calendar.appendChild(dayElement);
-                }
-            }
+					// Highlight the current day
+					if (today.getDate() == day && today.getMonth() == currentMonth && today.getFullYear() == currentYear) {
+						dayElement.classList.add('currentDay');
+					}
 
-            // Event listeners for navigation buttons
-            document.getElementById('prevMonth').addEventListener('click', () => {
-                currentDate.setMonth(currentDate.getMonth() - 1);
-                renderCalendar();
-            });
+					dayElement.addEventListener('click', function () {
+						const selectedDate = new Date(currentYear, currentMonth, day);
+						var localDate = new Date(selectedDate.getTime() - (selectedDate.getTimezoneOffset() * 60000)).toISOString().split("T")[0];
+						window.location.href = '/Diet/DietsCallendarShow?date=' + localDate;
+					});
 
-            document.getElementById('nextMonth').addEventListener('click', () => {
-                currentDate.setMonth(currentDate.getMonth() + 1);
-                renderCalendar();
-            });
+					calendar.appendChild(dayElement);
+				}
+			}
 
-            // Initial rendering of the calendar
-            renderCalendar();
-        });
+			// Event listeners for navigation buttons
+			document.getElementById('prevMonth').addEventListener('click', () => {
+				currentDate.setMonth(currentDate.getMonth() - 1);
+				renderCalendar();
+			});
 
-        function deleteThis(item) { 
-            item.remove()
-        }
+			document.getElementById('nextMonth').addEventListener('click', () => {
+				currentDate.setMonth(currentDate.getMonth() + 1);
+				renderCalendar();
+			});
 
-    </script>
+			// Initial rendering of the calendar
+			renderCalendar();
+		});
+
+		function deleteThis(item) {
+			item.parentElement.remove()
+		}
+
+	</script>
 </body>
 </html>

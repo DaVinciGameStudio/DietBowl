@@ -1,0 +1,49 @@
+/* setusermacro.css */
+
+/* Styl dla nag³ówka */
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: black;
+}
+
+/* Styl dla labeli */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* Styl dla inputów */
+input{
+    width: calc(100% - 10px); /* Szerokoœæ inputa minus padding */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styl dla przycisku */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #218838;
+    }
+
+/* Styl dla ca³ego formularza */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}

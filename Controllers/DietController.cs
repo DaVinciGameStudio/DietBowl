@@ -35,7 +35,7 @@ namespace DietBowl.Controllers
 
             var emailUser = User.FindFirstValue(ClaimTypes.Name);
             var user = await _dietBowlDbContext.Users
-                        .Include(b=>b.BodyParameters)
+                        .Include(b => b.BodyParameters)
                         .FirstOrDefaultAsync(u => u.Email == emailUser && u.Role == 2);
             var userId = user.Id;
 
@@ -76,6 +76,28 @@ namespace DietBowl.Controllers
                 // Przekazanie daty do akcji "NoDietForDay"
                 return RedirectToAction("NoDietForDay", new { date = date.ToString("yyyy-MM-dd") });
             }
+
+            var totalCalories = diet.DietRecipes.Sum(dr => dr.Recipe.Calories);
+            var totalCarbohydrate = diet.DietRecipes.Sum(dr => dr.Recipe.Carbohydrate);
+            var totalFat = diet.DietRecipes.Sum(dr => dr.Recipe.Fat);
+            var totalProtein = diet.DietRecipes.Sum(dr => dr.Recipe.Protein);
+
+            var consumedDietRecipes = diet.DietRecipes.Where(dr => dr.IsConsumed);
+
+            var totalCaloriesUse = consumedDietRecipes.Sum(dr => dr.Recipe.Calories);
+            var totalCarbohydrateUse = consumedDietRecipes.Sum(dr => dr.Recipe.Carbohydrate);
+            var totalFatUse = consumedDietRecipes.Sum(dr => dr.Recipe.Fat);
+            var totalProteinUse = consumedDietRecipes.Sum(dr => dr.Recipe.Protein);
+
+            ViewBag.TotalCalories = totalCalories;
+            ViewBag.TotalCarbohydrate = totalCarbohydrate;
+            ViewBag.TotalFat = totalFat;
+            ViewBag.TotalProtein = totalProtein;
+
+            ViewBag.TotalCaloriesUse = totalCaloriesUse;
+            ViewBag.TotalCarbohydrateUse = totalCarbohydrateUse;
+            ViewBag.TotalFatUse = totalFatUse;
+            ViewBag.TotalProteinUse = totalProteinUse;
 
             return View(diet);
         }
@@ -170,7 +192,8 @@ namespace DietBowl.Controllers
                 })
                 .ToListAsync();
             List<int> listIds = new List<int>();
-            foreach (var recipe in dietRecipes) {
+            foreach (var recipe in dietRecipes)
+            {
                 listIds.Add(recipe.Id);
             }
 
@@ -178,6 +201,7 @@ namespace DietBowl.Controllers
 
             ViewData["List"] = allRecipes.Select(x => x.Title).ToJson();
             ViewBag.dietId = dietId;
+            ViewBag.userId = userId;
             ViewBag.DietRecipes = listIds;
             ViewData["AllRecipes"] = allRecipes;
             ViewBag.allJsRecipes = allJsRecipes;

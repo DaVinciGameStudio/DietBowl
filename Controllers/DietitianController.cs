@@ -235,24 +235,30 @@ namespace DietBowl.Controllers
 
         public IActionResult EditUserMacronutrients(int userId)
         {
-            var user = _dietitianService.GetUserMacronutrients(userId);
+            var userVM = _dietitianService.GetUserMacronutrients(userId);
+            var body = _dietBowlDbContext.BodyParameters
+                .Where(u=>u.UserId == userId)
+                .FirstOrDefault();
 
-            if (user == null)
+            if (userVM == null)
             {
                 return NotFound();
             }
 
             var userMacronutrientsVM = new UserMacronutrientsVM
             {
-                UserId = user.UserId,
-                FirstName = user.FirstName,
-                LastName = user.LastName,
-                Calories = user.Calories,
-                Protein = user.Protein,
-                Fat = user.Fat,
-                Carbohydrate = user.Carbohydrate
+                UserId = userVM.UserId,
+                FirstName = userVM.FirstName,
+                LastName = userVM.LastName,
+                Age = userVM.Age,
+                Sex = userVM.Sex,
+                Calories = userVM.Calories,
+                Protein = userVM.Protein,
+                Fat = userVM.Fat,
+                Carbohydrate = userVM.Carbohydrate,
             };
 
+            ViewBag.body = body;
             return View(userMacronutrientsVM);
         }
 
@@ -276,6 +282,16 @@ namespace DietBowl.Controllers
 
             var bodyParameters = await _dietitianService.GetBodyParameters((int)userId);
             return View(bodyParameters);
+        }
+
+        [Authorize(Roles = "1")]
+        public IActionResult ViewUserPreferences(int userId)
+        {
+            var userPreferences = _dietBowlDbContext.Preferences
+                .Include(a => a.Allergens)
+                .FirstOrDefault(p => p.UserId == userId);
+
+            return View(userPreferences);
         }
     }
 

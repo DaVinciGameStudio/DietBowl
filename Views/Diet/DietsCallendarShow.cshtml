@@ -16,6 +16,42 @@
     else
     {
         <div class="diet-container">
+            <label id="labelKalorie">Kalorie: @ViewBag.TotalCaloriesUse/@ViewBag.TotalCalories</label>
+            <div class="progress">
+                <div id="progressBarKalorie" class="progress-bar" role="progressbar"
+                     style="width:@Math.Round((@ViewBag.TotalCaloriesUse / @ViewBag.TotalCalories) * 100)%"
+                     aria-valuenow="@((@ViewBag.TotalCaloriesUse / @ViewBag.TotalCalories) * 100)"
+                     aria-valuemin="0" aria-valuemax="100">
+                </div>
+
+            </div>
+            <label id="labelBialko">Białko: @ViewBag.TotalProteinUse/@ViewBag.TotalProtein</label>
+            <div class="progress">
+                <div id="progressBarBialko" class="progress-bar" role="progressbar"
+                     style="width:@Math.Round((@ViewBag.TotalProteinUse / @ViewBag.TotalProtein) * 100)%"
+                     aria-valuenow="@((@ViewBag.TotalProteinUse / @ViewBag.TotalProtein) * 100)"
+                     aria-valuemin="0" aria-valuemax="100">
+                </div>
+            </div>
+            <label id="labelWegle">Węgle: @ViewBag.TotalCarbohydrateUse/@ViewBag.TotalCarbohydrate</label>
+            <div class="progress">
+                <div id="progressBarWegle" class="progress-bar" role="progressbar"
+                     style="width:@Math.Round((@ViewBag.TotalCarbohydrateUse / @ViewBag.TotalCarbohydrate) * 100)%"
+                     aria-valuenow="@((@ViewBag.TotalCarbohydrateUse / @ViewBag.TotalCarbohydrate) * 100)"
+                     aria-valuemin="0" aria-valuemax="100">
+                </div>
+            </div>
+            <label id="labelTluszcze">Tłuszcze: @ViewBag.TotalFatUse/@ViewBag.TotalFat</label>
+            <div class="progress">
+                <div id="progressBarTluszcze" class="progress-bar" role="progressbar"
+                     style="width:@Math.Round((@ViewBag.TotalFatUse / @ViewBag.TotalFat) * 100)%"
+                     aria-valuenow="@((@ViewBag.TotalFatUse / @ViewBag.TotalFat) * 100)"
+                     aria-valuemin="0" aria-valuemax="100">
+                </div>
+            </div>
+            <div id="listAtOneDay">
+            </div>
+            <br>
             <h3>Posiłki:</h3>
             <ul class="meals-list">
                 @foreach (var dietRecipe in Model.DietRecipes)

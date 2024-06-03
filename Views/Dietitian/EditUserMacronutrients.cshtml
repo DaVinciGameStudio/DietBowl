@@ -1,9 +1,14 @@
 ﻿@model DietBowl.ViewModel.UserMacronutrientsVM
 
+@{
+    BodyParameter body = @ViewBag.body;
+}
+
 <link rel="stylesheet" href="~/css/editusermacro.css" asp-append-version="true" />
 <br />
 <br />
 <div class="container">
+    
     <div class="form-container">
         
         <form method="post">
@@ -16,22 +21,101 @@
                 <p>@Model.LastName</p>
             </div>
             <div class="form-group">
+                <label>Wiek:</label>
+                <p id="age">@Model.Age</p>
+            </div>
+            <div class="form-group">
+                <label>Płeć:</label>
+                <p id="sex">@Model.Sex</p>
+            </div>
+            <div class="form-group">
                 <label>Kalorie:</label>
-                <p>@Model.Calories</p>
+                <p id="Calories">@Model.Calories</p>
             </div>
             <div class="form-group">
                 <label for="Protein">Białko (g):</label>
-                <input type="text" class="form-control" id="Protein" name="Protein" value="@Model.Protein" />
+                <input onkeyup="calculate()" type="text" class="form-control" id="Protein" name="Protein" value="@Model.Protein" />
             </div>
             <div class="form-group">
                 <label for="Fat">Tłuszcze (g):</label>
-                <input type="text" class="form-control" id="Fat" name="Fat" value="@Model.Fat" />
+                <input onkeyup="calculate()" type="text" class="form-control" id="Fat" name="Fat" value="@Model.Fat" />
             </div>
             <div class="form-group">
                 <label for="Carbohydrate">Węglowodany (g):</label>
-                <input type="text" class="form-control" id="Carbohydrate" name="Carbohydrate" value="@Model.Carbohydrate" />
+                <input onkeyup="calculate()" type="text" class="form-control" id="Carbohydrate" name="Carbohydrate" value="@Model.Carbohydrate" />
             </div>
             <button type="submit" class="btn btn-success">Zapisz zmiany</button>
         </form>
     </div>
+
+    <div class="dietary-requirements form-container">
+        <h2>Zapotrzebowanie na składniki odżywcze:</h2>
+        <label>Wzrost</label>
+        <input disabled id="height" value="@body.Height">
+        <label>Waga</label>
+        <input disabled id="weight" value="@body.Weight">
+        <label hidden id="bmrLabel">BMR</label>
+        <input hidden disabled id="bmr">
+        <br>
+        <button onclick="calculateBMR()" class="btn btn-success">Oblicz BMR</button>
+    </div>
 </div>
+
+<script>
+    function calculateBMR()
+    {
+        sexx = document.getElementById("sex").innerHTML
+        agex = document.getElementById("age").innerHTML
+        heightx = document.getElementById("height").value
+        weightx = document.getElementById("weight").value
+
+        if (sex == "Kobieta") {
+            result = ((weightx * 10) + (6.25 * heightx) - (5 * agex) - 161)
+        } else {
+            result = ((weightx * 10) + (6.25 * heightx) - (5 * agex) + 5)
+        }
+
+        bmrx = document.getElementById("bmr")
+        bmrx.value = result;
+        bmrx.hidden = false;
+        document.getElementById("bmrLabel").hidden = false;
+    }
+
+    function calculate()
+    {
+        proteinValue = document.getElementById("Protein").value
+        fatValue = document.getElementById("Fat").value
+        carbohydrateValue = document.getElementById("Carbohydrate").value
+
+        if (carbohydrateValue <= 0) {
+            document.getElementById("Carbohydrate").value = 0;
+            carbohydrateValue = 0;
+        }
+        if (fatValue <= 0) {
+            document.getElementById("Fat").value = 0;
+            fatValue = 0;
+        }
+        if (proteinValue <= 0) {
+            document.getElementById("Protein").value = 0;
+            proteinValue = 0;
+        }
+
+        caloriesValue = ((proteinValue * 4) + (fatValue * 9) + (carbohydrateValue * 4));
+        document.getElementById("Calories").innerHTML = caloriesValue;
+
+    }
+</script>
+
+@functions {
+    // Funkcja do obliczania wieku na podstawie daty urodzenia
+    int ObliczWiek(DateTime dataUrodzenia)
+    {
+        DateTime dzisiaj = DateTime.Today;
+        int wiek = dzisiaj.Year - dataUrodzenia.Year;
+        if (dzisiaj.Month < dataUrodzenia.Month || (dzisiaj.Month == dataUrodzenia.Month && dzisiaj.Day < dataUrodzenia.Day))
+        {
+            wiek--;
+        }
+        return wiek;
+    }
+}

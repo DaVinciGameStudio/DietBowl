@@ -473,6 +473,10 @@
       "PackagePath": "staticwebassets\\css\\setnutritionalreq.css"
     },
     {
+      "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\setusermacro.css",
+      "PackagePath": "staticwebassets\\css\\setusermacro.css"
+    },
+    {
       "Id": "C:\\Users\\Łukasz\\Desktop\\Git_repository\\DietBowl\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

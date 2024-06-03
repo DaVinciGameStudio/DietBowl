@@ -205,6 +205,14 @@ namespace DietBowl.Services
             return _dietBowlDbContext.Users.Include(u => u.Preference).Include(u => u.UserNutritionalRequirement).FirstOrDefault(u => u.Id == userId);
         }
 
+        private int CalculateAge(DateTime birthDate)
+        {
+            var today = DateTime.Today;
+            var age = today.Year - birthDate.Year;
+            if (birthDate.Date > today.AddYears(-age)) age--;
+            return age;
+        }
+
         public UserMacronutrientsVM GetUserMacronutrients(int userId)
         {
             var user = _dietBowlDbContext.Users
@@ -221,6 +229,8 @@ namespace DietBowl.Services
                 UserId = user.Id,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
+                Age = CalculateAge(user.DateOfBirth),
+                Sex = user.Sex,
                 Calories = user.UserNutritionalRequirement != null ? user.UserNutritionalRequirement.Calories : 0,
                 Protein = user.UserNutritionalRequirement != null ? user.UserNutritionalRequirement.Protein : 0,
                 Fat = user.UserNutritionalRequirement != null ? user.UserNutritionalRequirement.Fat : 0,
@@ -229,6 +239,7 @@ namespace DietBowl.Services
 
             return userMacronutrientsVM;
         }
+
 
         public void UpdateUserMacronutrients(UserMacronutrientsVM model)
         {

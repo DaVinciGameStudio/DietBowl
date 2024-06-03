@@ -1,0 +1,43 @@
+﻿@model DietBowl.Models.Preference
+
+@{
+    ViewData["Title"] = "Preferencje użytkownika";
+}
+<link rel="stylesheet" href="~/css/viewpref.css" asp-append-version="true" />
+<br />
+<br />
+<h1>Preferencje użytkownika</h1>
+<div class="prefcontainer">
+
+
+
+    @if (Model == null)
+    {
+        <p>Preferencje dla tego użytkownika nie zostały jeszcze dodane.</p>
+    }
+    else
+    {
+        <div class="pref-details">
+            <div>
+                <h2>Opis preferencji:</h2>
+                <p>@Model.Description</p>
+                <h2>Cele wagowe:</h2>
+                <p>@Model.WeightGoal<a> kg</a></p>
+                <h2>Aktywność:</h2>
+                <p>@Model.ActivityStatus</p>
+                <h2>Alergeny:</h2>
+                <ul>
+                    @foreach (var allergen in Model.Allergens)
+                    {
+                        <li>@allergen.Name</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
