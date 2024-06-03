@@ -96,15 +96,16 @@ namespace DietBowl.Controllers
                 //return RedirectToAction("Index", "Home"); stary kod
 
                 // Na podstawie roli przekieruj do odpowiedniego widoku - dodane na lekcji
-                switch (userRole)
-                {
-                    case "1": // Dietetyk
-                        return RedirectToAction("Dietician", "Home");
-                    case "2": // Pacjent
-                        return RedirectToAction("User", "Home");
-                    default:
-                        return RedirectToAction("Index", "Home"); // Domyślna strona po zalogowaniu
-                }
+                /* switch (userRole)
+                 {
+                     case "1": // Dietetyk
+                         return RedirectToAction("Dietician", "Home");
+                     case "2": // Pacjent
+                         return RedirectToAction("User", "Home");
+                     default:
+                         return RedirectToAction("Index", "Home"); // Domyślna strona po zalogowaniu
+                 }*/
+                return RedirectToAction("Index", "Home");
             }
 
             return RedirectToAction("Login", "User");
