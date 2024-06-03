@@ -1,7 +1,8 @@
 @model IList<DietBowl.Models.Recipe>
 @{
-    int userId = (int)ViewData["IdUser"]!;
-    DateTime ddd = ViewBag.date;
+	int userId = (int)ViewData["IdUser"]!;
+	DateTime ddd = ViewBag.date;
+	var allRecipes = Json.Serialize(ViewBag.allJsRecipes);
 
 }
 
@@ -10,152 +11,214 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<script>
-        var list = new Array();
-        var tab = JSON.parse('@Html.Raw(ViewData["List"])');
-        function reset() {
-            for (let i = 0; i < allList.children.length; i++) {
-                allList.children[i].hidden = false;
-            }
-        }
 
-        function showResult(str) {
-            var result = new Array();
-            if (str.length < 1) {
-                reset();
-                return;
-            }
-            tab.forEach(function (element) {
-                let x = element.toLowerCase()
-                if (x.includes(str.toLowerCase()))
-                    result.push(element);
-            });
-            searchHiden(result);
-        }
-
-        function searchHiden(result) {
-            for (let i = 0; i < allList.children.length; i++) {
-                if (result.includes(allList.children[i].getElementsByTagName("h5")[0].innerText)) {
-                    allList.children[i].hidden = false;
-                } else {
-                    allList.children[i].hidden = true;
-                }
-            }
-        }
-
-        function AddToList(id){
-
-            if (list.includes(id)) 
-            {
-                for (let i = 0; i < allList.children.length; i++) 
-                {
-                    if(list[i] == id)
-                    {
-                        list.splice(i,1);
-                    }
-                }
-            } 
-            else 
-            {
-                list.push(id)
-            }
-            console.log(list)
-            listAtOneDay.innerHTML = ""
-            list.forEach(item => {
-                const listItem = document.createElement('div')
-                    listItem.classList = "dodaniereceptury"
-                const temp = document.getElementById('allList').children
-                for (let i = 0; i < temp.length; i++) {
-                    if (temp[i].id == item) {
-                        const originalElement = temp[i].cloneNode(true)
-                        const copy = originalElement.querySelector("h5")
-                    copy.addEventListener('click', () => { AddToList(item) })
-                    listItem.appendChild(copy)
-                    }
-                }
-                listAtOneDay.appendChild(listItem)
-
-            });
-        }
-
-    function parseToSend() {
-        var dateOrg = @Html.Raw(Json.Serialize(@ViewBag.date));
-        var date = new Date(dateOrg);
-        // Uzyskaj rok, miesiąc i dzień
-        var year = date.getFullYear();
-        var month = ('0' + (date.getMonth() + 1)).slice(-2); // Dodaj 1 do miesiąca, ponieważ indeksowanie miesięcy zaczyna się od 0
-        var day = ('0' + date.getDate()).slice(-2);
-
-        // Utwórz łańcuch znaków w formacie "yyyy-MM-dd"
-        var formattedDate = year + '-' + month + '-' + day;
-
-        document.getElementById('sendList').children.date.value = formattedDate;
-        document.getElementById('recipeList').value = JSON.stringify(list);
-        document.getElementById('sendList').submit();
-    }
-
-</script>
-<div class="blue">
-        <div id="listAtOneDay"></div>
+<div class="blue" style="text-align:center; color:black">
+	<label id="labelKalorie"></label>
+	<div class="progress">
+		<div id="progressBarKalorie" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+	</div>
+	<label id="labelBialko"></label>
+	<div class="progress">
+		<div id="progressBarBialko" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+	</div>
+	<label id="labelWegle"></label>
+	<div class="progress">
+		<div id="progressBarWegle" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+	</div>
+	<label id="labelTluszcze"></label>
+	<div class="progress">
+		<div id="progressBarTluszcze" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+	</div>
+	<div id="listAtOneDay">
+	</div>
 </div>
 
 
 <div class="content">
-    <div class="orange">
-    @* tutaj ładnie zrobic forma *@
-    <form>
-            <div class="input-group">
-                
-                <input class="form-control" placeholder="Wyszukaj przepis..." 
-                autocomplete="on" id="inputLiveSearch" type="text" size="30" 
-                onkeyup="showResult(this.value)">
-                <div class="input-group-btn">
-                    <button class="btn btn-default" ><i class="glyphicon glyphicon-search"></i></button>
-                </div>
-            </div>
+	<div class="orange">
+		@* tutaj ładnie zrobic forma *@
+		<form>
+			<div class="input-group">
+
+				<input class="form-control" placeholder="Wyszukaj przepis..."
+					   autocomplete="on" id="inputLiveSearch" type="text" size="30"
+					   onkeyup="showResult(this.value)">
+				<div class="input-group-btn">
+					<button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+				</div>
+			</div>
 
 
-        
-    </form>
-    
-    
-    @* Tutaj dodac brak mozliwosci wybierania daty wstecz (date < today) *@
-    <form id="sendList" class="login" asp-action="AddRecipeAtDay" asp-controller="Dietitian" method="post">
-        <input name="userId" value="@userId" hidden>
-        <input name="date" type="date" hidden>
-        <input hidden name="recipeList" id="recipeList">
-    </form>
-        <button class="btn btn-success btn-lg" type="button" onclick="parseToSend()">Przypisz</button>
-    @* a tutaj chce ładne okienka :) *@
-    </div>
-        <div class="yellow">
-        <div id="allList" class="recipe-grid">
-        @foreach (var recipe in Model)
-        {
-                <div onclick="AddToList(@recipe.Id)" id="@recipe.Id">
-                <h5>@recipe.Title</h5>
-                <p>Category: @recipe.Category</p>
-                <p>Carbohydrate: @recipe.Carbohydrate g</p>
-                <p>Protein: @recipe.Protein g</p>
-                <p>Fat: @recipe.Fat g</p>
-                <p>Calories: @recipe.CalculateCalories() kcal</p>
 
-                    <p>Alergeny:</p>
-                    <ul>
-                        @foreach (var allergen in recipe.Allergens)
-                        {
-                            <li>@allergen.Name</li>
-                        }
-                    </ul>
-            </div>
-        }
-     </div>
+		</form>
 
-      
 
-      
+		@* Tutaj dodac brak mozliwosci wybierania daty wstecz (date < today) *@
+		<form id="sendList" class="login" asp-action="AddRecipeAtDay" asp-controller="Dietitian" method="post">
+			<input name="userId" value="@userId" hidden>
+			<input name="date" type="date" hidden>
+			<input hidden name="recipeList" id="recipeList">
+		</form>
+		<button class="btn btn-success btn-lg" type="button" onclick="parseToSend()">Przypisz</button>
+		@* a tutaj chce ładne okienka :) *@
+	</div>
+	<div class="yellow">
+		<div id="allList" class="recipe-grid">
+			@foreach (var recipe in Model)
+			{
+				<div onclick="AddToList(@recipe.Id)" id="@recipe.Id">
+					<h5>@recipe.Title</h5>
+					<p>Category: @recipe.Category</p>
+					<p>Carbohydrate: @recipe.Carbohydrate g</p>
+					<p>Protein: @recipe.Protein g</p>
+					<p>Fat: @recipe.Fat g</p>
+					<p>Calories: @recipe.CalculateCalories() kcal</p>
 
-    </div>
-    
-   
+					<p>Alergeny:</p>
+					<ul>
+						@foreach (var allergen in recipe.Allergens)
+						{
+							<li>@allergen.Name</li>
+						}
+					</ul>
+				</div>
+			}
+		</div>
+
+
+
+
+
+	</div>
+
+
 </div>
+<script>
+	var list = new Array();
+	var tab = JSON.parse('@Html.Raw(ViewData["List"])');
+	var allItems = @Html.Raw(allRecipes);
+
+	function reset() {
+		for (let i = 0; i < allList.children.length; i++) {
+			allList.children[i].hidden = false;
+		}
+	}
+
+	function showResult(str) {
+		var result = new Array();
+		if (str.length < 1) {
+			reset();
+			return;
+		}
+		tab.forEach(function (element) {
+			let x = element.toLowerCase()
+			if (x.includes(str.toLowerCase()))
+				result.push(element);
+		});
+		searchHiden(result);
+	}
+
+	function searchHiden(result) {
+		for (let i = 0; i < allList.children.length; i++) {
+			if (result.includes(allList.children[i].getElementsByTagName("h5")[0].innerText)) {
+				allList.children[i].hidden = false;
+			} else {
+				allList.children[i].hidden = true;
+			}
+		}
+	}
+
+	function AddToList(id) {
+
+		if (list.includes(id)) {
+			for (let i = 0; i < allList.children.length; i++) {
+				if (list[i] == id) {
+					list.splice(i, 1);
+				}
+			}
+		}
+		else {
+			list.push(id)
+		}
+		console.log(list)
+		listAtOneDay.innerHTML = ""
+		list.forEach(item => {
+			const listItem = document.createElement('div')
+			listItem.classList = "dodaniereceptury"
+			const temp = document.getElementById('allList').children
+			for (let i = 0; i < temp.length; i++) {
+				if (temp[i].id == item) {
+					const originalElement = temp[i].cloneNode(true)
+					const copy = originalElement.querySelector("h5")
+					copy.addEventListener('click', () => { AddToList(item) })
+					listItem.appendChild(copy)
+				}
+			}
+			listAtOneDay.appendChild(listItem)
+
+		});
+		updateLabel();
+	}
+
+	function initLabel() {
+		document.getElementById("labelKalorie").textContent = "Kalorie: 0/" + @ViewBag.Calories;
+		document.getElementById("labelBialko").textContent = "Białko: 0/" + @ViewBag.Protein;
+		document.getElementById("labelWegle").textContent = "Węgle: 0/" + @ViewBag.Fat;
+		document.getElementById("labelTluszcze").textContent = "Tłuszcze: 0/" + @ViewBag.Carbohydrate;
+	}
+
+	function swapMacro(wyliczone, wymagane, progressBar) {
+		var percent = (wyliczone / wymagane) * 100;
+		var element = document.getElementById(progressBar)
+		element.style.width = percent + "%";
+		element.setAttribute("aria-valuenow", percent)
+		if (wyliczone > wymagane) {
+			element.style.backgroundColor = 'red'
+		}
+		else {
+			element.style.backgroundColor = 'green'
+		}
+	}
+
+	function updateLabel() {
+		var wyliczoneKalorie = 0;
+		var wyliczoneTluszcze = 0;
+		var wyliczoneWegle = 0;
+		var wyliczoneBialko = 0;
+		for (var i = 0; i < allItems.length; i++) {
+			if (list.includes(allItems[i].id)) {
+				wyliczoneKalorie += allItems[i].calories;
+				wyliczoneTluszcze += allItems[i].fat;
+				wyliczoneWegle += allItems[i].carbohydrate;
+				wyliczoneBialko += allItems[i].protein;
+			}
+		}
+		document.getElementById("labelKalorie").textContent = "Kalorie: " + wyliczoneKalorie + "/" + @ViewBag.Calories;
+		document.getElementById("labelBialko").textContent = "Białko: " + wyliczoneTluszcze + "/" + @ViewBag.Protein;
+		document.getElementById("labelWegle").textContent = "Węgle: " + wyliczoneWegle + "/" + @ViewBag.Fat;
+		document.getElementById("labelTluszcze").textContent = "Tłuszcze: " + wyliczoneBialko + "/" + @ViewBag.Carbohydrate;
+
+		swapMacro(wyliczoneKalorie, @ViewBag.Calories, "progressBarKalorie")
+		swapMacro(wyliczoneTluszcze, @ViewBag.Protein, "progressBarTluszcze")
+		swapMacro(wyliczoneWegle, @ViewBag.Fat, "progressBarWegle")
+		swapMacro(wyliczoneBialko, @ViewBag.Carbohydrate, "progressBarBialko")
+	}
+
+	function parseToSend() {
+		var dateOrg = @Html.Raw(Json.Serialize(@ViewBag.date));
+		var date = new Date(dateOrg);
+		// Uzyskaj rok, miesiąc i dzień
+		var year = date.getFullYear();
+		var month = ('0' + (date.getMonth() + 1)).slice(-2); // Dodaj 1 do miesiąca, ponieważ indeksowanie miesięcy zaczyna się od 0
+		var day = ('0' + date.getDate()).slice(-2);
+
+		// Utwórz łańcuch znaków w formacie "yyyy-MM-dd"
+		var formattedDate = year + '-' + month + '-' + day;
+
+		document.getElementById('sendList').children.date.value = formattedDate;
+		document.getElementById('recipeList').value = JSON.stringify(list);
+		document.getElementById('sendList').submit();
+	}
+
+	initLabel();
+</script>

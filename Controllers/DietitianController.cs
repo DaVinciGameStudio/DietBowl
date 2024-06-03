@@ -1,4 +1,5 @@
-﻿using DietBowl.Models;
+﻿using DietBowl.EF;
+using DietBowl.Models;
 using DietBowl.Services;
 using DietBowl.Services.Interfaces;
 using DietBowl.ViewModel;
@@ -14,11 +15,14 @@ namespace DietBowl.Controllers
     public class DietitianController : Controller
     {
         private readonly IDietitianService _dietitianService;
+        private readonly DietBowlDbContext _dietBowlDbContext;
 
-        public DietitianController(IDietitianService dietitianService)
+        public DietitianController(IDietitianService IDietitianService, DietBowlDbContext dietBowlDbContext):base()
         {
-            _dietitianService = dietitianService;
+            _dietitianService = IDietitianService;
+            _dietBowlDbContext = dietBowlDbContext;
         }
+
 
         [Authorize(Roles = "1")]
         public async Task<IActionResult> Patients()
@@ -94,11 +98,34 @@ namespace DietBowl.Controllers
 
         public async Task<IActionResult> AddRecipeToDiet(int userId, DateTime data)
         {
+            var allJsRecipes = await _dietBowlDbContext.Recipes
+                .Select(r => new
+                {
+                    r.Id,
+                    r.Title,
+                    r.Fat,
+                    r.Carbohydrate,
+                    r.Protein,
+                    r.Calories
+                })
+                .ToListAsync();
             var recipes = await _dietitianService.GetRecipes();
             ViewData["List"] = recipes.Select(x => x.Title).ToJson();
             ViewData["IdUser"] = userId;
             ViewBag.date = data;
-            return View(recipes);
+            ViewBag.allJsRecipes = allJsRecipes;
+
+			UserNutritionalRequirement? userNutritionalRequirement = await _dietBowlDbContext.UserNutritionalRequirements
+								.FirstOrDefaultAsync(ur => ur.UserId == userId);
+
+			if (userNutritionalRequirement != null)
+			{
+				ViewBag.Calories = userNutritionalRequirement.Calories;
+				ViewBag.Protein = userNutritionalRequirement.Protein;
+				ViewBag.Fat = userNutritionalRequirement.Fat;
+				ViewBag.Carbohydrate = userNutritionalRequirement.Carbohydrate;
+			}
+			return View(recipes);
         }
 
         [HttpPost]
