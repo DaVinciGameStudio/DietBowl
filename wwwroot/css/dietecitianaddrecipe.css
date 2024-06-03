@@ -8,6 +8,7 @@
     width: 25vw;
     border: solid;
     border-color: black;
+    overflow:auto;
 }
 .yellow {
     flex: 1;

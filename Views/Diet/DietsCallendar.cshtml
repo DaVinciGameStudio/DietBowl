@@ -93,35 +93,51 @@
             text-transform: uppercase; /* Zawsze duże litery */
         }
 
+        .allSite{
+            width:100%;
+            height:90%;
+            display:grid;
+            position:absolute;
+            justify-content: center;
+            align-items: center;
+        }
+
         .information{
-            width: 100px;
-            height: 100px;
-            position: absolute;
+            display: grid;
+            width: 800px;
+            height: 400px;
             background-color: #fafafa;
             text-align: center;
-            top: 50%;
-            right: 50%;
+            opacity:0.8;
+            font-size: 64px;
             z-index: 100;
-/*             visibility: hidden; */
         }
     </style>
 </head>
+<div class="allSite">
+
+    @if (!ViewBag.userBody)
+    {
+        <div onclick="deleteThis(this)" class="information">
+            Uzupełnij parametry ciała na dzisiaj!
+         </div>
+    }
+
+</div>
 <body>
     <br />
     <br />
     <br />
-    @if(!ViewBag.userBody)
-    {
-        <div class="information">Uzupełnij BodyParamiters!</div>
-    }
-
+   
     <div id="calendarContainer">
         <div id="calendarNavigation">
             <button id="prevMonth" class="navigationButton">&lt;</button>
             <div class="month-year-display" id="monthYearDisplay"></div>
             <button id="nextMonth" class="navigationButton">&gt;</button>
+
         </div>
         <div id="calendar"></div>
+        
     </div>
 
     <script>
@@ -203,6 +219,11 @@
             // Initial rendering of the calendar
             renderCalendar();
         });
+
+        function deleteThis(item) { 
+            item.remove()
+        }
+
     </script>
 </body>
 </html>
